@@ -43,7 +43,7 @@ public class MainClass2 {
     }
     
     public void controlEx4(double avg) {
-        switch ((int)(avg/10)) {
+        switch ((int)(avg / 10)) {
             case 10:
             case 9:
                 System.out.println("A");

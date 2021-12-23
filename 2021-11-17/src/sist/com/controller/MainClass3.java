@@ -11,13 +11,13 @@ public class MainClass3 {
         for(; i < 5; i++) 
             System.out.println("은영안녕!");      
         System.out.println(i);      
-   }
+    }
     
     public void loopingEx2() {
         int sum = 0, even = 0, odd = 0;
         
-        for(int i = 1; i <= 100;i ++) {
-            if(i % 2 == 0)even += i;
+        for(int i = 1; i <= 100; i++) {
+            if(i % 2 == 0) even += i;
             else {
                 odd += i;
                 }

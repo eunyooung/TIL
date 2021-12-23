@@ -6,9 +6,13 @@ public class MainClass {
         int x = 1, y = 2, z = 3;
         //System.out.println(x++ == 1);
         /*
-         * if(x++ == 1) { System.out.println("if x++ == 1 1");
-         * System.out.println("if x++ == 1 2"); } else {
-         * System.out.println("else x++ == 1 1"); } System.out.println("else x++ == 1 2" );
+         * if(x++ == 1) {
+         *     System.out.println("if x++ == 1 1");
+         *     System.out.println("if x++ == 1 2"); }
+         * else {
+         *     System.out.println("else x++ == 1 1");
+         * }
+         * System.out.println("else x++ == 1 2" );
          */
         //System.out.println(x++ == 1 && ++x == 3);
 
@@ -23,19 +27,23 @@ public class MainClass {
         if(++x == 2) {
             if(y-- == 2) {
                 if(++z == 4) {
-
-                } else {
                     
                 }
-            } else {
+                else {
+                    
+                }
+            }
+            else {
             
             }
-        } else {
+        }
+        else {
             
         }
         if(++x == 2 && y-- == 2 && ++z == 4) {
         
-        }else {
+        }
+        else {
             
         }
     }
