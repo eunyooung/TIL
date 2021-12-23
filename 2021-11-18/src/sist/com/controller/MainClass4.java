@@ -23,10 +23,10 @@ public class MainClass4 {
             do {
                 System.out.println("계속할거니? yes/no");
                 state = scanner.next();
-            }while(!(state.equals("yes") || state.equals("no")));
+            } while(!(state.equals("yes") || state.equals("no")));
             if(state.equals("no")) break;
         }
-        System.out.println(name+" "+age);      
+        System.out.println(name + " " + age);      
     }
     
     public static void main(String[] args) {

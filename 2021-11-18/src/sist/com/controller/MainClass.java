@@ -50,7 +50,7 @@ public class MainClass {
     
     public void looping4() {
         int cnt = 0;
-        for(int i = 0; i < 10; i++);         
+        for(int i = 0; i < 10; i++);        
             cnt++;
     }
     
@@ -66,9 +66,9 @@ public class MainClass {
     }
     
     public void looping6() {
-        int cnt=0;
-        for(int i=0;i<10;i++) {
-            if(i%2==0) continue;
+        int cnt = 0;
+        for(int i = 0; i < 10; i++) {
+            if(i % 2 == 0) continue;
             cnt++;
         }
     }

@@ -15,9 +15,9 @@ public class MainClass2 {
     
     public void loopingEx2(int count) {
         int i = 0;
-        while(i<count) {         
+        while(i < count) {         
             i++;
-            if(i%2==0)continue;
+            if(i % 2 == 0)continue;
             System.out.println(i);
         }
     }
@@ -100,13 +100,13 @@ public class MainClass2 {
          * System.out.print(9+"  *"+3+"="+(9  *3)+"\t");
          */
         /*
-         * for(int i=1;i<=9;i++) { 
-         *      for(int j=2;j<=9;j++) {
+         * for(int i = 1; i <= 9; i++) { 
+         *      for(int j = 2; j <= 9; j++) {
          *          //System.out.println("i=" + i + " j=" + j); 
          *          try { 
          *              Thread.sleep(100);
          *              System.out.print(j + "  *" + i + "=" + (i * j) + "\t");
-         *          }catch(Exception e) {
+         *          } catch(Exception e) {
          *          }
          *      }
          *      System.out.println();
