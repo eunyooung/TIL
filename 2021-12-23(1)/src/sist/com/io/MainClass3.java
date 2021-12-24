@@ -11,14 +11,14 @@ public class MainClass3 {
         // TODO Auto-generated method stub
 
         try {
-            File dir = new File("C:\\download");
+            File dir = new File("C:\\javaDev\\data\\food");
             // download 폴더가 없다 
             //1. 폴더의 유무 확인 => 있는 경우는 통과 / 없는 경우는 만든다
             if (!dir.exists()) { // 존재하지 않는 경우 
                 dir.mkdir(); // 폴더를 만든다 
             }
             //System.out.println("폴더 생성 완료!!");
-            File file = new File("c:\\download\\food.txt");
+            File file = new File("c:\\javaDev\\data\\food\\food.txt");
             if (!file.exists()) {
                 // 파일을 만들어라 
                 file.createNewFile();

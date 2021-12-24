@@ -129,7 +129,7 @@ public class MainClass {
             // 정상 수행하는 문장 
             // 1. File에 대한 정보 
             // 1-1 파일 가지고 오기 
-            File file = new File("c:\\javaDev\\movie.txt");
+            File file = new File("c:\\javaDev\\data\\movie.txt");
             // 본인이 가지고 있는 파일 선택
             //***1. 파일 이름 읽기 
             System.out.println("파일명:" + file.getName());

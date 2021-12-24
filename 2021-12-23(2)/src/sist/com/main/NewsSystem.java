@@ -48,7 +48,7 @@ public class NewsSystem {
             }
 
             // 저장된 내용을 파일에 저장 
-            FileWriter fw = new FileWriter("c:\\java_data\\naver_news.txt");
+            FileWriter fw = new FileWriter("c:\\javaDev\\data\\naver_news.txt");
             fw.write(sb.toString());
             fw.close();
         } catch (Exception ex) {
@@ -61,7 +61,7 @@ public class NewsSystem {
         ArrayList<News> list = new ArrayList<News>();
         // 파일을 읽어서 데이터 전송 
         try {
-            FileInputStream fis = new FileInputStream("c:\\java_data\\naver_news.txt");
+            FileInputStream fis = new FileInputStream("c:\\javaDev\\data\\naver_news.txt");
             BufferedReader br = new BufferedReader(new InputStreamReader(fis));
             while (true) {
                 String data = br.readLine(); // \n

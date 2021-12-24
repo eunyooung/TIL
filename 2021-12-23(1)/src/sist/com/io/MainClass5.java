@@ -39,13 +39,13 @@ public class MainClass5 {
         FileInputStream fis = null;
         try {
             //1. 폴더 만들기 
-            File dir = new File("c:\\java_data");
+            File dir = new File("c:\\javaDev\\data");
             if (!dir.exists()) {
                 dir.mkdir();
                 System.out.println("폴더 생성 완료");
             }
             //2. 파일을 만들기 
-            File file = new File("c:\\java_data\\student.txt");
+            File file = new File("c:\\javaDev\\data\\student.txt");
             if (!file.exists()) {
                 file.createNewFile();
                 System.out.println("파일 생성 완료");

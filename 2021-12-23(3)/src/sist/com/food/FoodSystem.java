@@ -77,7 +77,7 @@ public class FoodSystem {
                 sb.append(data);
             }
 
-            File file = new File("c:\\java_data\\category.txt");
+            File file = new File("c:\\javaDev\\data\\category.txt");
             if (!file.exists()) {
                 file.createNewFile();
             }
