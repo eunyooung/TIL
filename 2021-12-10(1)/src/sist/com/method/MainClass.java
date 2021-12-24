@@ -162,8 +162,7 @@ import java.util.*; // Scanner => IO (BufferedReader)
 class MyDate {
     // 데이터 변질 => 은닉화 (MyDate에서 사용하는 변수)
     private int year, month, week;
-    private int[] lastday = { 31, 28, 31, 30, 31, 30, 
-                              31, 31, 30, 31, 30, 31 }; // 각달의 마지막 날짜
+    private int[] lastday = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }; // 각달의 마지막 날짜
     // 사용자 입력 
     // 메소드 => 구조화 (단락) , 반복 제거 , 한가지 기능을 수행 
 
@@ -179,8 +178,7 @@ class MyDate {
         int week = 0;
 
         // 1. 전년도까지의 총날수 (1년도 1일 => 월) ==> %7
-        int total = (year - 1) * 365 + (year - 1) / 4 - (year - 1) 
-                    / 100 + (year - 1) / 400; // 윤년 계산법 
+        int total = (year - 1) * 365 + (year - 1) / 4 - (year - 1) / 100 + (year - 1) / 400; // 윤년 계산법 
         // 2. 전달까지의 총날수 
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))// 윤년이라면 
             lastday[1] = 29; // 2월달 
@@ -243,7 +241,7 @@ public class MainClass {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 1. 메모리 할당 
         MyDate md = new MyDate();
         md.process();

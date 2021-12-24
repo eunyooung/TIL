@@ -61,7 +61,7 @@ public class MainClass4 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         String[] result = { "가위", "바위", "보" };
         // 모든 가상 ==> 0,1,2
 

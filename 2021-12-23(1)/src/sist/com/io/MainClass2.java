@@ -9,7 +9,7 @@ public class MainClass2 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         try {
             File dir = new File("C:\\Users\\EYC\\Desktop\\eclipse");
             System.out.println("폴더명:" + dir.getName());
@@ -20,8 +20,8 @@ public class MainClass2 {
             File[] files = dir.listFiles();// 업로드 => 같은 파일이 올라오면 
             // 같은 폴더안에는 같은 파일명을 올릴 수 없다
             HashSet<String> set = new HashSet<String>();
-            for(File f:files) {
-                if(f.isFile()) { // 파일일 경우에만 출력
+            for (File f : files) {
+                if (f.isFile()) { // 파일일 경우에만 출력
                     //System.out.println(f.getName());
                     // 확장자만 출력 
                     String name = f.getName();
@@ -33,7 +33,7 @@ public class MainClass2 {
             // 중복이 없는 확장자를 출력 ==> HashSet
             // 중복이 없는 확장자만 출력 
             System.out.println("===중복없는 확장자 출력===");
-            for(String s:set) {
+            for (String s : set) {
                 System.out.println(s);
             }
             /*
@@ -42,8 +42,8 @@ public class MainClass2 {
              *   => 중복된 데이터 포함 저장 : ArrayList
              *   => 파일명 , 크기 ==> Map , enum
              */
-        } catch(Exception ex) {
-             ex.printStackTrace();
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
     }
 }

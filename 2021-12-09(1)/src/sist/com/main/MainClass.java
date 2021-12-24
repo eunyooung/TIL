@@ -189,7 +189,7 @@ public class MainClass {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 배열 => 1차
         // 배열 선언
         /*
@@ -209,8 +209,7 @@ public class MainClass {
          *     
          */
 
-        String[] title = { "스파이더맨-노 웨이 홈", "몬스타엑스 : 더 드리밍", 
-                           "듄", "돈 룩 업", "연애 빠진 로맨스" };
+        String[] title = { "스파이더맨-노 웨이 홈", "몬스타엑스 : 더 드리밍", "듄", "돈 룩 업", "연애 빠진 로맨스" };
 
         double[] reserve = { 67.3, 9.2, 4.1, 4.0, 1.8 };
 
@@ -232,6 +231,5 @@ public class MainClass {
         // 결과 출력
         System.out.println(title[index]);
         System.out.println("예매율:" + max);
-
     }
 }

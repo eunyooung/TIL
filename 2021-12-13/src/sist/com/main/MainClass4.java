@@ -6,7 +6,7 @@ public class MainClass4 {
     // 선언만 하는 영역 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 전체 예외처리 
         //try {
         // 데이터 수집 

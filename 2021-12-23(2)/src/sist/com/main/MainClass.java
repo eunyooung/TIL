@@ -14,7 +14,7 @@ public class MainClass {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         NewsSystem ns = new NewsSystem();
         // 검색어 입력 요청 
         Scanner scan = new Scanner(System.in);
@@ -23,7 +23,7 @@ public class MainClass {
         ns.newsGetData(fd);// 파일에 저장 
         ArrayList<News> list = ns.newsAllData();
         System.out.println("***** 검색 결과 *****");
-        for(News n:list) {
+        for (News n : list) {
             System.out.println(n.getTitle());
             System.out.println(n.getDescription());
             System.out.println(n.getAuthor());

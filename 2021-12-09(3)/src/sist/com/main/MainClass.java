@@ -37,7 +37,7 @@ public class MainClass {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 사용자 입력 완료 
         Scanner scan = new Scanner(System.in);
         System.out.print("년도 입력:");
@@ -48,8 +48,7 @@ public class MainClass {
 
         // 요청한 내용을 가공 => 1일자의 요일 구하기
         // 전년도까지의 총날 수 
-        int total = (year - 1) * 365 + (year - 1) / 4 - (year - 1) 
-                    / 100 + (year - 1) / 400;
+        int total = (year - 1) * 365 + (year - 1) / 4 - (year - 1) / 100 + (year - 1) / 400;
         // 전달까지의 합
         int[] lastday = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 

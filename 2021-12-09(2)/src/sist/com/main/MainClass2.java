@@ -45,7 +45,7 @@ public class MainClass2 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         int[] arr = { 45, 67, 90, 34, 12 };
         System.out.println("배열:");
         System.out.println(Arrays.toString(arr));

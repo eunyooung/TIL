@@ -181,18 +181,18 @@ public class MainClass {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 1. ArrayList 사용 방법
-        
+
         // 1-1. 저장 공간 생성
         ArrayList list = new ArrayList(); // 제네릭스 필수
-        
+
         // *** 가변형 (17만개) 
         // 1-2. 데이터 첨부 
         list.add("사과"); // index => 0
         list.add("오렌지"); // index => 1
         list.add("수박"); // index => 2
-        
+
         // 1-3. 요청 => 관리
         // 1-3-1. 목록 (데이터를 보여 달라)
         /*
@@ -232,15 +232,15 @@ public class MainClass {
          *            => 소프트웨어 => 인터페이스 고정  
          *          class => 단일 상속 
          */
-        for(int i = 0; i < list.size(); i++) {
-            String f = (String)list.get(i);
+        for (int i = 0; i < list.size(); i++) {
+            String f = (String) list.get(i);
             System.out.println(f);
         }
-        
+
         // 1-4. 데이터 지우기 
         System.out.println("==== 삭제 후====");
         list.remove(1); // 2->1변경 
-        for(Object obj:list) { // obj => 실제 저장된 값을 순차적으로 대입
+        for (Object obj : list) { // obj => 실제 저장된 값을 순차적으로 대입
             System.out.println(obj); // toString을 생략 
             /*
              *   valueOf() ==> int , double ==> 문자열 변경 
@@ -248,62 +248,61 @@ public class MainClass {
              */
         }
         System.out.println("==== 데이터 출력 =====");
-        list.forEach(obj->System.out.println(obj));//{}생략 
+        list.forEach(obj -> System.out.println(obj));//{}생략 
         // JavaScript =>  화살표 함수 (ES6)
         // ES5 => ES6 (외국 => ES8)
-        
+
         // 람다식 (함수 포인터) => *
         System.out.println("==== 전체 삭제 ====");
         list.clear();
-        if(list.isEmpty()) { // 데이터가 없다면 
+        if (list.isEmpty()) { // 데이터가 없다면 
             System.out.println("데이터가 없습니다");//찾기 
         }
-        
-        
+
         // 2. HashSet 사용 방법
-        
+
         // 2-1. 저장 공간 생성 ==> 중복된 데이터가 들어가면 =>추가가 안된다
         System.out.println("==== HashSet ====");
         HashSet set = new HashSet();
-        
+
         // 2-2. 데이터 추가 
         set.add(1);
         set.add(2);
         set.add(3);
-        
+
         // 2-3. 데이터를 출력 
         // => for-each 
-        for(Object obj:set) {
+        for (Object obj : set) {
             System.out.println(obj);
         }
-        
+
         System.out.println("==== Iterator 사용 ====");
         // HashMap , HashSet 
         Iterator it = set.iterator(); // 데이터를 접근이 가능하게 it에 연결 
         // => Iterator 
-        while(it.hasNext()) { // 접근 가능한 데이터 있는 것까지만 반복을 수행 
+        while (it.hasNext()) { // 접근 가능한 데이터 있는 것까지만 반복을 수행 
             // it.next() => 실제 접근된 값을 읽어 온다 
-            int value = (int)it.next();
+            int value = (int) it.next();
             // => 기본데이터형으로 클래스값을 받는다 : 언박싱 
             // Integer i=(Integer)it.next()
             System.out.println(value);
         }
-        
+
         System.out.println("==== 삭제 ====");
         set.remove(2);
-        set.forEach((obj)->System.out.println(obj));
+        set.forEach((obj) -> System.out.println(obj));
         System.out.println(set.toString());
-        
+
         // 프로그램 => 어렵다 (경우의 수)
         // 가장 쉬운 프로그램 => Spring / MyBatis
         // => 패턴 (형식) => 동일
-        
+
         System.out.println("==== 전체 삭제 =====");
         set.clear();
-        if(set.isEmpty()) {
+        if (set.isEmpty()) {
             System.out.println("데이터가 존재하지 않습니다");
         }
-        
+
         System.out.println("===== HashSet 주로 하는 역할 =====");
         ArrayList list2 = new ArrayList();
         list2.add("홍길동");
@@ -311,35 +310,34 @@ public class MainClass {
         list2.add("박문수");
         list2.add("홍길동");
         list2.add("박문수");
-        
+
         // 출력 
-        for(Object obj:list2) {
+        for (Object obj : list2) {
             System.out.println(obj);
         }
-        
+
         // 중복제거 
         System.out.println("==== List => Set ====");
         HashSet set2 = new HashSet();
         set2.addAll(list2);// list2에 있는 모든 데이터를 => set2으로 이동
-        for(Object obj:set2) {
+        for (Object obj : set2) {
             System.out.println(obj);
         }
-        
+
         list2.clear();// List,Set갱신=> 한번을 전체 삭제 => 추가
         list2.addAll(set2);
         // => List => Set , Set => List로 변경이 가능 addAll()
-        for(Object obj:list2) {
+        for (Object obj : list2) {
             System.out.println(obj);
         }
-        
+
         // Set ==> 주로 사용처 (장바구니) , Cookie
-        
-        
+
         // 3. HashMap 사용 방법 ==> 다음 (클래스 관리:스프링)
-        
+
         // 3-1. 생성
         HashMap map = new HashMap();
-        
+
         // 3-2. 데이터 추가 
         // => 값이 두개 , 키 , 값 
         map.put("aaaaa", "홍길동");
@@ -348,7 +346,7 @@ public class MainClass {
         map.put("dd", "박문수");
         map.put("eee", "이순신");
         // 키를 중복하면 안된다 , 데이터는 중복이 가능 
-        
+
         //System.out.println(map.get("b"));
         System.out.println("==== 전체적으로 출력 ====");
         /*
@@ -359,19 +357,19 @@ public class MainClass {
         */
         Set s = map.keySet();// map에 저장되어 있는 키 전체를 읽어 온다 
         Iterator i = s.iterator();
-        while(i.hasNext()) {
-            String key = (String)i.next();
-            String name = (String)map.get(key);
+        while (i.hasNext()) {
+            String key = (String) i.next();
+            String name = (String) map.get(key);
             System.out.println(name);
         }
-        
+
         System.out.println("====  삭제 ====");
         map.remove("dd"); // 키설정 
-        map.forEach((key,value)->System.out.println(value));
-        
+        map.forEach((key, value) -> System.out.println(value));
+
         System.out.println("==== 전체 삭제 =====");
         map.clear();
-        if(map.isEmpty()) {
+        if (map.isEmpty()) {
             System.out.println("데이터가 없습니다");
         }
     }

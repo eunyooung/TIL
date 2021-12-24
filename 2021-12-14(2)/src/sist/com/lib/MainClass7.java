@@ -40,10 +40,8 @@ public class MainClass7 {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         // 1. 데이터 저장 
-        String[] data = { "혼자 배우는 자바", "자바와 오라클", "자바기반의 AWS", 
-                          "오라클 프로그래밍", "자바 프로그래밍", "JSP AND MVC",
-                          "Spring Framework", "MyBatis 프로그래밍", 
-                          "자바를 이용한 챗봇", "AWS를 이용한 배포", };
+        String[] data = { "혼자 배우는 자바", "자바와 오라클", "자바기반의 AWS", "오라클 프로그래밍", "자바 프로그래밍", "JSP AND MVC",
+                "Spring Framework", "MyBatis 프로그래밍", "자바를 이용한 챗봇", "AWS를 이용한 배포", };
         /*
          *   검색 용도로 사용 
          *   시작 문자열 (startsWith)

@@ -35,7 +35,7 @@ public class MainClass2 {
     // 코드가 없는 상태 => try~catch(개발)
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         try {
             MainClass2 m = createClass(); // 반드시 예외처리가 존재한다
             m.name = "홍길동";

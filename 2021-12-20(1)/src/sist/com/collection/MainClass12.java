@@ -8,12 +8,11 @@ public class MainClass12 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-    
+
         TreeSet set = new TreeSet(); // ArrayList,HashSet,HashMap
-        String[] names = {"홍길동","심청이","춘향이","박문수","이순신",
-                          "김두한","강감찬","을지문덕","전봉준","세종"};
+        String[] names = { "홍길동", "심청이", "춘향이", "박문수", "이순신", "김두한", "강감찬", "을지문덕", "전봉준", "세종" };
         // 배열을 TreeSet으로 변경 
-        for(Object name:names) {
+        for (Object name : names) {
             set.add(name);
         }
         System.out.println("===== TreeSet에 데이터가 추가된 상태 ======");

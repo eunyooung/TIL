@@ -6,7 +6,7 @@ public class MainClass6 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 난수 발생 => 일반
         int[] com = new int[6]; // 결과값 저장 위치 
         int su = 0; // 난수 저장하는 변수 
@@ -38,5 +38,4 @@ public class MainClass6 {
         }
         // 결과 출력 ==> 예외처리 
     }
-
 }

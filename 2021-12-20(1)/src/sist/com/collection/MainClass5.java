@@ -17,24 +17,24 @@ public class MainClass5 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         ArrayList list = new ArrayList();
         list.add("사과"); // 0
         list.add("배"); // 1
         list.add("참외"); // 2
         list.add("딸기"); // 3
         list.add("복숭아");// 4
-        
+
         // 출력 
-        for(int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             System.out.println(i + ":" + list.get(i));
         }
-        
+
         // 역순
-        for(int i = list.size() - 1; i >= 0; i--) {
+        for (int i = list.size() - 1; i >= 0; i--) {
             System.out.println(i + ":" + list.get(i));
         }
-        
+
         /*
         System.out.println("===== while ======");
         int i = 0;
@@ -44,19 +44,19 @@ public class MainClass5 {
         }
         */
         Iterator it = list.iterator(); // Set , Map (인덱스가 없는 컬렉션)
-        while(it.hasNext()) {
+        while (it.hasNext()) {
             System.out.println(it.next());
         }
-        
+
         System.out.println("======= ListIterator=======");
         ListIterator lt = list.listIterator();
-        while(lt.hasNext()) { // 위=>아래
+        while (lt.hasNext()) { // 위=>아래
             System.out.println(lt.next());
         }
-        
+
         System.out.println("======= 역순으로 출력 ========");
-        while(lt.hasPrevious()) { // 아래 => 위
-            System.out.println(lt.previous());   
+        while (lt.hasPrevious()) { // 아래 => 위
+            System.out.println(lt.previous());
         }
         // 데이터 수집
     }

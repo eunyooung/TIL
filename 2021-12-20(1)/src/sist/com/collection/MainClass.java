@@ -78,27 +78,27 @@ public class MainClass {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // Collection 
-        
+
         // 1. 메모리 할당 (저장할 수 있는 공간 확보)
         //ArrayList list = new ArrayList();
         //Vector list = new Vector();
         LinkedList list = new LinkedList();
-        
+
         // 2. 데이터 저장 
         list.add("사과");//0
         list.add("포도");//1
         list.add("배");//2
         list.add("수박");//3
         list.add("귤");//4
-        
+
         // 3. 확인 
-        for(int i = 0; i < list.size(); i++) {
-            String f = (String)list.get(i);
+        for (int i = 0; i < list.size(); i++) {
+            String f = (String) list.get(i);
             System.out.print(f + " ");
         }
-        
+
         // 4. 출력 
         // 5. 수정 
         list.set(4, "오렌지");
@@ -109,14 +109,14 @@ public class MainClass {
                 list.add("수박");//3
                 list.add("오렌지");//4
          */
-        
+
         // 6. 출력
         System.out.println("\n===== 수정후 출력 =====");
-        for(int i = 0; i < list.size(); i++) {
-            String f = (String)list.get(i);
+        for (int i = 0; i < list.size(); i++) {
+            String f = (String) list.get(i);
             System.out.print(f + " ");
         }
-        
+
         // 7. 삭제
         list.remove(2);
         /*
@@ -125,7 +125,7 @@ public class MainClass {
                 list.add("수박");//2
                 list.add("오렌지");//3
          */
-        
+
         // 8. 출력 
         System.out.println("\n===== 삭제후 출력 =====");
         /*
@@ -134,16 +134,16 @@ public class MainClass {
             System.out.print(f + " ");
         }
         */
-        
-        for(Object obj:list) { //list는 Object가 첨부되어 있다 
+
+        for (Object obj : list) { //list는 Object가 첨부되어 있다 
             System.out.print(obj + " ");
         }
-        
+
         // 9. 전체 삭제
         list.clear();
-        
+
         // 10.출력 
-        if(list.isEmpty()) { // list가 비워져 있는지 확인 
+        if (list.isEmpty()) { // list가 비워져 있는지 확인 
             System.out.println("\n바구니에 과일이 없습니다");
         }
     }

@@ -27,7 +27,7 @@ public class MainClass4 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-     
+
         //FileInputStream fis = null;//1byte씩 읽어오는 클래스 
         FileReader fis = null;
         // 그림파일 , zip파일 
@@ -39,17 +39,18 @@ public class MainClass4 {
             // A => 65
             int i = 0; // 문자한개를 받아서 저장할 변수 
             // ==> 파일의 끝까지 읽는다 (EOF=> End Of File) => -1
-            while((i = fis.read()) != -1) { // 모든 데이터를 읽어와라 
+            while ((i = fis.read()) != -1) { // 모든 데이터를 읽어와라 
                 // read() => 한글자씩 읽어 온다 
-                System.out.print((char)i);
+                System.out.print((char) i);
             }
-        } catch(Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
             // 서버닫기 , 파일 닫기 , 오라클 닫기 
             try {
                 fis.close(); // 예외처리가 필요
-            } catch(Exception ex){}
+            } catch (Exception ex) {
+            }
         }
     }
 }

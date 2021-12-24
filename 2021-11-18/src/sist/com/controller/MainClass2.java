@@ -3,25 +3,28 @@ package sist.com.controller;
 // looping, for, while
 
 public class MainClass2 {
-    
+
     public void loopingEx1(int count) {
-        for(int i = 1; i <= count; i++) {
-            if(i % 6 == 0) System.out.println();
-            if(!(i % 2 == 0)) continue;
+        for (int i = 1; i <= count; i++) {
+            if (i % 6 == 0)
+                System.out.println();
+            if (!(i % 2 == 0))
+                continue;
             //System.out.print(i+"\t");
-            System.out.printf("%-5d",i);
+            System.out.printf("%-5d", i);
         }
     }
-    
+
     public void loopingEx2(int count) {
         int i = 0;
-        while(i < count) {         
+        while (i < count) {
             i++;
-            if(i % 2 == 0)continue;
+            if (i % 2 == 0)
+                continue;
             System.out.println(i);
         }
     }
-    
+
     public void loopingEx3() {
         /*
          * System.out.print(2+"  *"+1+"="+(2  *1)+"\t");
@@ -113,14 +116,14 @@ public class MainClass2 {
          * }
          */
         int k = 0;
-        for(int i = 1; i <= 9; i++) {
-            for(int j = 2; j <= 9; j++) {
+        for (int i = 1; i <= 9; i++) {
+            for (int j = 2; j <= 9; j++) {
                 k++;
             }
             System.out.println();
         }
     }
-    
+
     public void loopingEx4() {
         int i = 1;
         int j = 1;
@@ -134,22 +137,23 @@ public class MainClass2 {
             i++;
         }
     }
-    public void loopingEx5(){
+
+    public void loopingEx5() {
         int i = 1;
         int j = 1;
-        
+
         do {
             do {
                 System.out.printf("%d * %d = %d\t", i, j, i * j);
                 j++;
-            } while(j <= 9);
+            } while (j <= 9);
             System.out.println();
             i++;
-        } while(i <= 5);
+        } while (i <= 5);
     }
-           
+
     public static void main(String[] args) {
         MainClass2 c = new MainClass2();
         c.loopingEx3();
     }
-}  
+}

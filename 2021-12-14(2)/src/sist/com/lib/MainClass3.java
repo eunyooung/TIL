@@ -67,7 +67,7 @@ public class MainClass3 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         MainClass3 m = new MainClass3();
         // 인스턴스 메소드,인스턴스 변수 => 저장 ==> calc()=>저장 
         try {

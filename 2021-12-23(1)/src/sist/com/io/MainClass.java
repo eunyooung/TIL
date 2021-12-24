@@ -124,7 +124,7 @@ public class MainClass {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         try {
             // 정상 수행하는 문장 
             // 1. File에 대한 정보 
@@ -142,9 +142,8 @@ public class MainClass {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
             System.out.println("수정일:" + sdf.format(date));
             //***5. 파일의 크기 
-            String temp = file.length() > 1024 ? (file.length() / 1024) + "KB":
-                    (file.length()) + "Bytes";
-            System.out.println("파일 크기:"+temp);
+            String temp = file.length() > 1024 ? (file.length() / 1024) + "KB" : (file.length()) + "Bytes";
+            System.out.println("파일 크기:" + temp);
             //6. 특성 => 숨긴파일 , 읽기전용,쓰기전용
             System.out.println("숨긴파일:" + file.isHidden());//false
             System.out.println("읽기전용:" + file.canRead());//true
@@ -154,7 +153,7 @@ public class MainClass {
             System.out.println("디렉토리여부:" + file.isDirectory());
             //8.기타
             System.out.println("절대경로:" + file.getAbsolutePath());
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace(); // 에러 처리 (확인)
         }
     }

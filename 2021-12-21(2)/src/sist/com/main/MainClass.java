@@ -62,25 +62,27 @@ import java.util.*;
 
 class Box<T> {
     T item; // 제한 static은 에러가 발생  => 멤버(인스턴스)로만 사용이 가능 
+
     public void setItem(T item) {
         this.item = item;
     }
+
     public T getItem() {
         return item;
     }
 }
 
 public class MainClass {
-    
+
     // 데이터형을 통합 => 형변환이 필요가 없어진다
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         Box box = new Box();
         box.setItem("홍길동");
-        String name = (String)box.getItem();
+        String name = (String) box.getItem();
         System.out.println(name);
-        
+
         Box<String> box1 = new Box<String>();
         box1.setItem("심청이");
         String name2 = box1.getItem();

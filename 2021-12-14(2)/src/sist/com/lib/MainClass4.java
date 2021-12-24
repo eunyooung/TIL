@@ -16,7 +16,7 @@ public class MainClass4 {
     // aaa bbb ==> String ==> enter
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 문자열 입력을 받는다 
         Scanner scan = new Scanner(System.in);
         System.out.print("문자열 입력:");

@@ -22,7 +22,7 @@ public class MainClass7 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 오늘 날짜 => 달력 
         Date date = new Date();
         System.out.println(date);

@@ -16,7 +16,7 @@ public class MainClass3 {
 
     public static void main(String[] args) /*throws IOException*/ {
         // TODO Auto-generated method stub
-        
+
         File dir = new File("c:\\download");
         if (!dir.exists()) { //폴더가 존재하지 않으면
             dir.mkdir();

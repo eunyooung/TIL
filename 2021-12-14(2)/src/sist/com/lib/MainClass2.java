@@ -24,7 +24,7 @@ public class MainClass2 {
 
     public static void main(String[] args) throws Exception {
         // TODO Auto-generated method stub
-        
+
         // 메모리에 저장 
         Member m1 = new Member();
         m1.name = "홍길동";

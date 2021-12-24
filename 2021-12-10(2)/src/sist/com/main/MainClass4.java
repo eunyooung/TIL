@@ -117,7 +117,7 @@ public class MainClass4 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         /*
          * double d=123456.78; int i=(int)((d-123456)*100); System.out.println(i);
          */

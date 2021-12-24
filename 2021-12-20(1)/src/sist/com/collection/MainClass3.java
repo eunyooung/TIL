@@ -29,18 +29,18 @@ public class MainClass3 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 1. 데이터 저장 공간 확보
         LinkedList list = new LinkedList();
         // Vector , ArrayList
-        
+
         // 2. 데이터 추가 
         list.add(100);//0
         list.add(200);//1
         list.add(300);//2
         list.add(400);//3
         list.add(500);//4
-        
+
         // 추가하는 순서로 인덱스 번호가 자동으로 설정 (순차적으로 설정)
         System.out.println("추가된 데이터 갯수:" + list.size());
         /*
@@ -51,22 +51,22 @@ public class MainClass3 {
          *    int i = (int)o;
          *    ============= 일반 데이터형도 가능 
          */
-        
+
         // 추가된 데이터 출력 
-        for(int i = 0; i < list.size(); i++) {
-            Integer num = (Integer)list.get(i);
+        for (int i = 0; i < list.size(); i++) {
+            Integer num = (Integer) list.get(i);
             // 사용하기 쉽게 
             // int num = (int)list.get(i)
             System.out.println(i + ":=>" + num);
         }
-        
+
         // 삭제 
         System.out.println("===== 데이터 삭제후 =====");
         list.remove(3);
         System.out.println("삭제후 데이터 갯수:" + list.size());
         // 삭제된 데이터 출력 
-        for(int i = 0; i < list.size(); i++) {
-            Integer num = (Integer)list.get(i);
+        for (int i = 0; i < list.size(); i++) {
+            Integer num = (Integer) list.get(i);
             // 사용하기 쉽게 
             // int num = (int)list.get(i)
             System.out.println(i + ":=>" + num);
@@ -76,22 +76,22 @@ public class MainClass3 {
         System.out.println("===== 데이터 수정후 =====");
         list.set(2, 3000);
         // 수정후에 데이터 출력 
-        for(int i = 0; i < list.size(); i++) {
-            Integer num = (Integer)list.get(i);
+        for (int i = 0; i < list.size(); i++) {
+            Integer num = (Integer) list.get(i);
             // 사용하기 쉽게 
             // int num = (int)list.get(i)
             System.out.println(i + ":=>" + num);
         }
-        
+
         // 전체 삭제 
         list.clear();
         System.out.println("현재 데이터 갯수 확인:" + list.size());
-        
-        if(list.isEmpty()) { // 데이터가 존재 (false) , 데이터가 없으면 (true)
+
+        if (list.isEmpty()) { // 데이터가 존재 (false) , 데이터가 없으면 (true)
             System.out.println("데이터가 존재하지 않습니다!!");
         }
         // isXxx() => 리턴형 (boolean)
-        
+
         // ArrayList = Vector = LinkedList 
         /*
          *    add() ==> 데이터 추가

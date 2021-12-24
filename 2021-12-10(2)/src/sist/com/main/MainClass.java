@@ -111,7 +111,7 @@ class Sawon {
 public class MainClass {
 
     public static void main(String[] args) {
-        
+
         Sawon s1 = new Sawon();// 디폴트 생성자 (생성자를 구현하지 않은 경우 => 자동 생성)
         System.out.println("이름:" + s1.name + ",부서:" + s1.dept);
         Sawon s2 = new Sawon("박문수", "영업부");

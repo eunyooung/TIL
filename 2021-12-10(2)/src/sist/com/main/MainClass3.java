@@ -33,7 +33,7 @@ public class MainClass3 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         int[] arr = { 10, 50, 60, 30, 20 };
         Swap2 s1 = new Swap2();
         s1.changeArray(arr); // arr의 주소자체를 제어 => 원본자체 변경 

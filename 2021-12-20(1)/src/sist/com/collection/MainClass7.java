@@ -35,7 +35,7 @@ public class MainClass7 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 저장 공간을 만든다 
         HashSet set = new HashSet(); // 데이터 저장시 중복없는 데이터만 설정
         set.add("자바");
@@ -48,15 +48,15 @@ public class MainClass7 {
         set.add("신기술:Spring-Boot,VueJS,ReactJS,AI");
         set.add("AWS:배포,리눅스");
         set.add("CSS");
-        
+
         System.out.println("===== for-each =====");
-        for(Object obj:set) {
+        for (Object obj : set) {
             System.out.println(obj);//obj.toString() => toString()은 생략한다 
         }
-        
+
         System.out.println("===== 삭제후 ======");
         set.remove("자바");
-        for(Object obj:set) {
+        for (Object obj : set) {
             System.out.println(obj);//obj.toString() => toString()은 생략한다 
         }
     }

@@ -15,7 +15,7 @@ public class MainClass5 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         /*
          *   문자열(next())로 데이터를 받아서 => 정수 변환 O
          *     NumberFormatException

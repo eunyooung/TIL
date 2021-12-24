@@ -11,7 +11,7 @@ import java.util.*;
 public class MainClass3 {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         int[] kor = new int[3];
         int[] eng = new int[3];
         int[] math = new int[3];
@@ -52,8 +52,7 @@ public class MainClass3 {
         }
         // 출력 
         for (int i = 0; i < 3; i++) {
-            System.out.printf("%-5d%-5d%-5d%-5d%-8.2f%-5d\n", kor[i], eng[i], 
-                              math[i], total[i], avg[i], rank[i]);
+            System.out.printf("%-5d%-5d%-5d%-5d%-8.2f%-5d\n", kor[i], eng[i], math[i], total[i], avg[i], rank[i]);
         }
     }
 }

@@ -14,7 +14,7 @@ public class MainClass10 {
      */
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // insert / update
         /*
         String msg = "이름:{0}\n전화번호:{1}\n주소:{2}\n성별:{3}";
@@ -22,8 +22,7 @@ public class MainClass10 {
         String res=MessageFormat.format(msg, obj);
         System.out.println(res);
         */
-        String pattern = "INSERT INTO Member VALUES({0},''{1}'',''{2}''," 
-                          + "''{3}'',''{4}'',{5})";
+        String pattern = "INSERT INTO Member VALUES({0},''{1}'',''{2}''," + "''{3}'',''{4}'',{5})";
         Object[] obj = { 1, "이순신", "남자", "서울", "010-1111-1111", 25 };
         String res = MessageFormat.format(pattern, obj);
         System.out.println(res);

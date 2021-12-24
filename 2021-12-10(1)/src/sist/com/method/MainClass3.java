@@ -35,7 +35,7 @@ public class MainClass3 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         int a = 10;
         int b = ++a + ++a + ++a + ++a; // 11 + 12 + 13 + 14
         System.out.println(b);

@@ -16,10 +16,10 @@ package sist.com.main;
 import java.util.*;
 
 public class MainClass2 {
-    
+
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         ArrayList<String> list = new ArrayList<String>();
         // ArrayList안에는 String을 저장 한다 (데이터형을 고정한다)
         list.add("사과");
@@ -27,31 +27,31 @@ public class MainClass2 {
         list.add("수박");
         list.add("오렌지");
         list.add("메론");
-        
+
         // 출력 => foreach 
-        for(String s:list) {
+        for (String s : list) {
             System.out.println(s);
         }
         System.out.println(list.toString()); // [사과, 배, 수박, 오렌지, 메론]
-        
+
         System.out.println("====Set 사용====");
         HashSet<Integer> set = new HashSet<Integer>();
         // 정수만 저장해서 사용 
         // <클래스형만 첨부할 수 있다>  <int> <double> => 오류 
         // <Integer>  <Double> ==> Wrapper클래스로 지정 
         Random r = new Random();
-        for(int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             set.add(r.nextInt(100) + 1); //1~100
         }
         // for-each
-        for(int i:set) {
+        for (int i : set) {
             System.out.print(i + " ");
         }
         System.out.println();
         System.out.println(set.toString());
         // => 사용자 정의 클래스 , String 
         System.out.println("==== Map ====");
-        HashMap<String,String> map = new HashMap<String, String>();
+        HashMap<String, String> map = new HashMap<String, String>();
         map.put("id", "hong");
         map.put("password", "1234");
         map.put("sex", "남자");

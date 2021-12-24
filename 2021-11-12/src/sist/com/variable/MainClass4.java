@@ -6,13 +6,14 @@ public class MainClass4 {
         a = a + 1;
         System.out.println(a);
     }
-    
+
     int x = 5;
-    
+
     public void localValueEx2() {
         x = x + 5;
         System.out.println("x = " + x);
-    }        
+    }
+
     public void localValueEx3() {
         int a = 10;
         {
@@ -25,10 +26,10 @@ public class MainClass4 {
         }
         a = 55;
     }
-    
+
     public void localValueEx4() {
-       System.out.println((int)Character.MIN_VALUE+"~"+(int)Character.MAX_VALUE);
-       /*
+        System.out.println((int) Character.MIN_VALUE + "~" + (int) Character.MAX_VALUE);
+        /*
         *   for(int i = (int)Character.MIN_VALUE; i <= (int)Character.MAX_VALUE; i++) { 
         *   try {
         *       Thread.sleep(100); 
@@ -41,17 +42,17 @@ public class MainClass4 {
         *   }
         */
         System.out.print(65);
-        System.out.print((char)65);
-        System.out.print((char)10);
-        System.out.print((char)66);
-       
-    }   
-    public static void main(String[] args) {      
-        MainClass4 v = new MainClass4();
-       v.localValueEx4();
-       v.localValueEx2();//10                      
-       v.localValueEx2();//15                       
-       v.localValueEx2();//20                       
-    }
- }
+        System.out.print((char) 65);
+        System.out.print((char) 10);
+        System.out.print((char) 66);
 
+    }
+
+    public static void main(String[] args) {
+        MainClass4 v = new MainClass4();
+        v.localValueEx4();
+        v.localValueEx2();//10                      
+        v.localValueEx2();//15                       
+        v.localValueEx2();//20                       
+    }
+}

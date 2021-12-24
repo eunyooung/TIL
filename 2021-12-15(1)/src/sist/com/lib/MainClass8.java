@@ -15,7 +15,7 @@ public class MainClass8 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 입력값 받기 
         Scanner scan = new Scanner(System.in);
         System.out.print("알파벳 입력:");

@@ -65,7 +65,7 @@ public class MainClass {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 정렬 : 선택정렬 , 버블정렬 ==> ORDER BY no DESC
         int[] arr = { 45, 67, 90, 34, 12, 13, 60, 57 };
         /*
@@ -78,7 +78,7 @@ public class MainClass {
          *      System.out.print(arr[i] + " ");
          *  }
          */
-        
+
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[i] > arr[j]) { // 올림차순

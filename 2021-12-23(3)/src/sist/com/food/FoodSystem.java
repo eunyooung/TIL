@@ -41,55 +41,54 @@ import org.jsoup.select.Elements;
 */
 
 public class FoodSystem {
-    
+
     public static void main(String[] args) {
         FoodSystem f = new FoodSystem();
     }
+
     // 1. 실행 => 파일(오라클)에 저장 
     // 1-1 초기화 블록 ==> 시작과 동시에 수행이 가능 
     // 1-2 생성자 ==> 시작과 동시 호출
-     /*
-      *  <div class="top_list_slide">
-         <ul class="list-toplist-slider" style="width: 531px;">
-             <li>
-               <img class="center-croping" alt="안주가 맛있는 술집 베스트 40곳 사진"
-                    data-lazy="https://mp-seoul-image-production-s3.mangoplate.com/keyword_search/meta/pictures/ypeawavxjl9-_zkc.png?fit=around|600:400&amp;crop=600:400;*,*&amp;output-format=jpg&amp;output-quality=80"/>
-               <a href="/top_lists/1482_anju"
-                  onclick="trackEvent('CLICK_TOPLIST', {&quot;section_position&quot;:0,&quot;section_title&quot;:&quot;믿고 보는 맛집 리스트&quot;,&quot;position&quot;:0,&quot;link_key&quot;:&quot;R3PGZKC&quot;});">
-                 <figure class="ls-item">
-                   <figcaption class="info">
-                     <div class="info_inner_wrap">
-                       <span class="title">안주가 맛있는 술집 베스트 40곳</span>
-                       <p class="desc">"맛있는 안주와 함께했더니 술에서 꿀맛이 나...!"</p>
-      */
+    /*
+     *  <div class="top_list_slide">
+        <ul class="list-toplist-slider" style="width: 531px;">
+            <li>
+              <img class="center-croping" alt="안주가 맛있는 술집 베스트 40곳 사진"
+                   data-lazy="https://mp-seoul-image-production-s3.mangoplate.com/keyword_search/meta/pictures/ypeawavxjl9-_zkc.png?fit=around|600:400&amp;crop=600:400;*,*&amp;output-format=jpg&amp;output-quality=80"/>
+              <a href="/top_lists/1482_anju"
+                 onclick="trackEvent('CLICK_TOPLIST', {&quot;section_position&quot;:0,&quot;section_title&quot;:&quot;믿고 보는 맛집 리스트&quot;,&quot;position&quot;:0,&quot;link_key&quot;:&quot;R3PGZKC&quot;});">
+                <figure class="ls-item">
+                  <figcaption class="info">
+                    <div class="info_inner_wrap">
+                      <span class="title">안주가 맛있는 술집 베스트 40곳</span>
+                      <p class="desc">"맛있는 안주와 함께했더니 술에서 꿀맛이 나...!"</p>
+     */
     public FoodSystem() {
         try {
             Document doc = Jsoup.connect("https://www.mangoplate.com/").get();
             Elements title = doc.select("div.top_list_slide span.title");
             Elements subject = doc.select("div.top_list_slide p.desc");
             StringBuffer sb = new StringBuffer();
-            for(int i = 0; i < title.size(); i++) {
+            for (int i = 0; i < title.size(); i++) {
                 System.out.println(title.get(i).text());
                 System.out.println(subject.get(i).text());
                 System.out.println("\n");
-                String data = (i + 1) + "|" + title.get(i).text() + "|"
-                           + subject.get(i).text() + "\n";
+                String data = (i + 1) + "|" + title.get(i).text() + "|" + subject.get(i).text() + "\n";
                 sb.append(data);
             }
-            
+
             File file = new File("c:\\java_data\\category.txt");
-            if(!file.exists()) {
+            if (!file.exists()) {
                 file.createNewFile();
             }
-            
+
             // 파일에 카테고리 저장하기 
             FileWriter fw = new FileWriter(file);
             fw.write(sb.toString());
             fw.close();
-        } catch(Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
     // 2. 사용자가 요청 => 파일(오라클) 읽어서 => ArrayList에 저장후 전송 
 }
-

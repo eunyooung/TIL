@@ -113,7 +113,7 @@ public class ExceptionTotal {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         //1. 정수를 두개를 받아서 나누기 => 0
         Scanner scan = new Scanner(System.in);
 

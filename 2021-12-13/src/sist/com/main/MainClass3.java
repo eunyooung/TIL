@@ -17,7 +17,7 @@ public class MainClass3 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 예외처리 
         //try {
         Scanner scan = new Scanner(System.in);

@@ -13,7 +13,7 @@ public class MainClass2 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 난수 변수 
         int[] com = { 5, 8, 3 };// 중복 없는 난수 => 피망맞고
         // 사용자 입력 

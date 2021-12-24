@@ -41,27 +41,29 @@ package sist.com.io;
 import java.io.*;
 
 public class MainClass7 {
-    
+
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         FileInputStream fis = null;
         try {
             fis = new FileInputStream("c:\\java_data\\news.txt");
             BufferedReader br = new BufferedReader(new InputStreamReader(fis));
-            
+
             // => 1byte => 2byte로 변경 (한글이 정상적으로 수행)
-            while(true) {
+            while (true) {
                 String data = br.readLine();
-                if(data == null) break; //값이 없는 경우에 종료
+                if (data == null)
+                    break; //값이 없는 경우에 종료
                 System.out.println(data);
             }
-        } catch(Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();// 에러 처리 
         } finally {
             try {
                 fis.close();// 파일 닫기 (에러,에러없다 상관없이 파일 닫기를 한다 
-            }catch(Exception ex) {}
+            } catch (Exception ex) {
+            }
         }
     }
 }

@@ -23,7 +23,7 @@ public class MainClass2 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 저장 공간 생성 (자료구조 => 메모리에 데이터를 저장하고 관리)
         // Stack(LIFO) / Queue(FIFO)=> 운영체제 를 만들어라 (코테)
         // index = 0 , index = langth - 1 

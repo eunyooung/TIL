@@ -8,7 +8,7 @@ public class MainClass_Temp {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         ArrayList list = new ArrayList();
         list.add("사과"); // 0
         list.add("배"); // 1
@@ -19,20 +19,20 @@ public class MainClass_Temp {
         list.add("복숭아");// 6
         System.out.println("===== 중복 제거전 =====");
         System.out.println(list.toString());
-        
+
         HashSet set = new HashSet();
-        for(Object obj:list) {
+        for (Object obj : list) {
             set.add(obj);
         }
-        
+
         System.out.println("===== Set 데이터 출력 =====");
         System.out.println(set.toString());
         list.clear();
         Iterator it = set.iterator();
-        while(it.hasNext()) {
+        while (it.hasNext()) {
             list.add(it.next());
         }
-        
+
         System.out.println("===== 중복 제거후 =====");
         System.out.println(list.toString());
     }

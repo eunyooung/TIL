@@ -25,11 +25,11 @@ enum 전화국번{
     제주특별자치도("064");
      
     private String code;
-    
+
     전화국번(String code) {
         this.code = code;
     }
-    
+
     // ()안에 있는 데이터 읽기
     public String getCode() {
         return code;
@@ -40,14 +40,14 @@ public class MainClass2 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         Scanner scan = new Scanner(System.in);
         System.out.print("시도 입력:");
         String sido = scan.next();
-        
-        for(전화국번 n:전화국번.values()) {
-            if(n.name().contains(sido)) {
-                System.out.println(sido+"의 국번은 "+n.getCode());
+
+        for (전화국번 n : 전화국번.values()) {
+            if (n.name().contains(sido)) {
+                System.out.println(sido + "의 국번은 " + n.getCode());
             }
         }
     }

@@ -28,6 +28,7 @@ onclick="fnViewAlbumLayer('82398969');return false;">
 쇼미더머니 10 Episode 3</a>
                                 </td>
  */
+
 public class MusicSystem {
 
     private static ArrayList list = new ArrayList(); // 뮤직의 전체정보를 가지고 있다 

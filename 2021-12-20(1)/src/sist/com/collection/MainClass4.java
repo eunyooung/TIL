@@ -70,7 +70,7 @@ public class MainClass4 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         /*
          * String[] names = new String[5]; // 배열의 단점 (고정) 
         //  메모리 크기가 더 필요하면 => String[] names2 = new String[10];
@@ -102,15 +102,14 @@ public class MainClass4 {
         st.push("오렌지");
         st.push("메론");
         // 스택 데이터 추출 => pop()
-        if(!st.isEmpty()) { // 스택안에 데이터가 있다면 
-            while(!st.isEmpty()) {
+        if (!st.isEmpty()) { // 스택안에 데이터가 있다면 
+            while (!st.isEmpty()) {
                 System.out.println(st.pop());
             }
-        }
-        else {
+        } else {
             System.out.println("데이터 존재하지 않습니다");
         }
-        
+
         System.out.println("============Queue============");
         Queue queue = new LinkedList(); // Queue생성 
         // interface => 미완성된 클래스 (자신이 new를 이용해서 메모리 할당을 할수 없다)
@@ -120,9 +119,9 @@ public class MainClass4 {
         queue.offer("춘향이");
         queue.offer("김두한");
         queue.offer("박문수");
-        
+
         System.out.println("=========출력==========");
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             System.out.println(queue.poll());
         }
     }

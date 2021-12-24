@@ -10,10 +10,11 @@ enum 사이트{
     NATE("www.nate.com");
     
     private String site;
+
     사이트(String site) {
         this.site = site;
     }
-    
+
     public String getSite() {
         return site;
     }
@@ -24,22 +25,23 @@ public class MainClass3 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        
+
         // 사용자로부터 값을 받는다 
         Scanner scan = new Scanner(System.in);
         System.out.print("방문 할 사이트 입력:");
         String s = scan.next();
-        
+
         //사이트 찾기
-        for(사이트 site:사이트.values()) {
+        for (사이트 site : 사이트.values()) {
             // equalsIgnoreCase(s) : 대소문자 구분없이 찾는다 
             // daum ,DAUM ,Daum....
-            if(site.name().equalsIgnoreCase(s)) {
+            if (site.name().equalsIgnoreCase(s)) {
                 String ss = site.getSite();
                 try {
                     // exe파일 실행시에 사용 => CheckException(반드시 예외처리)
                     Runtime.getRuntime().exec("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe " + ss);
-                } catch(Exception ex) {}
+                } catch (Exception ex) {
+                }
             }
         }
     }
