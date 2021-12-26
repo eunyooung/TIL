@@ -53,15 +53,15 @@ Used Book: 자바의 정석
     - [MainClass3](https://github.com/eunyooung/TIL/blob/main/2021-11-18/src/sist/com/controller/MainClass3.java) - *for loop, while loop, if statement, switch*
     - [MainClass4](https://github.com/eunyooung/TIL/blob/main/2021-11-18/src/sist/com/controller/MainClass4.java) - *while loop, do...while loop, if statement*
 * **2021-11-19**
-  - *sist.com.controller* - *(__Age, Year, Date, Yundal__ using Control Statements)*
-  - *sist.com.array* - *array*
+  - [*sist.com.controller*](https://github.com/eunyooung/TIL/blob/main/2021-11-19/src/sist/com/controller/MainClass.java) - *(__Age, Year, Date, Yundal__ using Control Statements)*
+  - [*sist.com.array*](https://github.com/eunyooung/TIL/tree/main/2021-11-19/src/sist/com/array) - *array*
 * **2021-11-22**
-  - *sist.com.array* - *array*
+  - [*sist.com.array*](https://github.com/eunyooung/TIL/tree/main/2021-11-22/src/sist/com/array) - *array*
 * **2021-11-23**
-  - *sist.com.array* - *array*
+  - [*sist.com.array*](https://github.com/eunyooung/TIL/tree/main/2021-11-23/src/sist/com/array) - *array*
 * **2021-11-24**
-  - *sist.com.array* - *(__CRUD__ using Array)*
-  - *sist.com.core.array* - array
+  - [*sist.com.array*](https://github.com/eunyooung/TIL/blob/main/2021-11-24/src/sist/com/array/MainClass.java) - *(__CRUD__ using Array)*
+  - [*sist.com.core.array*](https://github.com/eunyooung/TIL/tree/main/2021-11-24/src/sist/com/core/array) - array
 
 </br>
 
@@ -241,35 +241,35 @@ Used Book: 자바의 정석
     - [MainClass6](https://github.com/eunyooung/TIL/blob/main/2021-12-23(1)/src/sist/com/io/MainClass6.java) - *__FileWriter__ {write}, __FileReader__ {read()}*
     - [MainClass7](https://github.com/eunyooung/TIL/blob/main/2021-12-23(1)/src/sist/com/io/MainClass7.java) - *BufferedReader, InputStreamReader*
 * **2021-12-23(2)**
-  - *sist.com.main* - *(__News System__ using IO & Jsoup(Naver News))*
+  - [*sist.com.main*](https://github.com/eunyooung/TIL/tree/main/2021-12-23(2)/src/sist/com/main) - *(__News System__ using IO & Jsoup(Naver News))*
     - *FileWriter, FileInputStream, BufferedReader*
 * **2021-12-23(3)**
-  - *sist.com.food* - *(__Music System__ using IO & Jsoup(MangoPlate) & Lombook)*
+  - [*sist.com.food*](https://github.com/eunyooung/TIL/tree/main/2021-12-23(3)/src/sist/com/food) - *(__Music System__ using IO & Jsoup(MangoPlate) & Lombook)*
 * **2021-12-24(1)**
   - Book Chapter 15 (I/O - Object)
   - *sist.com.main*
-    - MainClass - *(__File copy__ using IO)
+    - [MainClass](https://github.com/eunyooung/TIL/blob/main/2021-12-24(1)/src/sist/com/main/MainClass.java) - *(__File copy__ using IO)
       - *FileInputStream, FileOutputStream*
-    - MainClass2 - *(__Write Address.txt__ using IO)*
+    - [MainClass2](https://github.com/eunyooung/TIL/blob/main/2021-12-24(1)/src/sist/com/main/MainClass2.java) - *(__Write Address.txt__ using IO)*
       - *FileWriter*
-    - MainClass3 - *(__Read Address.txt__ using IO)*
+    - [MainClass3](https://github.com/eunyooung/TIL/blob/main/2021-12-24(1)/src/sist/com/main/MainClass3.java) - *(__Read Address.txt__ using IO)*
       - *FileReader*
-    - MainClass4 - *(__Read Address.txt__ using IO)*
+    - [MainClass4](https://github.com/eunyooung/TIL/blob/main/2021-12-24(1)/src/sist/com/main/MainClass4.java) - *(__Read Address.txt__ using IO)*
       - *FileInputStream, BufferedReader*
-    - MainClass5 - *(__Write Sawon.txt__ using IO)*
+    - [MainClass5](https://github.com/eunyooung/TIL/blob/main/2021-12-24(1)/src/sist/com/main/MainClass5.java) - *(__Write Sawon.txt__ using IO)*
       - *FileOutputStream, __ObjectOutputStream__ {writeObject}*
-    - MainClass6 - *(__Read Sawon.txt__ using IO)
+    - [MainClass6](https://github.com/eunyooung/TIL/blob/main/2021-12-24(1)/src/sist/com/main/MainClass6.java) - *(__Read Sawon.txt__ using IO)
       - *FileInputStream, __ObjectInputStream__ {readObject()}*
 * **2021-12-24(2)**
   - Book Chapter 15 (I/O Application 1)
   - *sist.com.main*
-    - MainClass - *(__Read Movie.txt and write Movie_object.txt__ using IO)*
+    - [MainClass](https://github.com/eunyooung/TIL/blob/main/2021-12-24(2)/src/sist/com/main/MainClass.java) - *(__Read Movie.txt and write Movie_object.txt__ using IO)*
       - *FileInputStream, BufferedReader, FileOutputStream, ObjectOutputStream*
-    - MainClass2 - *(__Read Movie_object.txt__ using IO)*
+    - [MainClass2](https://github.com/eunyooung/TIL/blob/main/2021-12-24(2)/src/sist/com/main/MainClass2.java) - *(__Read Movie_object.txt__ using IO)*
       - *FileInputStream, ObjectInputStream*
 * **2021-12-24(3)**
   - Book Chapter 15 (I/O Application 2)
-  - *sist.com.main/music/temp* - *(Music System using IO & Jsoup(Genie))*
+  - [*sist.com.main/music/temp*](https://github.com/eunyooung/TIL/tree/main/2021-12-24(3)/src/sist/com) - *(Music System using IO & Jsoup(Genie))*
     - *ArrayList, FileOutputStream, ObjectOutputStream*
 
 </br>
@@ -280,11 +280,11 @@ Used Book: 자바의 정석
 
 ## Quizzes
 
-* **2021-12-15(problems)** - operator, control statement
-* **2021-12-16(problems)** - Control Statement
-* **2021-12-17(problems)** - Methods
-* **2021-12-20(problems)** - OOP
-* **2021-12-21(problems)** - OOP
-* **2021-12-22(problems)** - Exception
-* **2021-12-23(problems)** - Library
-* **2021-12-24(problems)** - Collection
+* [**2021-12-15(problems)**](https://github.com/eunyooung/TIL/tree/main/2021-12-15(problems)/src/sist/com/problems) - operator, control statement
+* [**2021-12-16(problems)**](https://github.com/eunyooung/TIL/tree/main/2021-12-16(problems)/src/sist/com/problems) - Control Statement
+* [**2021-12-17(problems)**](https://github.com/eunyooung/TIL/tree/main/2021-12-17(problems)/src/sist/com/problems) - Methods
+* [**2021-12-20(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-20(problems)/Questions.md) - OOP
+* [**2021-12-21(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-21(problems)/Questions.md) - OOP
+* [**2021-12-22(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-22(problems)/Questions.md) - Exception
+* [**2021-12-23(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-23(problems)/Questions.md) - Library
+* [**2021-12-24(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-24(problems)/Questions.md) - Collection
