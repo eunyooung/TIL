@@ -16,7 +16,7 @@ public class Client {
         // TODO Auto-generated method stub
         
         try {
-            Socket s = new Socket("211.63.89.99", 3355);
+            Socket s = new Socket("localhost", 3355);
         } catch (Exception ex) {
         }
     }

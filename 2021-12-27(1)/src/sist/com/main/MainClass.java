@@ -46,7 +46,7 @@ public class MainClass {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             
             //2. 오라클 연결
-            String url = "jdbc:oracle:thin:@211.63.89.99:1521:XE";
+            String url = "jdbc:oracle:thin:@localhost:1521:XE";
             Connection conn = DriverManager.getConnection(url, "hr", "happy");
             
             //3. 오라클 명령어 전송 
