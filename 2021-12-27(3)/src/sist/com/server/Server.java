@@ -51,14 +51,11 @@ import java.net.*;
  *       => 만드는 방법 
  *          =========
  *          인터페이스
- *            => class A implements Runable
- *               {
- *                   public void run()
- *                   {
+ *            => class A implements Runable {
+ *                   public void run() {
  *                   }
  *               } 
- *          상속 class A extends Thread
- *              {
+ *          상속 class A extends Thread {
  *              }
  *              
  *       => Thread의 생명 주기 
@@ -72,11 +69,11 @@ import java.net.*;
  */
 
 public class Server implements Runnable {
-    //1. 접속한 클라이언트(정보:IP,PORT) 저장 
+    // 1. 접속한 클라이언트(정보:IP,PORT) 저장 
     private Vector<Client> waitVc = new Vector<Client>();
-    //2. 서버 가동 
+    // 2. 서버 가동 
     private ServerSocket ss;
-    //3. PORT(연결선) 
+    // 3. PORT(연결선) 
     private final int PORT = 3355;//0~65535사이에서 결정 
     // 서버가동 
     // 접속시에 처리 => waitVc저장에 저장 
@@ -111,12 +108,14 @@ public class Server implements Runnable {
 
     // 접속한 클라이언트와 통신 (요청 => 응답) ==> JSP
     class Client extends Thread {
-        //통신 => 입출력 
-        //클라이언트로부터 요청을 받는다
+        // 통신 => 입출력 
+        // 클라이언트로부터 요청을 받는다
         BufferedReader in;
-        //클라이언트로 값을 전송
+        
+        // 클라이언트로 값을 전송
         OutputStream out;
-        //전화 받기
+        
+        // 전화 받기
         Socket s;
 
         public Client(Socket s) {
@@ -134,6 +133,7 @@ public class Server implements Runnable {
                 try {
                     // 클라이언트가 보내준 요청을 읽는다 
                     String msg = in.readLine();
+                    
                     // 접속한 모든 사람에게 전송 
                     for (Client c : waitVc) {
                         c.out.write((msg + "\n").getBytes());
