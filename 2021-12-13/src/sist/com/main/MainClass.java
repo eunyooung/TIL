@@ -43,16 +43,15 @@ package sist.com.main;
  *                   => Integer.parseInt("10");
  *                      Integer.parseInt("10 ");
  *                      list.jsp?page=1  => "1" , " 1"
- *           => class A
- *              {
+ *           => class A {
  *                 public void display(){}
  *              }
  *                
- *              A a; => A a=new A();
+ *              A a; => A a = new A();
  *              a.display();  => NullPointerException
  *              
- *           => int[] arr=new int[2];
- *              arr[2]=100;   ====== 0,1
+ *           => int[] arr = new int[2];
+ *              arr[2] = 100;   ====== 0,1
  *              ArrayIndexOutOfBoundsException
  *              
  *           => 10/0 => ArithmeticException 
@@ -115,17 +114,13 @@ package sist.com.main;
  *       예외처리 사용법 
  *       1) 직접처리(예외복구) => try~catch~finally(생략이 가능)
  *       
- *       try
- *       {
+ *       try {
  *          정상수행이 가능한 소스 (지금까지 코딩한 내용)
  *          ==> 에러 발생 
  *              프로그래머 실수 , 사용자 실수 
- *       } catch(예외처리의 종류) ==> 여러번 사용이 가능 (예상되는 에러)
- *       {
+ *       } catch(예외처리의 종류) { ==> 여러번 사용이 가능 (예상되는 에러)
  *          ==> 에러 처리 ==> 복구 
- *       }
- *       finally
- *       {
+ *       } finally {
  *          ==> 정상 수행 , 비정상 수행 => 무조건 실행 
  *              네트워크 서버 해제 , 오라클 연결 해제 
  *       }
@@ -135,8 +130,7 @@ package sist.com.main;
  *        
  *        
  *        => 
- *        try
- *        {
+ *        try {
  *           1. 사용자의 입력값 받기 (정수 2개)
  *           2. 두개의 정수를 배열에 저장 (배열 범위 초과) 
  *                ===> 에러발생  
@@ -148,40 +142,29 @@ package sist.com.main;
  *           4. 결과값을 출력  
  *          ============================================
  *           
- *        } catch(배열 범위 초과)
- *        {
+ *        } catch(배열 범위 초과) {
  *           처리 ===>  처리 (원상 복구)
- *        }catch(0으로 나눌 경우)
- *        {
+ *        } catch(0으로 나눌 경우) {
  *           처리
- *        }
- *        finally
- *        {
+ *        } finally {
  *           try,catch와 관계없이 무조건 수행하는 문장 
  *        }
  *        
  *        |
  *       밖에 있는 문장 수행
  *       
- *       public static void main(String[] arg)
- *       {
+ *       public static void main(String[] arg) {
  *            1) 문장  ==> 수행
  *            2) 문장  ==> 수행
- *            try
- *            {
+ *            try  {
  *               3)문장 ==> 수행 
  *               4)문장 ==> 예외처리 종류1 발생 catch이동 
  *               5)문장
- *            }catch(예외 처리 종류1)
- *            {
+ *            } catch(예외 처리 종류1) {
  *               6)문장 ==> 수행 
- *            }
- *            catch(예외 처리 종류2)
- *            {
+ *            } catch(예외 처리 종류2) {
  *               7)문장
- *            }
- *            finally
- *            {
+ *            } finally {
  *               8)문장 ==> 수행 (무조건 수행) => 생략이 가능 
  *            }
  *            

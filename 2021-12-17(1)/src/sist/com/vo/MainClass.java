@@ -1,12 +1,13 @@
 package sist.com.vo;
 
-//==> 모아서 처리 
+// ==> 모아서 처리 
 import java.util.*;
 
 public class MainClass {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
+        
         // 초기값 
         Food food = new Food(); // 맛집 1개를 만든다 
         // 어떤 데이터를 저장할지 초기값 => 저장 

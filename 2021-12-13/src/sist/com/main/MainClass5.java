@@ -6,10 +6,12 @@ package sist.com.main;
 *   catch(예외처리클래스|예외처리클래스 a2) // 예상되는 에러가 여러개
 *   // 사용 빈도는 거의 없다 
 */
-import java.util.*; //Scanner 
-//생략이 가능한 패키지 => java.lang.* (Object,String,StringBuffer..)
-//java.lang , java.util , java.io , java.net , javax....
-//java.sql 
+
+import java.util.*; //Scanner
+
+// 생략이 가능한 패키지 => java.lang.* (Object,String,StringBuffer..)
+// java.lang , java.util , java.io , java.net , javax....
+// java.sql 
 
 public class MainClass5 {
 
@@ -29,6 +31,7 @@ public class MainClass5 {
          *    ==> | 로 연결 
          *    ==> Exception/RuntimeException 
          */
+        
         try {
             // 정상수행이 가능한 소스 
             Scanner scan = new Scanner(System.in);

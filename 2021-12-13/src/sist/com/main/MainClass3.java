@@ -70,9 +70,8 @@ public class MainClass3 {
             // 예외처리 => 에러를 사전에 방지 (if) ==> try~catch
             // 코테 => 오류방지 
         }
-        //}catch(Exception e)
-        //{
-        //System.out.println("입력된 경로가 틀립니다!!");
+        //} catch(Exception e) {
+        //    System.out.println("입력된 경로가 틀립니다!!");
         //}
     }
 }

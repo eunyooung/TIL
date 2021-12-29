@@ -9,7 +9,7 @@ public class MainClass6 {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 
-        Vector list = new Vector(); //ArrayList,LinkedList
+        Vector list = new Vector(); // ArrayList, LinkedList
 
         // 데이터 추가 
         list.add("0");

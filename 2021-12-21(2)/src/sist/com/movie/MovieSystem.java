@@ -82,14 +82,14 @@ public class MovieSystem {
         }
     }
     
-    //1.종류별 목록 
+    // 1.종류별 목록 
     // ArrayList<Movie> => 영화정보 전체
     // Movie => 영화 한개 
     public ArrayList<Movie> movieAllData() {
         return list;
     }
     
-    //2.상세보기 (영화한개에 대한 정보를 본다)
+    // 2.상세보기 (영화한개에 대한 정보를 본다)
     public Movie movieDetailData(int no) {
         Movie m = new Movie();
         for(Movie mm:list) {
@@ -100,7 +100,7 @@ public class MovieSystem {
         }
         return m;
     }
-    //3. 찾기 => 영화가 여러개 있는 경우도 있다 
+    // 3. 찾기 => 영화가 여러개 있는 경우도 있다 
     public ArrayList<Movie> movieFind(String title) {
         ArrayList<Movie> mList=new ArrayList<Movie>();
         // mList에 찾은 영화(Movie) 모아서 넘겨준다

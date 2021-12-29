@@ -8,25 +8,20 @@ package sist.com.lib;
  *    예외처리 
  *     = 예외 복구 (try~catch~finally)
  *       형식)
- *            try
- *            {
+ *            try {
  *              ====================================
  *                정상적으로 수행하는 문장 
  *                => 사용자 실수 , 프로그래머 실수 
  *                   원하지 않는 에러가 발생 (사전에 대비)
  *              ====================================
- *            }
- *            catch(예외처리 종류)
- *            {
+ *            } catch (예외처리 종류) {
  *              =========================
  *               => 에러 복구를 하는 프로그램 
  *               => 에러 위치 확인 
  *               => 여러개를 사용 할 수 있다 (예상되는 에러를 잡을 수 있다)
  *               => 통합 : Exception/Throwable
  *              =========================
- *            }
- *            finally
- *            {
+ *            } finally {
  *              ================
  *               => 닫기 (서버,오라클,파일)
  *               => 생략이 가능 
@@ -43,10 +38,9 @@ package sist.com.lib;
  *         2) try~catch이용하는 방식 
  *         3) 예외가 여러개 선언시에 Exception,Throwable로 통합이 가능하다 
  *    = try~with~resource 
- *      try (FileReader fr=new FileReader(""))
- *      {
+ *      try (FileReader fr = new FileReader("")) {
  *          fr는 try 블록이 종료가 되면 자동으로 fr.close() 호출 
- *      }catch(Exception e){}
+ *      } catch (Exception e) { }
  *      
  *      => 계층구조 
  *         = CheckException
@@ -101,5 +95,4 @@ public class DailyNote {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
     }
-
 }

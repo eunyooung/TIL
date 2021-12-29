@@ -27,7 +27,7 @@ public class MainClass11 {
         // 배열 초기화 
         Random r = new Random();
         for (int i = 0; i < 10; i++) {
-            score[i] = r.nextInt(101); //0~100
+            score[i] = r.nextInt(101); // 0~100
         }
         System.out.println(Arrays.toString(score));
         // 기준 

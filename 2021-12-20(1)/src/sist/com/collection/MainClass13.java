@@ -1,6 +1,6 @@
 package sist.com.collection;
 
-//Map => 키와 값으로 설정 
+// Map => 키와 값으로 설정 
 
 import java.util.*;
 

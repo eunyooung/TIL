@@ -30,15 +30,15 @@ package sist.com.lib;
  *   2권 컬렉션 , 제네릭스 (10장 , SimpleDateFormat)
  *       11장 , 12장 
  *      IO (FileReader , FileWriter , BufferedReader) 
- *   
- *   
  */
+
 import java.util.*;
 
 public class MainClass7 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
+        
         // 1. 데이터 저장 
         String[] data = { "혼자 배우는 자바", "자바와 오라클", "자바기반의 AWS", "오라클 프로그래밍", "자바 프로그래밍", "JSP AND MVC",
                 "Spring Framework", "MyBatis 프로그래밍", "자바를 이용한 챗봇", "AWS를 이용한 배포", };

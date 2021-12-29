@@ -1,6 +1,6 @@
 package sist.com.lib;
 
-// 469page~471page (String) => AI,RPA,통계, 수집 => 문자열 
+// 469page ~ 471page (String) => AI,RPA,통계, 수집 => 문자열 
 // 웹 , 윈도우 => 문자열만 사용이 가능 
 // HTML => <input type="text"> 10 ==> "10"
 
@@ -20,11 +20,12 @@ package sist.com.lib;
 *                       ==> charAt(6) => 'J'
 */
 
-//charAt ==> 연산(계산기) 
+// charAt ==> 연산(계산기)
+
 import java.util.*;
 
 public class MainClass3 {
-    //인스턴스 => MainClass3을 메모리에 저장후에 사용 
+    // 인스턴스 => MainClass3을 메모리에 저장후에 사용 
     // throws => 선언된 예외클래스를 처리후에 사용을 해야된다 
     public void calc() throws ArithmeticException, NumberFormatException, Exception {
         Scanner scan = new Scanner(System.in);

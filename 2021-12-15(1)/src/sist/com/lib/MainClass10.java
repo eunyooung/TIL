@@ -41,10 +41,10 @@ import java.util.StringJoiner;
  *      =================
  *           &(*)   |(+)
  *      =================
-        0 0   0     0
-        0 1   0     1
-        1 0   0     1
-        1 1   0     1
+ *       0 0   0     0
+ *       0 1   0     1
+ *       1 0   0     1
+ *       1 1   0     1
  */
 
 public class MainClass10 {
@@ -55,7 +55,7 @@ public class MainClass10 {
         // 날짜 => 예약 날짜 [~]
         String name = "홍길동,박문수,심청이,이순신,강감찬";
         String[] names = name.split(",");
-        // names = {"홍길동","박문수","심청이","이순신","강감찬"}
+        //names = {"홍길동","박문수","심청이","이순신","강감찬"}
 
         // 출력 
         for (String n : names) {

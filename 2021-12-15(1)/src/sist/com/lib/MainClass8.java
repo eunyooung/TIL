@@ -1,8 +1,8 @@
 package sist.com.lib;
 
-//응용 => toUpperCase(문자-32) , toLowerCase(문자+32)
+// 응용 => toUpperCase(문자-32) , toLowerCase(문자+32)
 
-//조건 ==> && (포함), ||(미포함)
+// 조건 ==> && (포함), ||(미포함)
 
 /*
 *   if(score >= 0 && score <= 100) => BETWEEN 0 AND 100

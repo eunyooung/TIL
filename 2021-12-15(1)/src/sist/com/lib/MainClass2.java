@@ -11,9 +11,9 @@ package sist.com.lib;
 *        ==> 제공한 내용을 사용한다 
 *        ==> 모든 개발자 동일하게 사용 
 *   1. 데이터형으로 사용
-*      String s="";  
+*      String s = "";  
 *   2. 클래스형으로 사용
-*      String s=new String("");
+*      String s = new String("");
 *   3. 기능(제공) => 메소드 
 *      = charAt(int index) ==> 자바는 인덱스번호 => 0번부터 , 오라클=>1번
 *        예) 

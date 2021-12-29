@@ -24,18 +24,18 @@ public class MainClass {
     }
 
     public void firstOperator() {
-        //()우선순위 변경   []
-        //int []m; 배열선언시 사용 
-        //. 주소링크
+        // ()우선순위 변경   []
+        // int []m; 배열선언시 사용 
+        // . 주소링크
     }
 
     public static void main(String[] args) {
-        MainClass o = new MainClass();//HEAP
+        MainClass o = new MainClass(); // HEAP
         o.firstOperator();
-        //System.out.println(o.firstOperator(1, 2, 3, 4));//
+        //System.out.println(o.firstOperator(1, 2, 3, 4));
         /*
-         * int rs = o.firstOperator(5, 6, 7);//5,6,7 argumets
-         * System.out.printf("firstOperator Result=%d", rs);
+         * int rs = o.firstOperator(5, 6, 7); // 5,6,7 arguments
+         * System.out.printf("firstOperator Result = %d", rs);
          */
     }
 }

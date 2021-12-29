@@ -101,14 +101,11 @@ package sist.com.method;
  *                    => 오버로딩을 지원 
  *                    => 서버연결 / 오라클 드라이버 설정 
  *             = 초기화 블록 
- *               class A
- *               {
- *                  선언 
- *                  {
+ *               class A {
+ *                  선언 {
  *                    구현  => 인스턴스 블록 
  *                  }
- *                  static
- *                  {
+ *                  static {
  *                     정적 블록 
  *                  }
  *               }
@@ -226,7 +223,7 @@ class MyDate {
     // 조립 => 기능없이 함쳐준다 
     public void process() { // 조립후 출력 => 결과값이 없다 (void)
         // 사용자 요청값 받기 
-        year = input("년도");// year=0,month=0,week=0
+        year = input("년도"); // year=0,month=0,week=0
         // year = 2021
         // month = 12
         month = input("월"); // lastday[month-1] => lastday[-1]

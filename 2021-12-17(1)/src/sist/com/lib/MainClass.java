@@ -20,9 +20,9 @@ package sist.com.lib;
  *       String / StringBuffer
  *         => 문자열을 제어하는 클래스 (웹 => 문자열 제어)
  *         => 문자열을 저장 하는 방법 
- *            String s="Hello"; // "Hello" (문자열은 자체가 메모리주소)
+ *            String s = "Hello"; // "Hello" (문자열은 자체가 메모리주소)
  *              "Hello"가 가지고 있는 주소을 대입 
- *            String s=new String("Hello");
+ *            String s = new String("Hello");
  *              새로운 메모리 생성 (new => 새로운 메모리 생성)
  *         => *** java.lang에서 지원하는 클래스 대부분이 final클래스다 
  *                => 상속을 받을 수 없다 (종단 클래스 => 확장해서 사용 금지)
@@ -56,14 +56,14 @@ package sist.com.lib;
  *                               => 필요없는 부분을 제거 
  *                               => 일반 문자/문자열 설정
  *                               => 숫자를 지운다 
- *                               => replace('0',"")
+ *                               => replace('0', "")
  *                                  ==
  *                                  ==
- *                                  replace('9',"")
+ *                                  replace('9', "")
  *               replaceAll    : 원하는 부분의 문자/문자열을 변경 
  *                               => 일반 문자/문자열 설정, 문자열 형태
  *                               => 문자 형태를 가지고 찾는 경우 (정규식)
- *                               => replaceAll("[0-9]","")
+ *                               => replaceAll("[0-9]", "")
  *               concat : 문자열 결합 (사용빈도가 거의 없다) ==> +
  *            4) 찾기 
  *               indexOf() : 지정한 문자/문자열의 위치를 찾는 경우에 사용 
@@ -76,13 +76,13 @@ package sist.com.lib;
  *                 => 오버로딩 : 같은 메소드명으로 여러개의 기능을 만드는 경우 
  *                    => 매개변수의 갯수나 데이터형이 다른 경우
  *                    substring(int begin)
- *                    String s="Hello Java!!"
- *                              0123455678910
+ *                    String s = "Hello Java!!"
+ *                               0123455678910
  *                    s.substring(3) ==> lo Java!!
- *                    substring(int begin,int end)
+ *                    substring(int begin, int end)
  *                    String s="Hello Java!!"
- *                    s.substring(1,5) => ello
- *                                  = end-1 (제외)
+ *                    s.substring(1, 5) => ello
+ *                                  = end - 1 (제외)
  *               split 
  *                 => 구분문자를 이용해서 자르는 역할 (StringTokenizer)
  *                 => 자른 문자열을 배열로 모아서 넘겨준다 
@@ -137,17 +137,16 @@ package sist.com.lib;
  *            nextToken() : 자른 문장열 
  *            => 자른 문장열을 읽은 경우에 초과하면 오류가 발생 
  *            => 예)
- *                  String words="aaa|bbb|ccc";
- *                  StringTokenizer st=
- *                         new StringTokenizer(words,"|")
- *                  String s1=st.nextToken();
- *                  String s2=st.nextToken();
- *                  String s3=st.nextToken();
- *                  String s4=st.nextToken(); // 초과 (오류발생)
+ *                  String words = "aaa|bbb|ccc";
+ *                  StringTokenizer st = new StringTokenizer(words,"|")
+ *                  String s1 = st.nextToken();
+ *                  String s2 = st.nextToken();
+ *                  String s3 = st.nextToken();
+ *                  String s4 = st.nextToken(); // 초과 (오류발생)
  *         => 데이터 수집  ( | ), 그림이 여러개 
  *      ***Date 
  *         시스템의 날짜,시간을 읽어 온다 (오라클과 호환)
- *         Date date=new Date()
+ *         Date date = new Date()
  *      ***Calendar
  *         달력 만들기 , 요일 확인 , 각 달의 마지막 날을 가지고 오는 경우
  *         => 추상 클래스 (인터페이스) => 미완성 클래스 (메모리에 저장이 불가능)
@@ -168,12 +167,12 @@ package sist.com.lib;
  *                                    2.ANNOTATION => 구분
  *                                    3.인터페이스 => 클래스 제어 
  *         => 객체 생성 
- *            Calendar cal=Calendar.getInstance()
+ *            Calendar cal = Calendar.getInstance()
  *            1. 날짜 설정 
- *               cal.set(Calendar.YEAR,2021)
- *               cal.set(Calendar.MONTH,12(X) month-1) => 0~11
+ *               cal.set(Calendar.YEAR, 2021)
+ *               cal.set(Calendar.MONTH, 12(X) month - 1) => 0~11
  *                    12월 => 11
- *               cal.set(Calendar.DATE,17)
+ *               cal.set(Calendar.DATE, 17)
  *            2. 요일을 읽어 온다 (요일 : 1~7) => 0~6  ==> week-1
  *                                
  *      Scanner : 키보드 입력값을 읽는 경우 
@@ -261,7 +260,7 @@ package sist.com.lib;
  *                       add(int index,Object obj)
  *                       *** Object (매개변수) => 모든 데이터를 첨부
  *              => 2. 수정 
- *                    => set(int index,수정할 데이터)
+ *                    => set(int index, 수정할 데이터)
  *              => 3. 삭제
  *                    => remove(int index)
  *              => 4. 읽기
@@ -296,7 +295,7 @@ public class MainClass {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 
-        //1. ArrayList 객체 생성 
+        // 1. ArrayList 객체 생성 
         ArrayList list = new ArrayList(); // 단점은 모든 데이터가 Object로 저장 
         // index번호는 자동으로 생성 ==> 0번부터 시작 (배열)
         /*
@@ -329,21 +328,21 @@ public class MainClass {
          *   => 반복문을 수행하기 쉽게 => 인덱스번호 자동 조절 
          */
         // Object로 저장이 되면 => 값을 읽어 올때 반드시 형변환 => for-each를 사용 할 수 없다
-        //2. ArrayList 저장 (맨뒤에 추가) ==> add(데이터)
-        //3. ArrayList 저장 (원하는 위치에 추가) ==> add(index번호,데이터)
-        //4. ArrayList 저장된 데이터 읽기  ==> get(index번호)
-        //5. ArrayList 저장된 갯수 확인 ==> size() 
-        //6. ArrayList 저장된 데이터 수정 ==> set(index번호,데이터)
-        //7. ArrayList 저장된 데이터 삭제 ==> remove(index번호)
-        //8. ArrayList 저장된 데이터 전체 삭제 ==> clear()
+        // 2. ArrayList 저장 (맨뒤에 추가) ==> add(데이터)
+        // 3. ArrayList 저장 (원하는 위치에 추가) ==> add(index번호,데이터)
+        // 4. ArrayList 저장된 데이터 읽기  ==> get(index번호)
+        // 5. ArrayList 저장된 갯수 확인 ==> size() 
+        // 6. ArrayList 저장된 데이터 수정 ==> set(index번호,데이터)
+        // 7. ArrayList 저장된 데이터 삭제 ==> remove(index번호)
+        // 8. ArrayList 저장된 데이터 전체 삭제 ==> clear()
 
         // 1. 이름 추가 
-        list.add("홍길동");//0 // =>데이터는 어떤 데이터형이든 관계가 없다 
+        list.add("홍길동"); // 0 // =>데이터는 어떤 데이터형이든 관계가 없다 
         //       ======= Object가 설정 (Object는 모든 데이터형을 받아서 관리)
-        list.add("심청이");//1
-        list.add("김두한");//2
-        list.add("강감찬");//3
-        list.add("박문수");//4 
+        list.add("심청이"); // 1
+        list.add("김두한"); // 2
+        list.add("강감찬"); // 3
+        list.add("박문수"); // 4 
 
         // 출력 
         for (int i = 0; i < list.size(); i++) {
@@ -399,7 +398,7 @@ public class MainClass {
         // 인덱스번호는 항상 => 0부터 순차적으로 유지 (ArrayList클래스에서 조절)
         System.out.println("======원하는 위치에 데이터 추가 =======");
         list.add(2, "이순신");
-        //출력 
+        // 출력 
         for (int i = 0; i < list.size(); i++) { //범위를 벗어나면 오류 발생 (저장된 갯수만큼)
             String name = (String) list.get(i);
             System.out.println(i + "." + name);
@@ -435,7 +434,7 @@ public class MainClass {
         list.remove(3);
         // *** ArrayList => 메모리에 저장 => 프로그램을 종료하면 자동으로 메모리에서 사라진다 
         // 유지가 가능게 만든다 ==> 파일 , 오라클 (영구적으로 저장)
-        for (int i = 0; i < list.size(); i++) { //범위를 벗어나면 오류 발생 (저장된 갯수만큼)
+        for (int i = 0; i < list.size(); i++) { // 범위를 벗어나면 오류 발생 (저장된 갯수만큼)
             String name = (String) list.get(i);
             System.out.println(i + "." + name);
         }

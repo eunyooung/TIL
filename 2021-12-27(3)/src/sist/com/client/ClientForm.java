@@ -26,12 +26,14 @@ import java.net.*;
 import java.util.*;
 
 public class ClientForm extends JFrame implements Runnable, ActionListener {
+    
     // 화면 UI관련 
     JTable table;
     DefaultTableModel model;
     JTextArea ta;
     JTextField tf;
     JButton loginBtn, sendBtn, endBtn;
+    
     // 네트워크와 관련 
     Socket s; // 서버와 연결 
     BufferedReader in; // 서버로부터 값을 읽어 온다 
@@ -39,9 +41,10 @@ public class ClientForm extends JFrame implements Runnable, ActionListener {
     String name = "";
 
     public ClientForm() {
+        
         // 멤버변수의 초기화 
         ta = new JTextArea();
-        ta.setEditable(false);// 편집방지
+        ta.setEditable(false); // 편집방지
         JScrollPane js1 = new JScrollPane(ta);
         tf = new JTextField();
         loginBtn = new JButton("로그인");
@@ -80,6 +83,7 @@ public class ClientForm extends JFrame implements Runnable, ActionListener {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
+        
         new ClientForm();
     }
 

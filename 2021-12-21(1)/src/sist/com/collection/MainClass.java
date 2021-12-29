@@ -319,12 +319,12 @@ public class MainClass {
         // 중복제거 
         System.out.println("==== List => Set ====");
         HashSet set2 = new HashSet();
-        set2.addAll(list2);// list2에 있는 모든 데이터를 => set2으로 이동
+        set2.addAll(list2); // list2에 있는 모든 데이터를 => set2으로 이동
         for (Object obj : set2) {
             System.out.println(obj);
         }
 
-        list2.clear();// List,Set갱신=> 한번을 전체 삭제 => 추가
+        list2.clear(); // List,Set갱신=> 한번을 전체 삭제 => 추가
         list2.addAll(set2);
         // => List => Set , Set => List로 변경이 가능 addAll()
         for (Object obj : list2) {
@@ -355,7 +355,7 @@ public class MainClass {
             System.out.println(name);
         }
         */
-        Set s = map.keySet();// map에 저장되어 있는 키 전체를 읽어 온다 
+        Set s = map.keySet(); // map에 저장되어 있는 키 전체를 읽어 온다 
         Iterator i = s.iterator();
         while (i.hasNext()) {
             String key = (String) i.next();

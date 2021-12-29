@@ -11,7 +11,7 @@ public class MainClass3 {
         System.out.println(~data);
     }
 
-    //최우선,단항,산술 +,-, *,/,% 
+    // 최우선,단항,산술 +,-, *,/,% 
     public double calcOperator(int x, int y, int z, int k) {
         return (x + y * z / k) % 10;
     }
@@ -39,6 +39,6 @@ public class MainClass3 {
         //System.out.println(o.calcOperator(11));
 
         //o.unaryOperator(-11);
-        //System.out.println(o.unaryOperator(1,2,3,4,5));//9
+        //System.out.println(o.unaryOperator(1,2,3,4,5)); //9
     }
 }

@@ -1,6 +1,7 @@
 package sist.com.lib;
 
-// MessageFormat => 출력형식 
+// MessageFormat => 출력형식
+
 import java.util.*;
 import java.text.*;
 
@@ -18,7 +19,7 @@ public class MainClass10 {
         // insert / update
         /*
         String msg = "이름:{0}\n전화번호:{1}\n주소:{2}\n성별:{3}";
-        Object[] obj = {"홍길동","010-1111-1111","서울","남자"};
+        Object[] obj = { "홍길동", "010-1111-1111", "서울", "남자" };
         String res=MessageFormat.format(msg, obj);
         System.out.println(res);
         */

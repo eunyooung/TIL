@@ -1,10 +1,10 @@
 package sist.com.controller;
 
-//if,if else,if elseif elseif else,switch case default
-//looping   for,while,do~while  (break,return)
+// if,if else,if elseif elseif else,switch case default
+// looping   for,while,do~while  (break,return)
 public class MainClass2 {
 
-    //if ~ else if 차이점 
+    // if ~ else if 차이점 
     public void controlEx1(double avg) {
         if (avg >= 90)
             System.out.println("A");

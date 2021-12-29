@@ -3,8 +3,8 @@ package sist.com.lib;
 // StringBuffer
 // StringBuilder
 
-//동기화  / 비동기화 
-//데이터 수집 => 나머지 String
+// 동기화  / 비동기화 
+// 데이터 수집 => 나머지 String
 
 import java.io.*; // 파일 읽기
 
@@ -36,13 +36,13 @@ public class MainClass11 {
     public void stringBufferUse() {
 
         StringBuffer sb = new StringBuffer();
-        long start = System.currentTimeMillis();//log파일 
+        long start = System.currentTimeMillis(); // log파일 
         // 파일 읽기
         // IOException ==> CheckException
         try {
             // 파일 읽기 
             FileReader fr = new FileReader("c:\\javaDev\\movie.txt");
-            int i = 0;//char => read() => int  A=65
+            int i = 0; //char => read() => int  A=65
             while ((i = fr.read()) != -1) { //-1 EOF
                 sb.append(String.valueOf((char) i));
             }

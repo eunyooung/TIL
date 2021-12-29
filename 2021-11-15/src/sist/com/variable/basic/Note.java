@@ -24,6 +24,7 @@ package sist.com.variable.basic;
     - 형변환(CASTING)
     - Operator(연산자)계산을 목적으로 사용되는 기호 
  */
+
 public class Note {
 
 }

@@ -18,7 +18,7 @@ package sist.com.collection;
  *                 => 데이터가 여러종류를 첨부 => 제어하기 어렵다(반복문 수행이 어렵다)
  *                 => 같은 데이터형 처리
  *                 => String , Integer , ***사용자 정의 클래스  
- *                 ArrayList list=new ArrayList();
+ *                 ArrayList list = new ArrayList();
  *                  => 데이터 저장 공간 생성 
  *                  => 1) 데이터 추가 
  *                     list.add("홍길동");
@@ -29,7 +29,7 @@ package sist.com.collection;
  *                      ==> 반복문을 사용하려면 
  *                          => 패턴 (수 => 수열)
  *        2. 삭제 : remove(int index)
- *        3. 수정 : set(int index,Object o)
+ *        3. 수정 : set(int index, Object o)
  *        ***4. 읽기 : get(int index) 
  *        ***5. 저장 갯수 : size() 
  *        6. 데이터 유무 : isEmpty() (boolean)
@@ -87,11 +87,11 @@ public class MainClass {
         LinkedList list = new LinkedList();
 
         // 2. 데이터 저장 
-        list.add("사과");//0
-        list.add("포도");//1
-        list.add("배");//2
-        list.add("수박");//3
-        list.add("귤");//4
+        list.add("사과"); // 0
+        list.add("포도"); // 1
+        list.add("배"); // 2
+        list.add("수박"); // 3
+        list.add("귤"); // 4
 
         // 3. 확인 
         for (int i = 0; i < list.size(); i++) {
@@ -103,11 +103,11 @@ public class MainClass {
         // 5. 수정 
         list.set(4, "오렌지");
         /*
-                list.add("사과");//0
-                list.add("포도");//1
-                list.add("배");//2
-                list.add("수박");//3
-                list.add("오렌지");//4
+                list.add("사과"); // 0
+                list.add("포도"); // 1
+                list.add("배"); // 2
+                list.add("수박"); // 3
+                list.add("오렌지"); // 4
          */
 
         // 6. 출력
@@ -120,10 +120,10 @@ public class MainClass {
         // 7. 삭제
         list.remove(2);
         /*
-                list.add("사과");//0
-                list.add("포도");//1
-                list.add("수박");//2
-                list.add("오렌지");//3
+                list.add("사과"); // 0
+                list.add("포도"); // 1
+                list.add("수박"); // 2
+                list.add("오렌지"); // 3
          */
 
         // 8. 출력 
@@ -135,7 +135,7 @@ public class MainClass {
         }
         */
 
-        for (Object obj : list) { //list는 Object가 첨부되어 있다 
+        for (Object obj : list) { // list는 Object가 첨부되어 있다 
             System.out.print(obj + " ");
         }
 

@@ -37,8 +37,6 @@ import java.util.Arrays;
  *     2 ==> 3
  *     3 ==> 2
  *     4 ==> 1     i+j=5  ==> j=5-i
- *   
- *   
  */
 
 public class MainClass2 {

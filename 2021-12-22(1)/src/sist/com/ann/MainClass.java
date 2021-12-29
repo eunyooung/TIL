@@ -41,7 +41,7 @@ public class MainClass {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("메소드 호출(a,b,c,d,e):");
-        String method = scan.next();// 사용자가 요청 
+        String method = scan.next(); // 사용자가 요청 
         switch (method) { // 사용자 요청 처리 
         case "a":
             u.aaa();

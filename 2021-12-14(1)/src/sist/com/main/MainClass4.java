@@ -8,7 +8,8 @@ import java.io.*;
 public class MainClass4 {
     // throws FileNotFoundException,IOException => throws Exception
     // throws FileNotFoundException,IOException => throws Throwable
-    /*public static void main(String[] args) 
+    /*
+    public static void main(String[] args) 
     	throws FileNotFoundException,IOException {
     // TODO Auto-generated method stub
     // 파일 읽기 
@@ -18,11 +19,13 @@ public class MainClass4 {
             System.out.print((char)i);
         }
         fr.close();
-    }*/
+    }
+    */
 
-    /*public static void main(String[] args) {
-    	FileReader fr = null;// main 전체에서 사용 
-    	try {
+    /*
+    public static void main(String[] args) {
+        FileReader fr = null;// main 전체에서 사용 
+        try {
             fr = new FileReader("c:\\javaDev\\movie.txt");
             int i = 0;
             while((i = fr.read()) != -1) {
@@ -36,8 +39,10 @@ public class MainClass4 {
                 fr.close();
             }catch(IOException ex){}
         }
-    }*/
-    // 437page 
+    }
+    */
+    
+    // 437page
     public static void main(String[] args) {
         try (FileReader fr = new FileReader("c:\\javaDev\\movie.txt")) {
             int i = 0;

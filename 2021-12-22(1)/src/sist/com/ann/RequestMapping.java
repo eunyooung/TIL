@@ -27,8 +27,7 @@ import java.lang.annotation.Target;
  *   PARAMETER
  *   
  *   @  ===> TYPE
- *   public class A
- *   {
+ *   public class A {
  *       @ ==> FIELD
  *       B b=new B();
  *       

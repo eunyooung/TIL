@@ -1,9 +1,10 @@
 package sist.com.vo;
 
-//영화 정보에 데이터를 모아둔다 (영화 한개에 대한 정보)
+// 영화 정보에 데이터를 모아둔다 (영화 한개에 대한 정보)
+
 public class Movie {
     private String title;
-    private boolean isShow;//true(상영중) , false(개봉예정)
+    private boolean isShow; // true(상영중) , false(개봉예정)
     private String titleEn;
     private String genre;
     private String nation;

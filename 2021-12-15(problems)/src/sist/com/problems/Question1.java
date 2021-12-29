@@ -45,7 +45,7 @@ public class Question1 {
         while(true) {
             System.out.print("2자리수 정수 입력(10~99) >> ");
             num = scan.nextInt();
-            if(num<10 || num>99) {
+            if (num < 10 || num > 99) {
             System.out.println("10~99까지만 입력하세요");
                 continue;
             }
@@ -53,7 +53,7 @@ public class Question1 {
         }
         
         // 입력을 받으면 처리 
-        if(num%11 == 0) {
+        if(num % 11 == 0) {
             System.out.println("10의 자리와 1의 자리가 같습니다.");
         }
         else {

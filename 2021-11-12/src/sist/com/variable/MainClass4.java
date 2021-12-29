@@ -38,7 +38,7 @@ public class MainClass4 {
         *   }
         *   if(i%7==0)
         *       System.out.println(); 
-        *   System.out.print(i+":"+(char)i+"\t"); 
+        *   System.out.print(i + ":" + (char)i + "\t"); 
         *   }
         */
         System.out.print(65);

@@ -1,5 +1,6 @@
 package sist.com.problems;
 
+// 문제
 /*
     12.	int[] num = { 94, 85, 95, 88, 90 };
 

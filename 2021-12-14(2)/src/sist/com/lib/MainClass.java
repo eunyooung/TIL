@@ -131,14 +131,14 @@ class Sawon /* extends Object */ {
         this.name = name;
     }
 
-    //출력 
+    // 출력 
     public void print() {
         // 객체 기능 활용
         System.out.println("이름:" + name);
     }
 
-    //메모리에 해제 
-    //객체의 메모리에서 사라질때 자동호출되는 메소드 (소멸자)
+    // 메모리에 해제 
+    // 객체의 메모리에서 사라질때 자동호출되는 메소드 (소멸자)
     /*
      *   A()  ==> new 
      *   ~A() ==> 메모리 해제 delete (GC) => 자동 메모리 해제 

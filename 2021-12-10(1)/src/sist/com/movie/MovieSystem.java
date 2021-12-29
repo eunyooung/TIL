@@ -1,7 +1,7 @@
 package sist.com.movie;
 
-//영화 시스템 ==> 메소드 
-//1. 데이터를 수집 ==> 공통으로 사용 (static) 
+// 영화 시스템 ==> 메소드 
+// 1. 데이터를 수집 ==> 공통으로 사용 (static) 
 
 import java.util.*;
 import java.io.*;
@@ -46,7 +46,7 @@ public class MovieSystem {
                 vo.setGrade(rm[6]);
                 vo.setDirector(rm[7]);
                 //System.out.println(vo.getNo());
-                //System.out.println("제목:"+vo.getTitle());
+                //System.out.println("제목:" + vo.getTitle());
                 movie_data[j] = vo;
             }
         } catch (Exception ex) {

@@ -33,7 +33,7 @@ package sist.com.lib;
  *    javax.xml , javax.http
  */
 
-//toString() => 호출 => 객체를 출력 => toString()을 호출한다 
+// toString() => 호출 => 객체를 출력 => toString()을 호출한다 
 
 class Card {
 
@@ -42,21 +42,18 @@ class Card {
 
     // 초기화 => {} 초기화 블록 , 생성자() 
     public Card() { // 디폴트 생성자 
-
         kind = "a";
         num = 1;
     }
 
     // 오버로딩 : 중복 메소드 정의
     public Card(String kind, int num) {
-
         this.kind = kind;
         this.num = num;
     }
 
     // Object가 가지고 있는 메소드를 재정의 (오버라이딩: 메소드 정의를 변경)
     public String toString() {
-
         return kind + ":" + num;
     }
 }
@@ -71,6 +68,7 @@ public class MainClass {
          * kind = "a";
          * num = 1;
          */
+        
         Card c2 = new Card("b", 2);
         /*
          *   kind = "b"

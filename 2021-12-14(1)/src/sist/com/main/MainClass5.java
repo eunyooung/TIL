@@ -25,10 +25,12 @@ class MyException extends Exception {
 *            메모리 할당 ==> 상속 내리는 클래스 메모리 할당
 *                          상속 받는 클래스 메모리 할당 
 */
+
 public class MainClass5 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
+        
         // 사용자 정의 예외처리는 자동으로 찾을 수 없다 (직접 호출)
         // 이미 자바에 지정된 예외처리만 자동 호출이 가능 
         /*
@@ -40,6 +42,7 @@ public class MainClass5 {
          *       
          *    break , continue , return , throw => 밑에 소스 코딩이 불가능 
          */
+        
         try {
             int a = 11;
             if (a % 2 == 0) {

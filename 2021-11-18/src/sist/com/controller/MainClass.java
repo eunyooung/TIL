@@ -19,7 +19,11 @@ public class MainClass {
     public void looping2() {
         int i = 0, j = 0, k = 0, cnt = 0;
         /*
-         * while(true) { if(i==3)break; System.out.println("승경안녕"); i++; }
+         * while(true) {
+         *     if(i == 3)break;
+         *     System.out.println("승경안녕");
+         *     i++;
+         * }
          */
         while (i < 5) {
             while (j < 3) {

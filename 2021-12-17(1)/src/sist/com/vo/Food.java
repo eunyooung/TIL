@@ -1,7 +1,7 @@
 package sist.com.vo;
 
-//음식점 한개에 대한 모든 정보
-//==== 저장을 여러개 ==> new 
+// 음식점 한개에 대한 모든 정보
+// ==== 저장을 여러개 ==> new 
 public class Food {
 
     private String title;

@@ -9,7 +9,7 @@ public class MainClass3 {
     Scanner scanner = new Scanner(System.in);
 
     public void controllerEx1() {
-        //for,while,doWhile
+        // for,while,doWhile
         /*
          * System.out.println("Cnt:");
          * int cnt = scanner.nextInt();

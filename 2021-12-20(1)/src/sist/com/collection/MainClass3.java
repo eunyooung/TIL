@@ -35,11 +35,11 @@ public class MainClass3 {
         // Vector , ArrayList
 
         // 2. 데이터 추가 
-        list.add(100);//0
-        list.add(200);//1
-        list.add(300);//2
-        list.add(400);//3
-        list.add(500);//4
+        list.add(100); // 0
+        list.add(200); // 1
+        list.add(300); // 2
+        list.add(400); // 3
+        list.add(500); // 4
 
         // 추가하는 순서로 인덱스 번호가 자동으로 설정 (순차적으로 설정)
         System.out.println("추가된 데이터 갯수:" + list.size());

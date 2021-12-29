@@ -1,6 +1,6 @@
 package sist.com.main;
 
-//배열 초기화 
+// 배열 초기화 
 /*
  *    new 이용 
  *    = int[] arr=new int[5] ==> 0

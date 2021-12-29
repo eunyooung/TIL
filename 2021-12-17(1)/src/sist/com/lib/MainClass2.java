@@ -11,7 +11,7 @@ import java.util.*;
 class Student {
     // 변수 => 읽기(메모리에서 데이터 얻기)/쓰기(메모리에 데이터값 저장)
     //        === 기능(메소드):getter: getXxx() === 기능(메소드) setter:setXxx()
-    private int hakbun;// 메모리에서 감춘다 (은닉화)
+    private int hakbun; // 메모리에서 감춘다 (은닉화)
     private String name;
     private int kor, eng, math;
 
@@ -134,7 +134,7 @@ public class MainClass2 {
         System.out.print(msg);
         System.out.println();
         System.out.println("수정할 대상 선택:");
-        int select = scan.nextInt();// index번호 
+        int select = scan.nextInt(); // index번호 
 
         System.out.print("학번 입력:");
         int hakbun = scan.nextInt();

@@ -45,5 +45,4 @@ public class MainClass4 {
             System.out.println("입력한 문자갯수가 짝수여야 합니다!!");
         }
     }
-
 }

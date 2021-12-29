@@ -28,9 +28,9 @@ public class MainClass {
          */
 
         boolean state = ++x == 1 && (--y == 1 || ++z == 4) && k++ == 4;
-        System.out.println("x=" + x + " y=" + y + " z=" + z + " k=" + k);//2 2 3 5
-                                                                         //2 2 3 5
-                                                                         // 2 2 3 4      
+        System.out.println("x=" + x + " y=" + y + " z=" + z + " k=" + k); // 2 2 3 5
+                                                                          // 2 2 3 5
+                                                                          // 2 2 3 4      
     }
 
     public void samHang(int x, int y, int z, int k) {
@@ -52,9 +52,9 @@ public class MainClass {
     public void shiftOperator() { //1 0 1 0
         System.out.println(10 << 2);
 
-        //0 0 0 0 1 0 1 0
-        //0 0 0 1 0 1 0 0
-        //0 0 1 0 1 0 0 0
+        // 0 0 0 0 1 0 1 0
+        // 0 0 0 1 0 1 0 0
+        // 0 0 1 0 1 0 0 0
     }
 
     public static void main(String[] args) {

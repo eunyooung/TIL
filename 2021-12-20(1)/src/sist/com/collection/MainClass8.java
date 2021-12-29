@@ -56,13 +56,13 @@ public class MainClass8 {
         }
         /*
          *   출력 => list.toString() => [데이터....]
-         *          for(Object obj:list)
+         *          for(Object obj : list)
          *          while(it.hasNext()) {
          *             System.out.println(it.next())
          *          }
          *          
          *          list에 데이터를 모아서 브라우저로 전송 (자바->브라우저)
-         *          request.setAttribute("list",list) 
+         *          request.setAttribute("list", list) 
          */
     }
 }

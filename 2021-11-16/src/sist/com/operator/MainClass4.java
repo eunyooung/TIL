@@ -24,7 +24,7 @@ public class MainClass4 {
         return (kor + eng + mat) / 3.0;
     }
 
-    public boolean logicPass(int kor, int eng, int mat) {//평균이 60이상이면 pass
+    public boolean logicPass(int kor, int eng, int mat) { //평균이 60이상이면 pass
         //return kor >= 40 && eng >= 40 && mat >= 40 && getAvg(kor, eng, mat) >= 60;
         return kor < 40 || eng < 40 || mat < 40 || getAvg(kor, eng, mat) < 60;
     }

@@ -6,6 +6,7 @@ package sist.com.main;
  *    한개의 파일에서 두개이상의 class 코딩 
  *    => public class는 한번만 사용 
  */
+
 class DateClass {
     int year;
     int month;

@@ -3,7 +3,7 @@ package sist.com.main;
 // try~catch, Exception
 
 public class MainClass2 {
-    //static String s;
+    // static String s;
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 
@@ -39,7 +39,9 @@ public class MainClass2 {
             System.out.println("9");
         }
         /*
-         * finally // 생략이 가능 { System.out.println("10"); }
+         * finally { // 생략이 가능
+         *     System.out.println("10");
+         * }
          */
         System.out.println("11");
     }

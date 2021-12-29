@@ -1,6 +1,6 @@
 package sist.com.lib;
 
-//random() => 임의의 실수를 추출 (0.0,~0.99) => static
+// random() => 임의의 실수를 추출 (0.0,~0.99) => static
 
 public class MainClass2 {
 

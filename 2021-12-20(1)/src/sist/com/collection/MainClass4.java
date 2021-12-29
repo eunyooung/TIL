@@ -7,7 +7,7 @@ package sist.com.collection;
 
 import java.util.*;
 
-//Stack / Queue ==> 사용 빈도는 거의 없다 
+// Stack / Queue ==> 사용 빈도는 거의 없다 
 /*
 *   Stack => LIFO (Last IN , First OUT)
 *            나중에 들어간 데이터가 먼저 출력 (메모리)
@@ -54,7 +54,7 @@ import java.util.*;
 *   ===========================================
 *            
 */
-//604page의 그림 확인 
+// 604page의 그림 확인 
 /*
 *    Stack (뒤에서부터 추출)
 *     = 저장 : push()
@@ -93,14 +93,17 @@ public class MainClass4 {
             System.out.println(names[i]);
         }
         */
+        
         // Stack 사용 
         Stack st = new Stack();
+        
         // 스택 데이터 추가 => push()
         st.push("사과");
         st.push("포도");
         st.push("수박");
         st.push("오렌지");
         st.push("메론");
+        
         // 스택 데이터 추출 => pop()
         if (!st.isEmpty()) { // 스택안에 데이터가 있다면 
             while (!st.isEmpty()) {

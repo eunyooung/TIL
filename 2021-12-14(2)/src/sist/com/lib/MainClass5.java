@@ -7,7 +7,8 @@ public class MainClass5 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        // int compareTo(String s) 
+        
+        // int compareTo(String s)
         // => 라이브러리 리턴형, 매개변수, 메소드명 , 기능 
 
         // 1.String 문자열을 저장 

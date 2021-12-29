@@ -52,7 +52,7 @@ public class MainClass5 {
                 continue; // while처음으로 돌아간다 (while=>조건식)
             }
 
-            //배열에 저장 ==> 345/100 (3)
+            // 배열에 저장 ==> 345/100 (3)
             user[0] = input / 100;
             user[1] = (input % 100) / 10; // 345%100 ==> 45/10 => 4
             user[2] = input % 10;
@@ -70,8 +70,8 @@ public class MainClass5 {
             }
 
             // 힌트
-            int s = 0;// 자리수 
-            int b = 0;// 숫자 
+            int s = 0; // 자리수 
+            int b = 0; // 숫자 
             /*
              *    345  => 378 ==> 1S-0B
              *    345  => 789 ==> 0S-0B
@@ -95,7 +95,7 @@ public class MainClass5 {
             // 종료여부 확인
             if (s == 3) {
                 System.out.println("Game Over!!");
-                break;// 종료 System.exit(0)
+                break; // 종료 System.exit(0)
             }
         }
     }

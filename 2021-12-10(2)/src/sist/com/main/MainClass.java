@@ -22,8 +22,7 @@ package sist.com.main;
  *                    자동으로 생성 => 디폴트 생성자)
  *                특징)
  *                     리턴형이 존재하지 않는다 
- *                     class A
- *                     {
+ *                     class A {
  *                        A(){}
  *                        A(int a){}
  *                        void A(double d){} => 일반 멤버
@@ -64,8 +63,8 @@ package sist.com.main;
 // 객체 저장시에 반드시 생성자가 호출되어야 한다 
 // 생성자는 호출시에 반드시 new를 사용한다 
 /*
- *   class A
- *   {
+ *   class A {
+ *   
  *   }
  *   
  *   A a; => 주소가 없는 상태 (null)
@@ -112,7 +111,7 @@ public class MainClass {
 
     public static void main(String[] args) {
 
-        Sawon s1 = new Sawon();// 디폴트 생성자 (생성자를 구현하지 않은 경우 => 자동 생성)
+        Sawon s1 = new Sawon(); // 디폴트 생성자 (생성자를 구현하지 않은 경우 => 자동 생성)
         System.out.println("이름:" + s1.name + ",부서:" + s1.dept);
         Sawon s2 = new Sawon("박문수", "영업부");
         System.out.println("이름:" + s2.name + ",부서:" + s2.dept);

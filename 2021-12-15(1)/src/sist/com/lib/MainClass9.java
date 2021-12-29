@@ -30,7 +30,7 @@ public class MainClass9 {
         // trim()
         String data = " Hello Java!! ";
         System.out.println("trim 전 문자 갯수:" + data.length()); // 14
-        String s = data.trim(); //"Hello Java!!"
+        String s = data.trim(); // "Hello Java!!"
         System.out.println("trim 후 문자 갯수:" + s.length()); // 12
 
         // valueOf()

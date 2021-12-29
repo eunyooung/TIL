@@ -7,7 +7,7 @@ package sist.com.problems;
     예) 랜덤한 정수들 : 3 6 3 6 1 3 8 9 6 9 
     평균은 5.4
     [Hint] 1에서 10까지 범위의 정수를 랜덤하게 생성할 때는 다음 코드를 이용하라.
-    int i  = (int)(Math.random()*10)+1;
+    int i  = (int)(Math.random() * 10) + 1;
  */
 
 public class Question13 {

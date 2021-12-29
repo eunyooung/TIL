@@ -2,7 +2,7 @@ package sist.com.main;
 
 class Swap {
     // Call By Value => 일반 데이터형 (int,long,double,boolean...)
-    // 특이 => String 
+    // 특이 => String
     public void callByValue(int x, int y) {
         System.out.println("x=" + x + ",y=" + y);
         // a와 b값을 변경 

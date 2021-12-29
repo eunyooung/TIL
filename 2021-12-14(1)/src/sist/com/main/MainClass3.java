@@ -4,6 +4,7 @@ package sist.com.main;
 // 선언 (알림) => throws , 직접처리 => try~catch
 
 import java.io.*;
+
 /*
 *   io (input/output)
 *    => 메모리 입출력 
@@ -11,7 +12,8 @@ import java.io.*;
 *    => 네트워크 입출력 
 */
 
-//==> 433page
+// ==> 433page
+
 public class MainClass3 {
 
     public static void main(String[] args) /*throws IOException*/ {

@@ -17,7 +17,6 @@ class Student implements Cloneable {
         // TODO Auto-generated method stub
         return super.clone();
     }
-
 }
 
 public class MainClass2 {

@@ -70,8 +70,8 @@ public class MainClass {
         int[] arr = { 45, 67, 90, 34, 12, 13, 60, 57 };
         /*
          *  Arrays.sort(arr); // ASC(올림차순), DESC(내림차순)
-         *  for(int i:arr) {
-         *      System.out.print(i+" ");
+         *  for(int i : arr) {
+         *      System.out.print(i + " ");
          *  } 
          *  System.out.println("\nDESC");
          *  for(int i = arr.length - 1; i >= 0; i--) {

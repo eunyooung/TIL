@@ -15,8 +15,6 @@ package sist.com.main;
  *    ================================ +
  *       총날 수 % 7 => 요일 
  *    ===> Calendar
- *    
- *    
  */
 
 import java.util.*;

@@ -45,7 +45,7 @@ public class MainClass2 {
         System.out.println("b1 = " + b1);
         System.out.println("b2 = " + b2);
 
-        //데이터형 통일화 => 제네릭스 
+        // 데이터형 통일화 => 제네릭스 
         // List<int> ==> X , List<Integer> ==> 핵심
         // 일반데이터과 동일하게 취급한다 
         // Object => 모든 데이터형 / 모든 클래스를 받을 수 있다 

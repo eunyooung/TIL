@@ -28,7 +28,6 @@ package sist.com.method;
  *           1
  *             ===
  *               2
- *      
  */
 
 public class MainClass3 {

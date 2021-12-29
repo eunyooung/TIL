@@ -28,30 +28,24 @@ package sist.com.main;
 *                           =====================
 *                           void add(String obj)
 *                           
-*    class Box<T>
-*    {
+*    class Box<T> {
 *        T item;
-*        void setItem(T item)
-*        {
+*        void setItem(T item) {
 *           this.item = item;
 *        }
-*        T getItem()
-*        {
+*        T getItem() {
 *           return item;
 *        }
 *    }
 *    
 *    Box<String> box = new Box<String>();
 *    
-*    class Box<T> ==> 사용하지 않으면 => Object
-*    {
+*    class Box<T> { ==> 사용하지 않으면 => Object
 *        String item;
-*        void setItem(String item)
-*        {
+*        void setItem(String item) {
 *           this.item = item;
 *        }
-*        String getItem()
-*        {
+*        String getItem() {
 *           return item;
 *        }
 *    }

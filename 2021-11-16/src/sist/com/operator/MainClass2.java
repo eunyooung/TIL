@@ -26,7 +26,7 @@ public class MainClass2 {
     public static void main(String[] args) {
         MainClass2 o = new MainClass2();
         System.out.println(o.unaryOperator(1, 2, 3, 4));
-        //o.unaryOperator("Action",10);
+        //o.unaryOperator("Action", 10);
         //System.out.println(o.unaryOperator(11));
     }
 }

@@ -7,7 +7,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 /*
- * <tr class="list" songid="95299676">
+    <tr class="list" songid="95299676">
       <td class="check"><input type="checkbox" class="select-check" title="Counting Stars (Feat. Beenzino)" /></td>
       <td class="number">1
        <span class="rank">
@@ -49,7 +49,7 @@ public class MusicSystem {
      *    => 프로그램의 동작을 정상적으로 수행 
      */
     static {
-        //웹 연결(네트워크) => CheckException
+        // 웹 연결(네트워크) => CheckException
         try {
             // 서버연결후 읽어온 데이터를 저장 
             Document doc = Jsoup.connect("https://www.genie.co.kr/chart/top200").get();

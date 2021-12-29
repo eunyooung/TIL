@@ -13,8 +13,8 @@ public class MainClass4 {
 
         /*
         while(true) {
-        	binary[index]=num%2;
-        	num = num/2;
+        	binary[index] = num % 2;
+        	num = num / 2;
         	if(num == 0)
         		break;
         	index--;

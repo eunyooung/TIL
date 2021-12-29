@@ -1,10 +1,11 @@
 package sist.com.main;
 
-// Check Exception ==> 컴파일러가 감시 
+// Check Exception ==> 컴파일러가 감시
 
 import java.io.*;// 데이터 읽기
-import java.net.*; // 웹사이트 연결 
-//=> 예외처리를 반드시 한다 
+import java.net.*; // 웹사이트 연결
+
+// => 예외처리를 반드시 한다 
 
 public class MainClass7 {
 

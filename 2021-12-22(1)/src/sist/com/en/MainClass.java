@@ -47,6 +47,6 @@ public class MainClass {
         }
         
         Season ss = Season.봄;
-        System.out.println(ss.ordinal());// 인덱스 읽기 (인덱스 0)
+        System.out.println(ss.ordinal()); // 인덱스 읽기 (인덱스 0)
     }
 }

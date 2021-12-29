@@ -56,13 +56,13 @@ public class Question2 {
         int no = scan.nextInt();
 
         //2. 요청처리 => 오류처리 
-        if(no>=9 && no<=11) { // && 범위이 있는 경우 , || 범위를 벗어난 경우
+        if(no >= 9 && no <= 11) { // && 범위이 있는 경우 , || 범위를 벗어난 경우
             System.out.println("가을");
         }
-        else if(no>=3 && no<=5) {
+        else if(no >= 3 && no <= 5) {
             System.out.println("봄");
         }
-        else if(no>=6 && no<=8) {
+        else if(no >= 6 && no <= 8) {
             System.out.println("여름");
         }
         else {

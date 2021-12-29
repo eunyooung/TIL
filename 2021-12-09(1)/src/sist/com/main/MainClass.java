@@ -1,7 +1,6 @@
 package sist.com.main;
 
 /*
- * 
  *   2021.12.09 => 기본 정리 
  *   1. 변수 (메모리 저장 공간) ==> 20page , 25page 28page~29page
  *                              32page
@@ -180,11 +179,8 @@ package sist.com.main;
  *      ============================================
  *      네트워크 => 온라인 게임 , ERP , 화상 (X)
  *      데이터베이스(웹) => 주력  (CURD) 
- *   
- *            
- *       
- *      
  */
+
 public class MainClass {
 
     public static void main(String[] args) {

@@ -3,10 +3,10 @@ package sist.com.main;
 import java.util.*;
 
 enum Card{
-    // static final String CLOVER=0
-    CLOVER(1,"♣"),
-    SPADE(2,"♠"),
-    HEART(3,"♥");
+    // static final String CLOVER = 0
+    CLOVER(1, "♣"),
+    SPADE(2, "♠"),
+    HEART(3, "♥");
     
     private int num;
     private String kind;

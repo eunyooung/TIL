@@ -49,8 +49,9 @@ public class MainClass {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
+        
         MusicSystem ms = new MusicSystem();
-        //1. 중복없는 가수 
+        // 1. 중복없는 가수 
         ArrayList<String> list = ms.singerData();
         // 출력 
         for(int i = 0; i < list.size(); i++) {

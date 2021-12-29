@@ -51,13 +51,13 @@ public class MainClass7 {
 
         System.out.println("===== for-each =====");
         for (Object obj : set) {
-            System.out.println(obj);//obj.toString() => toString()은 생략한다 
+            System.out.println(obj); // obj.toString() => toString()은 생략한다 
         }
 
         System.out.println("===== 삭제후 ======");
         set.remove("자바");
         for (Object obj : set) {
-            System.out.println(obj);//obj.toString() => toString()은 생략한다 
+            System.out.println(obj); // obj.toString() => toString()은 생략한다 
         }
     }
 }
