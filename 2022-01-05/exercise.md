@@ -1,4 +1,4 @@
-# My Exercise Answers
+# Exercise - My Answers
 
 ### emp 테이블 
 ![table1](https://user-images.githubusercontent.com/70963337/148264690-6dc56871-0f69-448f-b4fb-67a7472ef05b.png)

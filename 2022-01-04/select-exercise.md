@@ -1,4 +1,4 @@
-# My SELECT Exercise Answers
+# Exercise (SELECT) - My Answers
 
 1. 부서 번호가 10번인 부서의 사람 중 사원번호, 이름, 급여를 출력하라.
 ```
