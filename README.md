@@ -1,9 +1,10 @@
-# TIL
+# **TIL**
 ### Today I Learned at [<img width="12%" src="https://user-images.githubusercontent.com/70963337/146190115-602caa89-8752-41ff-84fc-891d5d99f5e1.png"/>](https://www.sist.co.kr/index.jsp)  
-A record of my daily studies at SIST from 2021.11.11 until the end of training. 📔✏️
+Records of my daily studies at SIST from 2021.11.11 until the end of training. 📔✏️
 
+</br>
 
-## Table of Contents
+## **Table of Contents**
 This is just for a faster approach when reviewing!  
 
 Used Book: 자바의 정석  
@@ -13,8 +14,7 @@ Used Book: 자바의 정석
 
 </br>
 
-### **Studies**
-</br>
+### **Java**
 
 * **2021-11-11**
   - _[Java & Eclipse Installation](https://github.com/eunyooung/TIL/blob/main/2021-11-11/src/sist/com/main/EnvironmentSettings.java)_
@@ -59,9 +59,23 @@ Used Book: 자바의 정석
 * **2021-11-23**
   - [_sist.com.array_](https://github.com/eunyooung/TIL/tree/main/2021-11-23/src/sist/com/array) - _array_
 * **2021-11-24**
-  - [_sist.com.array_](https://github.com/eunyooung/TIL/blob/main/2021-11-24/src/sist/com/array/MainClass.java) - _(**CRUD** using Array)_
-  - [_sist.com.core.array_](https://github.com/eunyooung/TIL/tree/main/2021-11-24/src/sist/com/core/array) - _array_
-
+  - [_sist.com.array.basic_](https://github.com/eunyooung/TIL/blob/main/2021-11-24/src/sist/com/array/MainClass.java) - _(**CRUD** using Array)_
+  - [_sist.com.array.core_](https://github.com/eunyooung/TIL/tree/main/2021-11-24/src/sist/com/array/corey) - _array_
+* **2021-11-25**
+  - [_sist.com.array.core_](https://github.com/eunyooung/TIL/tree/main/2021-11-25/src/sist/com/array/core) - _1D array, 2D array_
+* **2021-11-26**
+  - [_sist.com.array.core_](https://github.com/eunyooung/TIL/tree/main/2021-11-26/src/sist/com/array/core) - _2D array_
+* **2021-11-29**
+  - [_sist.com.obj_](https://github.com/eunyooung/TIL/tree/main/2021-11-29/src/sist/com/obj) - _OOP
+* **2021-11-30**
+  - [_sist.com.obj_](https://github.com/eunyooung/TIL/tree/main/2021-11-30/src/sist/com/obj) - _OOP_
+* **2021-12-01**
+  - [_sist.com.obj_](https://github.com/eunyooung/TIL/tree/main/2021-12-01/src/sist/com/obj)
+    - [Score](https://github.com/eunyooung/TIL/blob/main/2021-12-01/src/sist/com/obj/Score.java) - (**Student** Score VO)
+    - [Student](https://github.com/eunyooung/TIL/blob/main/2021-12-01/src/sist/com/obj/Student.java) - (**Student** Student VO)
+    - [StudentMain](https://github.com/eunyooung/TIL/blob/main/2021-12-01/src/sist/com/obj/StudentMain.java) - (**Student** Main)
+* **2021-12-02**
+  - [_sist.com.obj_](https://github.com/eunyooung/TIL/tree/main/2021-12-02/src/sist/com/obj) - _OOP_
 </br>
 
 ---
@@ -342,22 +356,63 @@ Used Book: 자바의 정석
     - [MainClass2](https://github.com/eunyooung/TIL/blob/main/2021-12-29(2)/src/sist/com/main/MainClass2.java) - _[Review Chapter 3]_
     - [MainClass3](https://github.com/eunyooung/TIL/blob/main/2021-12-29(2)/src/sist/com/main/MainClass3.java) - _[Review Chapter 4]_
     - [MainClass4](https://github.com/eunyooung/TIL/blob/main/2021-12-29(2)/src/sist/com/main/MainClass4.java) - _[Review]_
+* **2021-12-30**
+  - _sist.com.common_
+    - [DataBase](https://github.com/eunyooung/TIL/blob/main/2021-12-30/src/sist/com/common/DataBase.java) - _(**Books Manager** & **Music Manager** DB Insert Interface)_
+  - _sist.com.dao_ 
+    - [Books](https://github.com/eunyooung/TIL/blob/main/2021-12-30/src/sist/com/dao/Books.java) - _(**Books Manager** Books VO)_
+    - [BooksDAO](https://github.com/eunyooung/TIL/blob/main/2021-12-30/src/sist/com/dao/BooksDAO.java) - _(**Books Manager** Books Oracle DAO)_
+    - [Music](https://github.com/eunyooung/TIL/blob/main/2021-12-30/src/sist/com/dao/Music.java) - _(**Music Manager** Music VO)_
+    - [MusicDAO](https://github.com/eunyooung/TIL/blob/main/2021-12-30/src/sist/com/dao/MusicDAO.java) - _(**Music Manager** Music Oracle DAO)_
+  - _sist.com.manager_
+    - [BooksManager](https://github.com/eunyooung/TIL/blob/main/2021-12-30/src/sist/com/manager/BooksManager.java) - _(**Books Manager**)_
+    - [MuiscManager](https://github.com/eunyooung/TIL/blob/main/2021-12-30/src/sist/com/manager/MusicManager.java) - _(**Music Manager**)_
+
+
+### **Java Quizzes**
+
+* [**2021-12-15(problems)**](https://github.com/eunyooung/TIL/tree/main/2021-12-15(problems)/src/sist/com/problems) - _operator, control statement_
+* [**2021-12-16(problems)**](https://github.com/eunyooung/TIL/tree/main/2021-12-16(problems)/src/sist/com/problems) - _control statement_
+* [**2021-12-17(problems)**](https://github.com/eunyooung/TIL/tree/main/2021-12-17(problems)/src/sist/com/problems) - _methods_
+* [**2021-12-20(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-20(problems)/Questions.md) - _OOP_
+* [**2021-12-21(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-21(problems)/Questions.md) - _OOP_
+* [**2021-12-22(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-22(problems)/Questions.md) - _Exception_
+* [**2021-12-23(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-23(problems)/Questions.md) - _library_
+* [**2021-12-24(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-24(problems)/Questions.md) - _Collection_
 
 </br>
-  
+
 ---
 
 </br>
 
-
-
-### Quizzes
-
-* [**2021-12-15(problems)**](https://github.com/eunyooung/TIL/tree/main/2021-12-15(problems)/src/sist/com/problems) - operator, control statement
-* [**2021-12-16(problems)**](https://github.com/eunyooung/TIL/tree/main/2021-12-16(problems)/src/sist/com/problems) - Control Statement
-* [**2021-12-17(problems)**](https://github.com/eunyooung/TIL/tree/main/2021-12-17(problems)/src/sist/com/problems) - Methods
-* [**2021-12-20(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-20(problems)/Questions.md) - OOP
-* [**2021-12-21(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-21(problems)/Questions.md) - OOP
-* [**2021-12-22(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-22(problems)/Questions.md) - Exception
-* [**2021-12-23(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-23(problems)/Questions.md) - Library
-* [**2021-12-24(problems)**](https://github.com/eunyooung/TIL/blob/main/2021-12-24(problems)/Questions.md) - Collection
+### **Oracle**
+* **2022-01-03**
+  - [test1](https://github.com/eunyooung/TIL/blob/main/2022-01-03/test1.sql) - _[DBMS]_
+  - [test2](https://github.com/eunyooung/TIL/blob/main/2022-01-03/test2.sql) - _[Oracle], SELECT, FROM, WHERE_
+* **2022-01-04**
+  - [test3](https://github.com/eunyooung/TIL/blob/main/2022-01-04/test3.sql) - _[arithmetic operators], [comparison operators], [logical operators], [In], [BETWEEN], [LIKE], [NOT], [NULL]_
+  - [test4](https://github.com/eunyooung/TIL/blob/main/2022-01-04/test4.sql) - _comparison operators, logical operators, IN, BETWEEN LIKE, NULL, NOT_
+  - [test5](https://github.com/eunyooung/TIL/blob/main/2022-01-04/test5.sql) - _[operators]_
+  - [test6](https://github.com/eunyooung/TIL/blob/main/2022-01-04/test6.sql) - _[exercise & solutions]_
+  - [excercise](https://github.com/eunyooung/TIL/blob/main/2022-01-04/exercise.md) - _[exercise - my solutions]_
+* **2022-01-05**
+  - [test7](https://github.com/eunyooung/TIL/blob/main/2022-01-05/test7.sql) - _[SELECT], [ORDER BY]_
+  - [test8](https://github.com/eunyooung/TIL/blob/main/2022-01-05/test8.sql) - _SELECT, ORDER BY_
+  - [test9](https://github.com/eunyooung/TIL/blob/main/2022-01-05/test9.sql) - _[built in functions: UPPER, LOWER, CONCAT, LTRIM, RTRIM, TRIM, LPAD, RPAD, REPLACE, LENGTH, SUBSTR, INSTR, ROUND, TRUNC, CEIL, MOD, SYSDATE, MONTHS_BETWEEN, ADD_MONTHS, LAST_DAY, NEXT_DAY, TOCHAR, TO_NUMBER, TO_DATE, NVL, DECODE, CASE]_
+  - [test10](https://github.com/eunyooung/TIL/blob/main/2022-01-05/test10.sql) - _[built in functions], MOD, ROUND, TRUNC, CEIL, LAST_DAY, NEXT_DAY, ADD_MONTHS, TO_CHAR, TO_DATE, TO_NUMBER, NVL, DECODE, CASE_
+  - [test11](https://github.com/eunyooung/TIL/blob/main/2022-01-05/test11.sql) - _[exercise & solutions]_
+  - [exercise](https://github.com/eunyooung/TIL/blob/main/2022-01-05/exercise.md) - _[exercise - my solutions]_
+* **2022-01-06**
+  - [test12](https://github.com/eunyooung/TIL/blob/main/2022-01-06/test12.sql) - _[single row function], [aggregate function], [user-defined function], COUNT, MAX, MIN, SUM, AVG, RANK() OVER, DENSE_RANK() OVER_
+  - [test13](https://github.com/eunyooung/TIL/blob/main/2022-01-06/test13.sql) - _COUNT, SUM, ROUND, AVG, MAX, MIN_
+  - [test14](https://github.com/eunyooung/TIL/blob/main/2022-01-06/test14.sql) - _[JOIN: INNER JOIN, OUTER JOIN, EQUI_JOIN]_
+  - [test15](https://github.com/eunyooung/TIL/blob/main/2022-01-06/test15.sql) - _JOIN_
+  - [test16](https://github.com/eunyooung/TIL/blob/main/2022-01-06/test16.sql) - _[exercise & solutions]_
+  - [exercise](https://github.com/eunyooung/TIL/blob/main/2022-01-06/exercise.md) - _[exercise - my solutions]_
+* **2022-01-07**
+  - [test17](https://github.com/eunyooung/TIL/blob/main/2022-01-07/test17.sql) - _[review]_
+  - [test18](https://github.com/eunyooung/TIL/blob/main/2022-01-07/test18.sql) - _JOIN_
+  - [test19](https://github.com/eunyooung/TIL/blob/main/2022-01-07/test19.sql) - _[sub query]_
+  - [test20](https://github.com/eunyooung/TIL/blob/main/2022-01-07/test20.sql) - _[exercise & solutions]_
+  - [exercise](https://github.com/eunyooung/TIL/blob/main/2022-01-07/exercise.md) - _[exercise - my solutions]_
