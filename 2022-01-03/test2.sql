@@ -94,8 +94,8 @@
      SELECT를 사용시의 옵션 
        = DISTINCT => 중복을 제거한 데이터 출력 (장르,직위,부서) 
        = AS => 별칭  
-                   empno as 사번 , ename as 이름 , hiredate as 입사일  => 컬럼명 변경
-                   empno "사번" , ename "이름" , hiredate "입사일"
+                   empno as 사번, ename as 이름, hiredate as 입사일  => 컬럼명 변경
+                   empno "사번", ename "이름", hiredate "입사일"
        = ||  => 문자열 결합 (자바 : +) ==> 연산자 (|| => OR)
        = & => Scanner (입력을 받는 경우에 사용)
 
@@ -132,11 +132,11 @@ FROM emp;
 SELECT DISTINCT deptno "부서번호" 
 FROM emp;
 -- 문자열 결합 ||
-SELECT ename||'님의 직위는 '||job||'입니다'
+SELECT ename || '님의 직위는 ' || job || '입니다'
 FROM emp;
 -- DISTINCT 는 한개를 출력할 경우에만 사용 (컬럼)
-SELECT empno "사번" , ename "사원명" , job "직책" , mgr "사수번호",
-           hiredate "입사일" , sal "급여" , comm "성과급",deptno "부서번호"
+SELECT empno "사번", ename "사원명", job "직책", mgr "사수번호",
+           hiredate "입사일", sal "급여", comm "성과급", deptno "부서번호"
 FROM emp;
 */
 -- 원하는 데이터(조건에 맞는)만 추출 => WHERE => 자바(if)
@@ -227,7 +227,7 @@ FROM emp;
                ============    (=> AND <=)
                1~10
                WHERE no BETWEEN 1 AND 10 
-               WHERE no>=1 AND no<=10   ===> 10을 포함하고 있다 
+               WHERE no >= 1 AND no <= 10   ===> 10을 포함하고 있다 
 
 
            *** 산술연산자 ( + , - , * , / ) => SELECT 
@@ -236,7 +236,7 @@ FROM emp;
           ========
             이름 국어 영어 수학 총점 평균 등수 
             ============  
-                                국어+영어+수학 , (국어+영어+수학)/3 , RANK()
+                                국어 + 영어 + 수학 , (국어 + 영어 + 수학) / 3 , RANK()
             => 가상 컬럼을 이용 , 뷰를 이용한다 
 
          *** 비교연산자 ( = (같다) , !=(<>) 같지 않다 , < (작다) , > (크다) , 
@@ -244,47 +244,47 @@ FROM emp;
          1==1
 */
 /*-- emp(사원의 정보)에 급여와 연봉을 출력 
-SELECT sal "급여" , sal*12 "연봉" 
+SELECT sal "급여", sal * 12 "연봉" 
 FROM emp;
 -- 연산처리 => DUAL테이블을 이용한다 
 SELECT 5/2 FROM DUAL; 
 */
-SELECT "***** 1<2 조건 ****" FROM DUAL; 
+SELECT "***** 1 < 2 조건 ****" FROM DUAL;
 SELECT * 
 FROM emp
-WHERE 1<2;
+WHERE 1 < 2;
 
-SELECT "***** 1<=2 조건 ****" FROM DUAL; 
+SELECT "***** 1 <= 2 조건 ****" FROM DUAL;
 SELECT * 
 FROM emp
-WHERE 1<=2;
+WHERE 1 <= 2;
 
-SELECT "***** 1>2 조건 ****" FROM DUAL; 
+SELECT "***** 1 > 2 조건 ****" FROM DUAL;
 SELECT * 
 FROM emp
-WHERE 1>2;
+WHERE 1 > 2;
 
-SELECT "***** 1>=2 조건 ****" FROM DUAL; 
+SELECT "***** 1 >= 2 조건 ****" FROM DUAL;
 SELECT * 
 FROM emp
-WHERE 1>=2;
+WHERE 1 >= 2;
 
-SELECT "***** 1<>2 조건(1과 2는 같지 않다) ****" FROM DUAL; 
+SELECT "***** 1 <> 2 조건(1과 2는 같지 않다) ****" FROM DUAL; 
 SELECT * 
 FROM emp
-WHERE 1<>2;
+WHERE 1 <> 2;
 
-SELECT "***** 1!=2 조건(1과 2는 같지 않다) ****" FROM DUAL; 
+SELECT "***** 1 != 2 조건(1과 2는 같지 않다) ****" FROM DUAL; 
 SELECT * 
 FROM emp
-WHERE 1!=2;
+WHERE 1 != 2;
 
-SELECT "***** 1^=2 조건(1과 2는 같지 않다) ****" FROM DUAL; 
+SELECT "***** 1 ^= 2 조건(1과 2는 같지 않다) ****" FROM DUAL; 
 SELECT * 
 FROM emp
-WHERE 1^=2;
+WHERE 1 ^= 2;
 
-SELECT "***** 1^=2 조건(1과 2는 같지 않다) ****" FROM emp; 
+SELECT "***** 1 ^= 2 조건(1과 2는 같지 않다) ****" FROM emp; 
 
 -- 오라클은 비절차적 언어 
 /*
@@ -297,19 +297,3 @@ SELECT "***** 1^=2 조건(1과 2는 같지 않다) ****" FROM emp;
     SQL문장 => 에러 (X) 재고
     SQL문장 (O) 출력 
 */
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

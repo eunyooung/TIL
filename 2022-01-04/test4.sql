@@ -1,5 +1,5 @@
--- 2022-01-04 오라클 연산자 (논리연산자 : OR,AND)
--- 오라클에서 지원하는 연산자 (IN,LIKE,BTEWEEN,NULL,NOT)
+-- 2022-01-04 오라클 연산자 (논리연산자 : OR, AND)
+-- 오라클에서 지원하는 연산자 (IN, LIKE, BTEWEEN, NULL, NOT)
 /*
       비교연산자 : = (한개의 정보 : 상세보기)
                        = 회원 탈퇴, 회원 수정 
@@ -33,17 +33,17 @@
 -- emp에서 사원중에 급여가 1500이상 3000이하인 사원의 모든 정보(*)
 SELECT *
 FROM emp
-WHERE sal>=1500 AND sal<=3000;
+WHERE sal >= 1500 AND sal <= 3000;
 -- BETWEEN ~ AND
 -- emp에서 사원중에 급여가 1500이하거나 3000이상 사원의 모든 정보(*)
 SELECT *
 FROM emp
-WHERE sal<=1500 OR sal>=3000;
+WHERE sal <= 1500 OR sal >= 3000;
 -- IN
 -- 사원중에 1982년에 입사한 사원의 모든 정보를 가지고 온다 
 SELECT *
 FROM emp
-WHERE hiredate>='82/01/01' AND hiredate<='82/12/31';
+WHERE hiredate >= '82/01/01' AND hiredate <= '82/12/31';
 /*
 SELECT *
 FROM emp
@@ -51,7 +51,7 @@ WHERE hiredate LIKE '82%';
 
 SELECT *
 FROM emp
-WHERE substr(hiredate,1,2)=82;
+WHERE substr(hiredate, 1, 2) = 82;
 
 SELECT *
 FROM emp
@@ -61,7 +61,7 @@ WHERE hiredate BETWEEN '82/01/01' AND '82/12/31';
 -- 사원중에 급여가 3000이고 이름 SCOTT인 사원의 모든 정보 출력 
 SELECT *
 FROM emp
-WHERE sal=3000 AND ename='SCOTT';
+WHERE sal = 3000 AND ename = 'SCOTT';
 -- ID , 오늘 날짜 구매 내용  ==> AND ==> 구매 내역 확인 
 -- 쿠키 id , 오늘 날짜 
 
@@ -71,21 +71,21 @@ WHERE sal=3000 AND ename='SCOTT';
 -- KING , SCOTT , CLARK => 정보 확인 => OR 
 SELECT *
 FROM emp
-WHERE ename='KING' OR ename='SCOTT' OR ename='CLARK'; 
+WHERE ename = 'KING' OR ename = 'SCOTT' OR ename = 'CLARK'; 
 
 -- IN연산자 
 SELECT *
 FROM emp
-WHERE ename IN('KING','SCOTT','CLARK');
+WHERE ename IN('KING', 'SCOTT', 'CLARK');
 
 -- 부서번호가 10,20,30에 있는 모든 사원 정보를 가지고 온다 
 SELECT *
 FROM emp
-WHERE deptno=10 OR deptno=20 OR deptno=30;
+WHERE deptno = 10 OR deptno = 20 OR deptno = 30;
 
 SELECT *
 FROM emp
-WHERE deptno IN(10,20,30);
+WHERE deptno IN(10, 20, 30);
 
 -- 체크박스 (조건 검색이 많은 경우) => 잡 포털 
 -- LIKE => 검색 
@@ -184,21 +184,21 @@ WHERE ename LIKE '%AK%';
 -- 직위가 MANAGER , CLERK인 사원의 모든 정보를 출력 
 SELECT *
 FROM emp
-WHERE job IN('MANAGER','CLERK');
+WHERE job IN('MANAGER', 'CLERK');
 
 -- 직위가 MANAGER , CLERK 아닌  사원의 모든 정보를 출력 
 SELECT *
 FROM emp
-WHERE job NOT IN('MANAGER','CLERK');
+WHERE job NOT IN('MANAGER', 'CLERK');
 
 
 SELECT *
 FROM emp
-WHERE job='MANAGER' OR job='CLERK';
+WHERE job = 'MANAGER' OR job = 'CLERK';
 
 SELECT *
 FROM emp
-WHERE NOT (job='MANAGER' OR job='CLERK');
+WHERE NOT (job = 'MANAGER' OR job = 'CLERK');
 
 -- NOT LIKE 
 -- 이름 중에 A를 포함하고 있지 않는 사원의 모든 정보 
@@ -210,7 +210,7 @@ WHERE ename NOT LIKE '%A%';
 -- 1. 비교연산자 
 SELECT *
 FROM emp
-WHERE sal>=1500 AND sal<=3000;
+WHERE sal >= 1500 AND sal <= 3000;
 -- 2. BETWEEN ~ AND 
 SELECT *
 FROM emp
@@ -230,28 +230,13 @@ WHERE mgr IS NULL;
 -- 성과급(comm)이 없는 사원의 모든 출력  comm=null (=> null)
 SELECT *
 FROM emp
-WHERE comm IS NULL OR comm=0;
+WHERE comm IS NULL OR comm = 0;
 -- 성과급을 받는 사원의 정보 출력  comm!=null (=> null)
 SELECT *
 FROM emp
-WHERE comm IS NOT NULL AND comm<>0;
+WHERE comm IS NOT NULL AND comm <> 0;
 
 -- 사원의 급여계산 => 성과급 포함 => 총급여 
 -- sal+comm
 SELECT ename , sal , comm, sal+NVL(comm,0) "총급여"
 FROM emp;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

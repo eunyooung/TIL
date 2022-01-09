@@ -46,31 +46,31 @@
          4) OUTER JOIN의 형식 
              = 오라클 조인 
                   1. LEFT OUTER JOIN
-                   SELECT A.col,B.col
-                   FROM A,B
-                   WHERE A.col=B.col(+)
+                   SELECT A.col, B.col
+                   FROM A, B
+                   WHERE A.col = B.col(+)
 
                   2. RIGTH OUTER JOIN
-                   SELECT A.col,B.col
-                   FROM A,B
-                   WHERE A.col(+)=B.col
+                   SELECT A.col, B.col
+                   FROM A, B
+                   WHERE A.col(+) = B.col
              = ANSI 조인                
                   1. LEFT OUTER JOIN
-                   SELECT A.col,B.col
+                   SELECT A.col, B.col
                    FROM A LEFT OUTER JOIN B
                                ---------------------
-                   ON A.col=B.col
+                   ON A.col = B.col
 
                   2. RIGHT OUTER JOIN
-                   SELECT A.col,B.col
+                   SELECT A.col, B.col
                    FROM A RIGTH OUTER JOIN B
                                ---------------------
-                   ON A.col=B.col 
+                   ON A.col = B.col 
                   3. FULL OUTER JOIN => 오라클 조인은 존재하지 않는다
-                   SELECT A.col,B.col
+                   SELECT A.col, B.col
                    FROM A FULL OUTER JOIN B
                                ---------------------
-                   ON A.col=B.col 
+                   ON A.col = B.col 
 
                    ==> 
                     SELECT 컬럼1.... (컬럼리스트)
@@ -90,29 +90,29 @@
 */
 -- LEFT
 
-SELECT ename, job , hiredate , dname , loc
-FROM emp , dept 
-WHERE emp.deptno=dept.deptno;
+SELECT ename, job, hiredate, dname, loc
+FROM emp, dept 
+WHERE emp.deptno = dept.deptno;
 
-SELECT ename, job , hiredate , dname , loc
-FROM emp , dept 
-WHERE emp.deptno=dept.deptno(+);
+SELECT ename, job, hiredate, dname, loc
+FROM emp, dept
+WHERE emp.deptno = dept.deptno(+);
 
-SELECT ename, job , hiredate , dname , loc
-FROM emp , dept 
-WHERE emp.deptno(+)=dept.deptno;
+SELECT ename, job, hiredate, dname, loc
+FROM emp, dept 
+WHERE emp.deptno(+) = dept.deptno;
 
 -- 교재 
 SELECT * FROM customer;
 SELECT * FROM orders;
 
 -- 회원 전체 명단을 읽어 온다 (구매한 금액을 출력)
-SELECT name,saleprice
-FROM customer c,orders o
+SELECT name, saleprice
+FROM customer c, orders o
 WHERE c.custid = o.custid;
 
-SELECT name,saleprice
-FROM customer c,orders o
+SELECT name, saleprice
+FROM customer c, orders o
 WHERE c.custid = o.custid(+);
 /*
 CREATE TABLE test1(
@@ -123,7 +123,7 @@ CREATE TABLE test2(
 );
 */
 /*
-     INNER => 1,2,3 + 5,7 (test1-test2) 
+     INNER => 1,2,3 + 5,7 (test1 - test2) 
 
 */
 /*
@@ -143,44 +143,33 @@ COMMIT;
 */
 
 -- SELF => 테이블 1개로 조인 
-SELECT empno , ename , mgr FROM emp;
--- INNER JOIN 
-SELECT e1.ename  "본인", e1.job , e2.ename "사수", e2.job
-FROM emp e1,emp e2
-WHERE e1.mgr=e2.empno;
+SELECT empno, ename, mgr FROM emp;
+-- INNER JOIN
+SELECT e1.ename  "본인", e1.job, e2.ename "사수", e2.job
+FROM emp e1, emp e2
+WHERE e1.mgr = e2.empno;
 
 SELECT e1.ename  "본인", e1.job , e2.ename "사수", e2.job
 FROM emp e1 JOIN emp e2
-ON e1.mgr=e2.empno;
+ON e1.mgr = e2.empno;
 
 -- LEFT OUTER JOIN (KING을 포함) 
-SELECT e1.ename  "본인", e1.job , e2.ename "사수", e2.job
-FROM emp e1,emp e2
-WHERE e1.mgr=e2.empno(+);
+SELECT e1.ename "본인", e1.job, e2.ename "사수", e2.job
+FROM emp e1, emp e2
+WHERE e1.mgr = e2.empno(+);
 
-SELECT e1.ename  "본인", e1.job , e2.ename "사수", e2.job
+SELECT e1.ename "본인", e1.job, e2.ename "사수", e2.job
 FROM emp e1 LETF OUTER JOIN emp e2
-ON e1.mgr=e2.empno;
+ON e1.mgr = e2.empno;
 -- RIGHT OUTER JOIN (사수가 아닌 사원 포함)
-SELECT e1.ename  "본인", e1.job , e2.ename "사수", e2.job
-FROM emp e1,emp e2
-WHERE e1.mgr(+)=e2.empno;
+SELECT e1.ename "본인", e1.job, e2.ename "사수", e2.job
+FROM emp e1, emp e2
+WHERE e1.mgr(+) = e2.empno;
 
-SELECT e1.ename  "본인", e1.job , e2.ename "사수", e2.job
+SELECT e1.ename "본인", e1.job, e2.ename "사수", e2.job
 FROM emp e1 RIGHT OUTER JOIN emp e2
-ON e1.mgr=e2.empno;
+ON e1.mgr = e2.empno;
 -- FULL OUTER JOIN (사수가 아닌 사원(8) + 사수가 없는 사원 포함(1))
-SELECT e1.ename  "본인", e1.job , e2.ename "사수", e2.job
+SELECT e1.ename "본인", e1.job, e2.ename "사수", e2.job
 FROM emp e1 FULL OUTER JOIN emp e2
-ON e1.mgr=e2.empno;
-
-
-
-
-
-
-
-
-
-
-
+ON e1.mgr = e2.empno;

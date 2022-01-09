@@ -10,7 +10,7 @@
      7) SubQuery 
      INSERT , UPDATE , DELETE  ==> DML 
      ========================== 간단한 테이블 제작 
-     DDL : 데이터베이스 저장 장소 제작 (Table,View,Index,Sequence)
+     DDL : 데이터베이스 저장 장소 제작 (Table, View, Index, Sequence)
      => 데이터베이스 프로그램 (PL/SQL)
      데이터베이스 설계 : 요구사항분석 
      1. 형식 => SELECT의 키워드 순서 
@@ -53,9 +53,9 @@
                                           =======
                     https://mp-seoul-image-production-s3.mangoplate.com
                      /33537_1539250987808772.jpg?fit=around|512:512
-                     ^crop=512:512;*,*
-                     ^output-format=jpg
-                     ^output-quality=80
+                     ^crop = 512:512;*,*
+                     ^output-format = jpg
+                     ^output-quality = 80
                      => 자바에서 저장 => replace('&',"^") => 
                     오라클에서 제공하는 연산자 
                      => NULL => NULL은 실제 데이터가 존재하지 않는 값 
@@ -94,14 +94,6 @@
                    => ORDER BY 1 
 */
 -- emp => 급여(sal)가 높은 순서로 정렬 해서 이름 , 급여 , 입사일 출력
-SELECT ename,sal,hiredate 
+SELECT ename, sal, hiredate 
 FROM emp
-ORDER BY sal DESC; 
-
-
-
-
-
-
-
-
+ORDER BY sal DESC;

@@ -53,9 +53,9 @@
                                           =======
                     https://mp-seoul-image-production-s3.mangoplate.com
                      /33537_1539250987808772.jpg?fit=around|512:512
-                     ^crop=512:512;*,*
-                     ^output-format=jpg
-                     ^output-quality=80
+                     ^crop = 512:512;*,*
+                     ^output-format = jpg
+                     ^output-quality = 80
                      => 자바에서 저장 => replace('&',"^") => 
                     오라클에서 제공하는 연산자 
                      => NULL => NULL은 실제 데이터가 존재하지 않는 값 
@@ -94,16 +94,16 @@
                    => ORDER BY 1 
 */
 -- emp => 급여(sal)가 높은 순서로 정렬 해서 이름 , 급여 , 입사일 출력
-SELECT ename,sal,hiredate 
+SELECT ename, sal, hiredate 
 FROM emp
 ORDER BY sal DESC; 
 
-SELECT ename,sal,hiredate 
+SELECT ename, sal, hiredate 
 FROM emp
 ORDER BY 2 DESC; 
 
 -- 부서(deptno) 순서로 정렬 (10,20,30) => 부서별로 모아서 출력 : 이름 , 직위 , 부서번호
-SELECT ename,job,deptno
+SELECT ename, job, deptno
 FROM emp;
 -- ORDER BY에서 (ASC|DESC) => ASC는 DEFAULT
 -- 데이터가 많은 경우에 ORDER BY를 사용하면 출력하는 속도가 느리다 
@@ -113,19 +113,19 @@ FROM emp;
        한가지 프로그램 : 데이터베이스 연결 
                                스프링 (프레임워크)
 */
-SELECT ename,job,deptno
+SELECT ename, job, deptno
 FROM emp
 ORDER BY deptno;
 
-SELECT ename,job,deptno
+SELECT ename, job, deptno
 FROM emp
 ORDER BY deptno ASC;
 
-SELECT ename,job,deptno
+SELECT ename, job, deptno
 FROM emp
 ORDER BY 3;
 
-SELECT ename,job,deptno
+SELECT ename, job, deptno
 FROM emp
 ORDER BY 3 ASC;
 /*
@@ -133,25 +133,25 @@ ORDER BY 3 ASC;
       ======
         형식) ORDER BY deptno ASC , ename DESC
 */
-SELECT deptno , ename
+SELECT deptno, ename
 FROM emp
-ORDER BY deptno ASC , ename DESC;
+ORDER BY deptno ASC, ename DESC;
 
-SELECT deptno , ename
+SELECT deptno, ename
 FROM emp
-ORDER BY 1 , 2 DESC;
--- empno,ename,job,mgr,hiredate,sal,comm,deptno
+ORDER BY 1, 2 DESC;
+-- empno, ename, job, mgr, hiredate, sal, comm, deptno
 
-SELECT  empno,ename,job,mgr,hiredate,sal,comm,deptno
+SELECT empno, ename, job, mgr, hiredate, sal, comm, deptno
 FROM emp
 ORDER BY 1;
 
-SELECT * 
+SELECT *
 FROM emp
 ORDER BY 1; 
 -- 156page
 -- ORDER BY price ASC, bookname ASC 
--- ORDER BY price DESC , bookname ASC
+-- ORDER BY price DESC, bookname ASC
 -- 가격이 낮은 순 => 높은 순 ==> 가격이 같은 경우 책제목을 ASC
 -- 사원 전체의 정보를 입사일순서로 출력 
 SELECT *
@@ -161,7 +161,7 @@ ORDER BY hiredate;
 -- 사원 전체의 정보를 입사일 순서로 출력 => 같은 날 입사한 사원들은 급여가 높은 순서로 출력 
 SELECT *
 FROM emp
-ORDER BY hiredate , sal DESC;
+ORDER BY hiredate, sal DESC;
 
 -- 조건에 맞는 데이터를 추출 => 정렬해서 출력 
 -- 10번 부서에 있는 사원 => 급여가 높은 순서로 출력  => 사원명,부서번호,급여
@@ -169,14 +169,7 @@ ORDER BY hiredate , sal DESC;
 -- 음악 (랭크) , 영화 (예매순) 
 -- 오라클에 저장된 데이터는 순서있게 저장되지 않는다 
 -- 인기게시물 => hit 
-SELECT ename,deptno,sal
+SELECT ename, deptno, sal
 FROM emp 
-WHERE deptno=10
+WHERE deptno = 10
 ORDER BY sal DESC;
-
- 
-
-
-
-
-

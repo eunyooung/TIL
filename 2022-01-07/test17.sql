@@ -36,13 +36,13 @@ DESC book;
 */
 /*
      1. 전체를 읽어 온다 (저장된 데이터) => *
-     2. 필요한 값(컬럼 구분)만 출력 => column1,column2...
+     2. 필요한 값(컬럼 구분)만 출력 => column1, column2...
 */
 -- 데이터 전체 출력 요청  => ROW
 SELECT * 
 FROM book;
 -- 원하는 데이터만 추출  => 도메인 
-SELECT bookname,publisher
+SELECT bookname, publisher
 FROM book;
 /*
       1. SELECT 문장 
@@ -74,8 +74,8 @@ FROM book;
         -- 조건 처리 (연산자)
             오라클에서 제공하는 연산자 
             = 산술연산자 (+,-,*,/) 
-                 -- 자동 형변환이 된다   10+10.5 => 20.5
-                                                 '10'+'20' => 30
+                 -- 자동 형변환이 된다   10 + 10.5 => 20.5
+                                                 '10' + '20' => 30
                                                   10    20 => 30
                  -- / => 정수/정수=실수 
                  -- 숫자 (정수,실수가 포함)
@@ -165,17 +165,17 @@ FROM book;
                        => FULL OUTER JOIN
               --> JOIN의 형식 
                   = 오라클 조인 => WHERE
-                      SELECT A.col,B.col
-                      FROM A,B
-                      WHERE A.col=B.col
+                      SELECT A.col, B.col
+                      FROM A, B
+                      WHERE A.col = B.col
                   = ANSI 조인(표준화) => 일반 데이터베이스는 동일 하게 사용 
-                     *** 데이터베이스 : 오라클 , MS-SQL , MYSQL, MariaDB,DB2
+                     *** 데이터베이스 : 오라클 , MS-SQL, MYSQL, MariaDB,DB2
                      JOIN~ON
-                     SELECT A.col,B.col
+                     SELECT A.col, B.col
                      FROM A JOIN B
-                     ON A.col=B.col
+                     ON A.col = B.col
                      => FROM A,B => , 대신 JOIN
-                     => WHERE A.col=B.col => WHERE 대신 ON
+                     => WHERE A.col = B.col => WHERE 대신 ON
                      1) 주의점 
                          = 테이블끼리 같은 컬럼명을 가지고 있는 경우
                             어떤 테이블의 데이터인지를 확인 
@@ -187,34 +187,26 @@ FROM book;
 
                    = LEFT OUTER JOIN
                        = 오라클 조인 
-                          SELECT A.col,B.col ....
-                          FROM A , B
-                          WHERE A.col=B.col(+)
+                          SELECT A.col, B.col ....
+                          FROM A, B
+                          WHERE A.col = B.col(+)
                        = ANSI 조인 
-                          SELECT A.col,B.col ....
+                          SELECT A.col, B.col ....
                           FROM A LEFT OUTER JOIN B
-                          ON A.col=B.col
+                          ON A.col = B.col
                    = RIGHT OUTER JOIN
                        = 오라클 조인 
-                          SELECT A.col,B.col ....
-                          FROM A , B
-                          WHERE A.col(+)=B.col
+                          SELECT A.col, B.col ....
+                          FROM A, B
+                          WHERE A.col(+) = B.col
                        = ANSI 조인 
-                          SELECT A.col,B.col ....
+                          SELECT A.col, B.col ....
                           FROM A RIGHT OUTER JOIN B
-                          ON A.col=B.col
+                          ON A.col = B.col
                    = FULL OUTER JOIN
 
                        = ANSi만 존재 
-                          SELECT A.col,B.col ....
+                          SELECT A.col, B.col ....
                           FROM A FULL OUTER JOIN B
-                          ON A.col=B.col
+                          ON A.col = B.col
 */
-
-
-
-
-
-
-
-
