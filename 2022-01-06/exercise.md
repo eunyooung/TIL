@@ -182,7 +182,7 @@ FROM emp;
 
 **58. 이름, 입사한 날짜부터 오늘까지 총 몇달 근무했는지 소수점 뒤에는 잘라서 출력하시오.**
 ```
-SELECT ename, ROUND(MONTHS_BETWEEN(SYSDATE, hiredate) / 12)
+SELECT ename, ROUND(MONTHS_BETWEEN(SYSDATE, hiredate))
 FROM emp;
 ```
 
