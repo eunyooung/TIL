@@ -1,6 +1,5 @@
 package sist.com.main;
 
-//
 /*
 *   285page : 오라클을 연결할 때 => ojdbc8.jar(12c~18c)
 *                            => ojdbc6.jar(11g)
@@ -24,5 +23,4 @@ public class MainClass2 {
         // TODO Auto-generated method stub
 
     }
-
 }

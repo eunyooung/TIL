@@ -23,7 +23,7 @@ import java.util.*; // List => 결과값을 모아서 저장
 *    3. SQL문장 전송 : PreparedStatement => conn.preparedStatement(sql)
 *    4. SQL문장 실행 요청
 *         = SELECT : 결과값을 읽어 온다 ==> executeQuery()
-*         = INSERT,UPDATE,DELETE : 오라클 자체 처리 ==> executeUpdate() 
+*         = INSERT, UPDATE, DELETE : 오라클 자체 처리 ==> executeUpdate() 
 *                                                 ==> commit()
 *                                         *** 자바는 autocommit()
 *    *** SQL문장 

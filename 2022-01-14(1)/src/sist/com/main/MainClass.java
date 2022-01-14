@@ -19,7 +19,7 @@ public class MainClass {
          System.out.println(e.getEmpno() + " "
                  + e.getEname()+" "
                  + e.getJob()+" "
-                 + e.getHiredate().toString()+" "
+                 + e.getHiredate().toString() + " "
                  + e.getSal());
         }
         */
