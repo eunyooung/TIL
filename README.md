@@ -66,7 +66,7 @@ Used Book: 자바의 정석
 * **2021-11-26**
   - [_sist.com.array.core_](https://github.com/eunyooung/TIL/tree/main/2021-11-26/src/sist/com/array/core) - _2D array_
 * **2021-11-29**
-  - [_sist.com.obj_](https://github.com/eunyooung/TIL/tree/main/2021-11-29/src/sist/com/obj) - _OOP
+  - [_sist.com.obj_](https://github.com/eunyooung/TIL/tree/main/2021-11-29/src/sist/com/obj) - _OOP_
 * **2021-11-30**
   - [_sist.com.obj_](https://github.com/eunyooung/TIL/tree/main/2021-11-30/src/sist/com/obj) - _OOP_
 * **2021-12-01**
@@ -76,6 +76,10 @@ Used Book: 자바의 정석
     - [StudentMain](https://github.com/eunyooung/TIL/blob/main/2021-12-01/src/sist/com/obj/StudentMain.java) - (**Student** Main)
 * **2021-12-02**
   - [_sist.com.obj_](https://github.com/eunyooung/TIL/tree/main/2021-12-02/src/sist/com/obj) - _OOP_
+* **2021-12-03**
+  - [_sist.com.obj_](https://github.com/eunyooung/TIL/tree/main/2021-12-03/src/sist/com/obj) - _OOP_
+* **2021-12-04**
+  - [_sist.com.obj_](https://github.com/eunyooung/TIL/tree/main/2021-12-06/src/sist/com/obj) - _OOP_
 </br>
 
 ---
@@ -387,6 +391,7 @@ Used Book: 자바의 정석
 </br>
 
 ### **Oracle**
+
 * **2022-01-03**
   - [test1](https://github.com/eunyooung/TIL/blob/main/2022-01-03/test1.sql) - _[DBMS]_
   - [test2](https://github.com/eunyooung/TIL/blob/main/2022-01-03/test2.sql) - _[Oracle], SELECT, FROM, WHERE_
@@ -413,6 +418,43 @@ Used Book: 자바의 정석
 * **2022-01-07**
   - [test17](https://github.com/eunyooung/TIL/blob/main/2022-01-07/test17.sql) - _[review]_
   - [test18](https://github.com/eunyooung/TIL/blob/main/2022-01-07/test18.sql) - _JOIN_
-  - [test19](https://github.com/eunyooung/TIL/blob/main/2022-01-07/test19.sql) - _[sub query]_
+  - [test19](https://github.com/eunyooung/TIL/blob/main/2022-01-07/test19.sql) - _[subquery]_
   - [test20](https://github.com/eunyooung/TIL/blob/main/2022-01-07/test20.sql) - _[exercise & solutions]_
   - [exercise](https://github.com/eunyooung/TIL/blob/main/2022-01-07/exercise.md) - _[exercise - my solutions]_
+* **2022-01-10**
+  - [test21](https://github.com/eunyooung/TIL/blob/main/2022-01-10/test21.sql) - _[sub query]_
+  - [test22](https://github.com/eunyooung/TIL/blob/main/2022-01-10/test22.sql) - _[DML], [DDL], [TCL], subquery_
+  - [test23](https://github.com/eunyooung/TIL/blob/main/2022-01-10/test23.sql) - _[DDL], CREATE TABLE_
+  - [test24](https://github.com/eunyooung/TIL/blob/main/2022-01-10/test24.sql) - _[DDL], CONSTRAINT, NOT NULL, SYSDATE, PRIMARY KEY_
+  - [test25](https://github.com/eunyooung/TIL/blob/main/2022-01-10/test25.sql) - _[exercise & solutions]_ -> [my solutions (2022-01-07)](https://github.com/eunyooung/TIL/blob/main/2022-01-07/exercise.md)
+* **2022-01-11**
+  - [test26](https://github.com/eunyooung/TIL/blob/main/2022-01-11/test26.sql) - _[DDL], CONSTRAINT, NOT NULL, SYSDATE, PRIMARY KEY, FOREIGN KEY, REFERENCES_
+  - [test27](https://github.com/eunyooung/TIL/blob/main/2022-01-11/test27.sql) - _[ALTER], CONSTRAINT, CHECK_
+  - [test28](https://github.com/eunyooung/TIL/blob/main/2022-01-11/test28.sql) - _[DNL], [INSERT]_
+  - [test29](https://github.com/eunyooung/TIL/blob/main/2022-01-11/test29.sql) - _[DML], INSERT, DELETE, UPDATE_
+  - [test30](https://github.com/eunyooung/TIL/blob/main/2022-01-11/test30.sql) - _[DDL], [DML]_
+  - [test31](https://github.com/eunyooung/TIL/blob/main/2022-01-11/test31.sql) - _DROP TABLE, CREATE TABLE, CONSTRAINT, NOT NULL, PRIMARY KEY, FOREIGN KEY, REFERENCES_
+  - [test32](https://github.com/eunyooung/TIL/blob/main/2022-01-11/test32.sql) - _[exercise & solutions]_
+  - [test33](https://github.com/eunyooung/TIL/blob/main/2022-01-11/test33.sql) - _[DML]_
+  - [exercise](https://github.com/eunyooung/TIL/blob/main/2022-01-11/exercise.sql) - _[exercise - my solutions]_
+* **2022-01-12**
+  - [test34](https://github.com/eunyooung/TIL/blob/main/2022-01-12/test34.sql) - _[advanced SQL]_
+  - [test35](https://github.com/eunyooung/TIL/blob/main/2022-01-12/test35.sql) - _rownum_
+  - [test36](https://github.com/eunyooung/TIL/blob/main/2022-01-12/test36.sql) - _[scalar subquery]_
+  - [test37](https://github.com/eunyooung/TIL/blob/main/2022-01-12/test37.sql) - _[view]_
+  - [test38](https://github.com/eunyooung/TIL/blob/main/2022-01-12/test38.sql) - _[exercise & solutions]_
+  - [test39](https://github.com/eunyooung/TIL/blob/main/2022-01-12/test39.sql) - _[Oracle JOIN], [ANSI JOIN]_
+* **2022-01-13(1)**
+  - [test40]() - _[view, SEQUENCE]_
+  - [test41]() - _[SEQUENCE]_
+  - [test42]() - _[CONSTRAINT]_
+  - [test43]() - _[Add CONSTRAINT using ALTER]_
+  - [test44]() - _[Add CONSTRAINT using ALTER]_
+  - [test45]() - _[Add CONSTRAINT using ALTER], [view]_
+  - [test46]() - _SEQUENCE_
+* **2022-01-13(2)**
+  - [_sist.com.main_](https://github.com/eunyooung/TIL/tree/main/2022-01-13(2)/src/sist/com/main) - _(**Food** using OJDBC)_
+* **2022-01-14(1)**
+  - [_sist.com.main_](https://github.com/eunyooung/TIL/tree/main/2022-01-14(1)/src/sist/com/main) - _(**Emp** using OJDBC)_
+* **2022-01-14(2)**
+  - [_sist.com.main_](https://github.com/eunyooung/TIL/tree/main/2022-01-14(2)/src/sist/com/main) - _(**Zipcode** using OJDBC)_
