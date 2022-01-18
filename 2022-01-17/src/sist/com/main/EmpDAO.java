@@ -1,20 +1,20 @@
 package sist.com.main;
 
-//오라클 연결 => 송수신 ==> VO, DAO, Manager (변경:일반 main, JSP, Spring)
+// 오라클 연결 => 송수신 ==> VO, DAO, Manager (변경:일반 main, JSP, Spring)
 
 import java.util.*; // List
 import java.sql.*; // Connection(연결), PreparedStatement(송수신)
 
-//ResultSet (결과값을 저장해주는 공간)
+// ResultSet (결과값을 저장해주는 공간)
 
 /*
-*   DDL / DML을 사용할 수 있다 
-*   DDL 
-*    CREATE TABLE, DROP, RENAME, ALTER .... (오라클내에서 보통 처리)
-*    DML (SELECT, INSERT, UPDATE, DELETE)
-*    ---------- 웹, 데이터베이스 프로그래머 => 사용자의 SQL을 대신 만들어서 처리
-*    ---------- 사용자에 요청 (데이터베이스에 필요한 => 데이터만 입력)
-*/
+ *   DDL / DML을 사용할 수 있다 
+ *   DDL 
+ *    CREATE TABLE, DROP, RENAME, ALTER .... (오라클내에서 보통 처리)
+ *    DML (SELECT, INSERT, UPDATE, DELETE)
+ *    ---------- 웹, 데이터베이스 프로그래머 => 사용자의 SQL을 대신 만들어서 처리
+ *    ---------- 사용자에 요청 (데이터베이스에 필요한 => 데이터만 입력)
+ */
 
 public class EmpDAO {
     // 연결 객체 ==> Socket
@@ -81,18 +81,18 @@ public class EmpDAO {
             // 정상적으로 수행 => 처리 
             /*
              *    conn hr/happy
-              연결되었습니다.
+             *    연결되었습니다.
              */
-            
+
             //1. 연결 
             getConnection();
-            
+
             //2. SQL문장을 작성 
             String sql = "SELECT * FROM emp";
-            
+
             //3. SQL문장을 오라클로 전송 
             ps = conn.prepareStatement(sql);
-            
+
             //4. 실행후에 결과값을 가지고 온다
             ResultSet rs = ps.executeQuery();
             while (rs.next()) { // 데이터 출력의 첫번째줄에 커서를 위치 
@@ -141,18 +141,18 @@ public class EmpDAO {
         try {
             //1. 연결 
             getConnection();
-            
+
             //2. SQL문장 
             String sql = "SELECT * FROM dept";
             // * =>테이블 출력하는 순서로 값을 읽는다 
             // 주의점 => 공백 
-            
+
             //3. 오라클로 SQL문장 전송 
             ps = conn.prepareStatement(sql);
-            
+
             //4. 실행후 결과값을 메모리에 저장해 둔다 
             ResultSet rs = ps.executeQuery();
-            
+
             //5. 클라이언트로 전송하기 위해 List에 데이터를 묶어 둔다 
             while (rs.next()) {
                 DeptVO vo = new DeptVO();
@@ -178,13 +178,13 @@ public class EmpDAO {
         try {
             //1. 연결 
             getConnection();
-            
+
             //2. SQL문장 
             String sql = "SELECT * FROM salgrade";
-            
+
             //3. 오라클로 전송 
             ps = conn.prepareStatement(sql);
-            
+
             //4. 실행 결과를 메모리에 저장 => ResultSet 
             //*** ? (사용자 보내준 데이터가 있는 경우에는 => ?에 값을 채운후에 실행)
             ResultSet rs = ps.executeQuery();
@@ -214,17 +214,17 @@ public class EmpDAO {
         try {
             // 1. 연결 
             getConnection();
-            
+
             // 2. SQL문장 
             String sql = "SELECT empno,ename,job,hiredate,sal," + "dname,loc " + "FROM emp,dept "
                     + "WHERE emp.deptno=dept.deptno";
-            
+
             // 3. SQL문장 전송 
             ps = conn.prepareStatement(sql);
-            
+
             // 4. 실행후 결과값을 메모리제 저장 
             ResultSet rs = ps.executeQuery();
-            
+
             // 5. 메모리에 저장된 데이터를 List에 추가 
             while (rs.next()) {
                 EmpVO vo = new EmpVO(); // Row한개씩 채운다 
@@ -258,17 +258,17 @@ public class EmpDAO {
         try {
             // 1. 오라클 연결 
             getConnection();
-            
+
             // 2. SQL문장 제작 
             String sql = "SELECT empno,ename,job,hiredate,sal,grade " + "FROM emp JOIN salgrade "
                     + "ON sal BETWEEN losal AND hisal";
-            
+
             // 3. SQL문장 전송 
             ps = conn.prepareStatement(sql);
-            
+
             // 4. 실행후에 메모리에 결과값 저장 
             ResultSet rs = ps.executeQuery();
-            
+
             // 5. 메모리에 저장된 내용을 클라이언트가 볼 수 있게 List에 저장
             while (rs.next()) {
                 EmpVO vo = new EmpVO();
@@ -341,7 +341,7 @@ public class EmpDAO {
         try {
             //1. 오라클 연결 
             getConnection();
-            
+
             //2. SQL문장 
             /*String sql="SELECT empno,ename,job,hiredate,sal,"//emp
                   +"dname,loc," // dept 
@@ -351,13 +351,13 @@ public class EmpDAO {
                   +"AND sal BETWEEN losal AND hisal";*/
             String sql = "SELECT empno,ename,job,hiredate,sal," + "dname,loc," + "grade " + "FROM emp JOIN dept "
                     + "ON emp.deptno=dept.deptno " + "JOIN salgrade " + "ON sal BETWEEN losal AND hisal";
-            
+
             //3. SQL문장 => 오라클로 전송 
             ps = conn.prepareStatement(sql);
-            
+
             //4. 실행후에 메모리에 저장 요청 
             ResultSet rs = ps.executeQuery();
-            
+
             //5. 메모리에 있는 데이터를 List로 이동 
             while (rs.next()) {
                 EmpVO vo = new EmpVO();
@@ -420,11 +420,11 @@ public class EmpDAO {
         try {
             // 1. 오라클 연결 
             getConnection();
-            
+
             // 2. SQL문장 제작 (사번, 이름, 직위, 입사일, 근무지, 부서명, 급여등급)
             String sql = "SELECT empno,ename,job,hiredate," + "loc,dname," + "grade,sal " + "FROM emp,dept,salgrade "
                     + "WHERE emp.deptno=dept.deptno " + "AND sal BETWEEN losal AND hisal " + "AND empno=?";
-            
+
             // 3. SQL문장을 오라클로 전송 
             ps = conn.prepareStatement(sql);
 
@@ -434,11 +434,11 @@ public class EmpDAO {
             // *** ps.setString(2, "홍길동") ==> '홍길동'로 변환한다
             // WHERE ename=홍길동 (X)
             // WHERE ename='홍길동' (O) => 날짜, 문자열은 반드시 ''
-            
+
             // 5. ?에 값을 채웠으면 => 실행요청 => 메모리에 저장 
             ResultSet rs = ps.executeQuery();
             rs.next();// 데이터 출력 위치에 커서 이동 
-            
+
             // 6. EmpVO에 값을 채운다 
             vo.setEmpno(rs.getInt(1));
             vo.setEname(rs.getString(2));
@@ -532,10 +532,10 @@ public class EmpDAO {
         try {
             // 1. 오라클 연결 
             getConnection();
-            
+
             // 2. SQL문장 
             String sql = "SELECT ROUND(AVG(sal)) FROM emp";
-            
+
             // 3. 결과값 받기
             ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
@@ -544,14 +544,14 @@ public class EmpDAO {
             rs.close();
             ps.close();
             /// 급여 평균값을 구한다
-            
+
             // 4. SQL문장 
             sql = "SELECT ename,job,hiredate,sal,dname,loc " + "FROM emp,dept " + "WHERE emp.deptno=dept.deptno "
                     + "AND sal>? " + "ORDER BY ename ASC";
             ps = conn.prepareStatement(sql);
             // ?에 값을 채운다 
             ps.setInt(1, avg);
-            
+
             // 5. 결과값 받기 
             rs = ps.executeQuery();
             while (rs.next()) {
@@ -581,7 +581,7 @@ public class EmpDAO {
         try {
             // 1. 오라클 연결 
             getConnection();
-            
+
             // 2. SQL문장 
             /*String sql="SELECT ROUND(AVG(sal)) FROM emp";
              * 
@@ -593,7 +593,7 @@ public class EmpDAO {
             rs.close();
             ps.close();*/
             /// 급여 평균값을 구한다
-            
+
             // 4. SQL문장 
             String sql = "SELECT ename,job,hiredate,sal,dname,loc " + "FROM emp,dept " + "WHERE emp.deptno=dept.deptno "
                     + "AND sal>(SELECT ROUND(AVG(sal)) FROM emp) " + "ORDER BY ename ASC";
@@ -619,6 +619,101 @@ public class EmpDAO {
             ex.printStackTrace();
         } finally {
             // 닫기 
+            disConnection();
+        }
+        return list;
+    }
+
+    // 스칼라 서브쿼리 
+    /*
+     *   SELECT ename, job, hiredate, sal, (SELECT dname FROM dept WHERE deptno = emp.deptno) dname,
+     *   (SELECT loc FROM dept WHERE deptno = emp.deptno) loc
+     *   FROM emp;
+     */
+    // -> JOIN없이 서브쿼리로 => 데이터 추출 (이름, 직위, 입사일, 급여, 부서명, 근무지)
+    public List<EmpVO> empSubQueryListData() {
+        //1. 리턴형 
+        List<EmpVO> list = new ArrayList<EmpVO>();
+        try {
+            // 1. 오라클 연결 
+            getConnection(); // LIKE '%A%' ==> LIKE '%'||'A'||'%'
+            // 자바에서 => 오라클로 전송 (문자열) => 공백 
+            // String sql="SELECT ename,job,(SELECT~)"
+            
+            // 2. SQL문장 
+            // SQLDevloper => 
+            String sql = "SELECT ename,job,hiredate,sal," + "(SELECT dname FROM dept WHERE deptno=emp.deptno),"
+                    + "(SELECT loc FROM dept WHERE deptno=emp.deptno) " + "FROM emp";
+            
+            // 3. 오라클로 SQL문장 전송 
+            ps = conn.prepareStatement(sql);
+            
+            // 4. 결과값을 받는다 
+            ResultSet rs = ps.executeQuery();
+            
+            // 5. 결과값을 List에 담는다 
+            while (rs.next()) {
+                EmpVO vo = new EmpVO();
+                vo.setEname(rs.getString(1));
+                vo.setJob(rs.getString(2));
+                vo.setHiredate(rs.getDate(3));
+                vo.setSal(rs.getInt(4));
+                vo.getDvo().setDname(rs.getString(5));
+                vo.getDvo().setLoc(rs.getString(6));
+
+                list.add(vo);
+            }
+            rs.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            disConnection(); // 닫기
+        }
+        return list;
+    }
+
+    // 인라인뷰 
+    /*
+     *   SELECT : 사용 
+     *    1) 전체 목록 (목록 출력)
+     *    2) 조건 => 1개 (상세보기)
+     *    3) 조인 
+     *    4) 서브쿼리 : 1) 스칼라, 2) 인라인뷰 
+     */
+    // Top-N (위에서 몇개~~ 인기검색어 , 인기 공지사항 ~ 인기 게시물 )
+    // 1. 급여가 많은 순서로 상위 5명을 추출 => 이름, 입사일, 직위, 급여 
+    /*
+     *    SELECT ----> 3)
+     *    FROM  ----- 1)
+     *    WHERE ----- 2)
+     *    ORDER BY --> 4)
+     *    
+     *    ==> 중간에 데이터를 추출 할 수 없다 
+     *    rownum BETWEEN 6 AND 10 ==> (X) 
+     */
+    public List<EmpVO> empTon5Data() {
+        List<EmpVO> list = new ArrayList<EmpVO>();
+        try {
+            // 연결 
+            getConnection();
+            // SQL문장 
+            String sql = "SELECT ename,job,hiredate,sal,rownum " + "FROM (SELECT ename,job,hiredate,sal "
+                    + "FROM emp ORDER BY sal DESC) " + "WHERE rownum<=5";
+            ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                EmpVO vo = new EmpVO();
+                vo.setEname(rs.getString(1));
+                vo.setJob(rs.getString(2));
+                vo.setHiredate(rs.getDate(3));
+                vo.setSal(rs.getInt(4));
+
+                list.add(vo);
+            }
+            rs.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
             disConnection();
         }
         return list;
