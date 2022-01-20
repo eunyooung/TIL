@@ -4,7 +4,7 @@ import java.sql.*;
 
 import oracle.jdbc.OracleTypes;
 
-// 11g (ojdbc6.jar) , 12c~21c (ojdbc8.jar)
+// 11g (ojdbc6.jar), 12c~21c (ojdbc8.jar)
 
 public class EmpDAO {
     
@@ -52,27 +52,27 @@ public class EmpDAO {
      */
     public void empAllData() {
         try {
-            //1. 연결 
+            // 1. 연결 
             getConnection();
             
-            //2. SQL문장 
+            // 2. SQL문장 
             String sql = "{CALL empAllData(?)}";
-            cs = conn.prepareCall(sql);// 프로시저 호출
+            cs = conn.prepareCall(sql); // 프로시저 호출
             // EXECUTE empAllData()
             
-            //3. ?에 값을 채운다 
+            // 3. ?에 값을 채운다 
             cs.registerOutParameter(1, OracleTypes.CURSOR);
             //                      ---- 오라클 데이터형 설정
             
-            //4. 실행 
+            // 4. 실행 
             cs.executeUpdate();
             
-            //5. 값을 받는다 
-            // empno,ename,job,hiredate,sal,dname,loc,grade
+            // 5. 값을 받는다 
+            // empno, ename, job, hiredate, sal, dname, loc, grade
             ResultSet rs = (ResultSet) cs.getObject(1);
             // CURSOR => ResultSet 
             // VARCHAR2 => String
-            // NUMBER   => int ,double 
+            // NUMBER   => int, double 
             // DATE     => java.util.Date
             while (rs.next()) {
                 System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3) + " "
