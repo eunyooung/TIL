@@ -445,13 +445,13 @@ Used Book: 자바의 정석
   - [test38](https://github.com/eunyooung/TIL/blob/main/2022-01-12/test38.sql) - [exercise & solutions]
   - [test39](https://github.com/eunyooung/TIL/blob/main/2022-01-12/test39.sql) - [Oracle JOIN], [ANSI JOIN]
 * **2022-01-13(1)**
-  - [test40]() - [view, SEQUENCE]
-  - [test41]() - [SEQUENCE]
-  - [test42]() - [CONSTRAINT]
-  - [test43]() - [Add CONSTRAINT using ALTER]
-  - [test44]() - [Add CONSTRAINT using ALTER]
-  - [test45]() - [Add CONSTRAINT using ALTER], [view]
-  - [test46]() - SEQUENCE
+  - [test40](https://github.com/eunyooung/TIL/blob/main/2022-01-13(1)/test40.sql) - [view, SEQUENCE]
+  - [test41](https://github.com/eunyooung/TIL/blob/main/2022-01-13(1)/test41.sql) - [SEQUENCE]
+  - [test42](https://github.com/eunyooung/TIL/blob/main/2022-01-13(1)/test42.sql) - [CONSTRAINT]
+  - [test43](https://github.com/eunyooung/TIL/blob/main/2022-01-13(1)/test43.sql) - [Add CONSTRAINT using ALTER]
+  - [test44](https://github.com/eunyooung/TIL/blob/main/2022-01-13(1)/test44.sql) - [Add CONSTRAINT using ALTER]
+  - [test45](https://github.com/eunyooung/TIL/blob/main/2022-01-13(1)/test45.sql) - [Add CONSTRAINT using ALTER], [view]
+  - [test46](https://github.com/eunyooung/TIL/blob/main/2022-01-13(1)/test46.sql) - SEQUENCE
 * **2022-01-13(2)**
   - [_sist.com.main_](https://github.com/eunyooung/TIL/tree/main/2022-01-13(2)/src/sist/com/main) - (**Food** using OJDBC)
 * **2022-01-14(1)**
