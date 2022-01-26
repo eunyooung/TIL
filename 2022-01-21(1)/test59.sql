@@ -63,4 +63,3 @@ CREATE TABLE foodLocation(
    CONSTRAINT foodl_cno_fk FOREIGN KEY(cno)
    REFERENCES category(cno)
 );
-
