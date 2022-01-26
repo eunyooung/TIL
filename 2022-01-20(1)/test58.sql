@@ -1,4 +1,4 @@
--- 2022-01-20(PL/SQL → FUNCTION,PROCEDURE,TRIGGER)
+-- 2022-01-20(PL/SQL → FUNCTION, PROCEDURE, TRIGGER)
 -- 오라클 자체의 언어(DBA) → 메뉴얼 제공
 /*
    자바에서 오라클 연결(JDBC) → ojdbc8.jar(오라클에서 제공)
@@ -17,13 +17,12 @@
     3. 오라클 닫기 : disConnection()
     4. 기능설정 
 	SELECT 
-                찾기,목록
-	INSERT/UPDATE/DELETE → 제어(오라클 자체 처리) →void
+                찾기, 목록
+	INSERT / UPDATE / DELETE → 제어(오라클 자체 처리) →void
 	1) 오라클 연결
 	2) SQL문장제작
 	3) 오라클로 SQL문장 전송
 	4) 실행 후 결과값 받기(메모리)
 	5) VO, Listdp ahdktj tkdydwkdprp wjsthdgksek
 	6) 오라클 닫기
-
 */

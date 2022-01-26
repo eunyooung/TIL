@@ -2,18 +2,21 @@
 <!-- HTML5버전 Tag에 대한 등록 파일 -->
 <!-- 
       파일명 .dtd (모든 ML은 정의가 되어있다 : W3C) => 표준화 
-      태그와 속성에 대한 정보 
+      태그와 속성에 대한 정보
+      
       1. 태그 
          <!ELEMENT html(head,body)>
-         <!ELEMENT head(meta*,title,style*,script*,link*)>
+         <!ELEMENT head(meta*, title, style*, script*, link*)>
          default : 한번만 사용이 가능 (반드시 한번 사용)
          * : 0번이상 (사용하지 않을 수 있다)
          + : 1번이상 
          | : 선택 
-         ? : 사용,사용하지 않을 수 있다
+         ? : 사용, 사용하지 않을 수 있다
+         
       2. 속성 
          <!ATTLIST a href CDATA #IMPLIED>
               <a href=""> <a>
+              
       3. Entity : 특수문자 
          <!ENTITY nbsp " ">  => &nbsp;
          <!ENTITY lt "<"> => &lt;
@@ -28,7 +31,7 @@
          -------------------------
              <태그>출력할 값(브라우저에 출력값)</태그>
              <태그 속성="값"> => 속성에 있는 값을 출력이 가능 
-             ------------- 속성:디자인,화면 출력용도 
+             ------------- 속성 : 디자인, 화면 출력용도 
                 예) <table width=300 height=250>
                     <img src="a.jpg">
          <html>
@@ -53,7 +56,7 @@
                 <i> : 이태릭
                 <sub>,<sup> : 위첨자,아래첨자 
                 <address> :주소 출력 => 이태릭 
-                <small> , <font> 
+                <small>, <font> 
                 <p> :단락
                 <br> : 다음줄에 출력 
                 <hr> : 라인선
@@ -143,11 +146,11 @@
                  valign : 정렬(v) => top/middle/bottom(middle)
                  rowspan : 행 병합 
                  colspan : 열 병합 
-               ============> 구분자 (id,class)
+               ============> 구분자 (id, class)
                  id=>중복이 없는 구분자 
-                 class =>중복이 있는 구분자 
-         
+                 class =>중복이 있는 구분자
  -->
+ 
 <html>
 <head>
   <meta charset="UTF-8">
