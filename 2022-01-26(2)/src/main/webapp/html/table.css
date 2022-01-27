@@ -6,7 +6,6 @@
 	border-bottom-style: solid;
 	border-top-color: #333;
 	border-bottom-color: #333;
-	
 }
 #table_content th,td{
 	margin: 0px;
@@ -60,6 +59,3 @@ input[type="password"] {
     border-radius: 12px;
     border: 1px #CCC solid;
 }
-
-
-
