@@ -1,4 +1,4 @@
-package com.sist.dao;
+package sist.com.dao;
 
 import java.util.*;
 import java.sql.*;
