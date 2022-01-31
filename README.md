@@ -516,23 +516,23 @@ Used Book: 자바의 정석
     - [etc-tag.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/etc-tag.html) - iframe
 * **2022-01-25(3)**
   - _src.main.webapp.html_
-    - [card.html]() - 
-    - [chapter_04_95.html]() - 
-    - [chapter_04_96.html]() - 
+    - [card.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(3)/src/main/webapp/card.html) - (**Kakao Movie Card**)
+    - [chapter_04_95.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(3)/src/main/webapp/chapter_04_95.html) - (**Register Form**)
+    - [chapter_04_96.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(3)/src/main/webapp/chapter_04_96.html) - (**Login**)
 * **2022-01-26(1)**
   - _src.main.webapp.html_
-    - [chapter_04_103.html]() - 
-    - [chapter_04_105.html]() - 
-    - [chapter_04_111.html]() - 
-    - [chapter_04_111_1.html]() - 
-    - [chatpter_04_112.html]() - 
-    - [total.html]() - 
+    - [chapter_04_103.html](https://github.com/eunyooung/TIL/blob/main/2022-01-26(1)/src/main/webapp/html/chapter_04_103.html) - (**Login**)
+    - [chapter_04_105.html](https://github.com/eunyooung/TIL/blob/main/2022-01-26(1)/src/main/webapp/html/chapter_04_105.html) - div, span
+    - [chapter_04_111.html](https://github.com/eunyooung/TIL/blob/main/2022-01-26(1)/src/main/webapp/html/chapter_04_111.html) - (**Layout** using table)
+    - [chapter_04_111_1.html](https://github.com/eunyooung/TIL/blob/main/2022-01-26(1)/src/main/webapp/html/chapter_04_111_1.html) - (**Layout** using div)
+    - [chatpter_04_112.html](https://github.com/eunyooung/TIL/blob/main/2022-01-26(1)/src/main/webapp/html/chapter_04_112.html) - [HTML5 template], header, nav, section, article, footer, aside
+    - [total.html](https://github.com/eunyooung/TIL/blob/main/2022-01-26(1)/src/main/webapp/html/total.html) - (**Drop-down** using select)
 * **2022-01-26(2)**
   - _src.main.webapp.html_
-    - [chapter_04.html]() - 
-    - [chapter_05.html]() - 
-    - [insert.html]() - 
-    - [table.css]() - 
+    - [chapter_04.html](https://github.com/eunyooung/TIL/blob/main/2022-01-26(2)/src/main/webapp/html/chapter_04.html) - (**Board** using table and CSS)
+    - [chapter_05.html](https://github.com/eunyooung/TIL/blob/main/2022-01-26(2)/src/main/webapp/html/chapter_05.html) - [CSS]
+    - [insert.html](https://github.com/eunyooung/TIL/blob/main/2022-01-26(2)/src/main/webapp/html/insert.html) - (**Posting** using table)
+    - [table.css](https://github.com/eunyooung/TIL/blob/main/2022-01-26(2)/src/main/webapp/html/table.css) - Board CSS
 * **2022-01-27(1)**
   - _src.main.webapp.html_
     - [chapter_05_125.html]() - 
