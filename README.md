@@ -494,26 +494,26 @@ Used Book: 자바의 정석
 
 * **2022-01-25(1)**
   - _src.main.webapp.html_
-    - [chapter_01.html]() - 
-    - [chapter_02.html]() - 
-    - [chapter_02_1.html]() - 
-    - [chapter_03.html]() - 
-    - [chapter_03_69.html]() - 
-    - [chapter_03_74.html]() - 
-    - [chapter_03_74_1.html]() - 
-    - [chapter_03_76.html]() - 
-    - [chapter_03_79.html]() - 
-    - [chapter_03_82.html]() - 
-    - [seat.jsp]() - 
+    - [chapter_01.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(1)/src/main/webapp/html/chapter_01.html) - [HTML5]
+    - [chapter_02.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(1)/src/main/webapp/html/chapter_02.html) - [HTML tags]
+    - [chapter_02_1.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(1)/src/main/webapp/html/chapter_02_1.html) - [HTML structures]
+    - [chapter_03.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(1)/src/main/webapp/html/chapter_03.html) - [HTML tags], sup, pre
+    - [chapter_03_69.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(1)/src/main/webapp/html/chapter_03_69.html) - &lt, &nbsp, &gt, p
+    - [chapter_03_74.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(1)/src/main/webapp/html/chapter_03_74.html) - marquee, blockquote
+    - [chapter_03_74_1.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(1)/src/main/webapp/html/chapter_03_74_1.html) - hr, id, a, a href="", a href=#
+    - [chapter_03_76.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(1)/src/main/webapp/html/chapter_03_76.html) - b, i, small, ins, del
+    - [chapter_03_79.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(1)/src/main/webapp/html/chapter_03_79.html) - ul > li, ol > li, dl > dt,dd
+    - [chapter_03_82.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(1)/src/main/webapp/html/chapter_03_82.html) - table > caption,tr > td,th
+    - [seat.jsp](https://github.com/eunyooung/TIL/blob/main/2022-01-25(1)/src/main/webapp/html/seat.jsp) - (**Seats** using jsp)
 * **2022-01-25(2)**
   - _src.main.webapp.html_
-    - [chapter_03_82.html]() - 
-    - [chapter_03_84.html]() - 
-    - [chapter_03_84_1.html]() -
-    - [chapter_03_84_2.html]() - 
-    - [chapter_03_84_3.html]() - 
-    - [chapter_03_84_4_html]() - 
-    - [etc-tag.html]() - 
+    - [chapter_03_82.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/chapter_03_82.html) - (**Report Card** using HTML table)
+    - [chapter_03_84.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/chapter_03_84.html) - (**Posts** using HTML table)
+    - [chapter_03_84_1.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/chapter_03_84_1.html) - (**Board** using HTML table)
+    - [chapter_03_84_2.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/chapter_03_84_2.html) - (**Movie Posters** using HTML)
+    - [chapter_03_84_3.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/chapter_03_84_3.html) - (**Movie Details**using HTML)
+    - [chapter_03_84_4_html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/chapter_03_84_4.html) - (**Img Map** using HTML)
+    - [etc-tag.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/etc-tag.html) - iframe
 * **2022-01-25(3)**
   - _src.main.webapp.html_
     - [card.html]() - 
