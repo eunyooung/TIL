@@ -511,7 +511,7 @@ Used Book: 자바의 정석
     - [chapter_03_84.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/chapter_03_84.html) - (**Posts** using HTML table)
     - [chapter_03_84_1.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/chapter_03_84_1.html) - (**Board** using HTML table)
     - [chapter_03_84_2.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/chapter_03_84_2.html) - (**Movie Posters** using HTML)
-    - [chapter_03_84_3.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/chapter_03_84_3.html) - (**Movie Details**using HTML)
+    - [chapter_03_84_3.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/chapter_03_84_3.html) - (**Movie Details** using HTML)
     - [chapter_03_84_4_html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/chapter_03_84_4.html) - (**Img Map** using HTML)
     - [etc-tag.html](https://github.com/eunyooung/TIL/blob/main/2022-01-25(2)/src/main/webapp/html/etc-tag.html) - iframe
 * **2022-01-25(3)**
@@ -538,10 +538,10 @@ Used Book: 자바의 정석
     - [chapter_05_125.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_125.html) - [CSS], width, height
     - [chapter_05_129.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_129.html) - color
     - [chapter_05_130.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_130.html) - color
-    - [chapter_05_131.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_131.html) - color
-    - [chapter_05_133.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_133.html) - widht, height, opacity, cursor
-    - [chapter_05_133_1.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_133_1.html) - color
-    - [chapter_05_135.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_135.html) - background, width, height, border, 
+    - [chapter_05_131.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_131.html) - [id], id, color
+    - [chapter_05_133.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_133.html) - class, width, height, opacity, cursor
+    - [chapter_05_133_1.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_133_1.html) - id, class, color
+    - [chapter_05_135.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_135.html) - tag selector, background, width, height, border
     - [chapter_05_136.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_136.html) - background-color, color
 * **2022-01-27(2)**
   - _src.main.webapp.html_
@@ -549,23 +549,25 @@ Used Book: 자바의 정석
     - [chapter_05_144.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(2)/src/main/webapp/html/chapter_05_144.html) - ul li:first-child, ul li:last-child, ul li:nth-child
 * **2022-01-28(1)**
   - _src.main.webapp.html_
-    - [chapter_05_159.html]() - 
-    - [chapter_05_160.html]() - 
-    - [chapter_05_163.html]() - 
-    - [chapter_05_165.html]() - 
-    - [chapter_05_165_1.html]() - 
-    - [chapter_05_166.html]() - 
-    - [total.html]() - 
+    - [chapter_05_159.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html/chapter_05_159.html) - [box model], [margin], [padding], [border]
+    - [chapter_05_160.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html/chapter_05_160.html) - border, margin, padding, display
+    - [chapter_05_163.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html/chapter_05_163.html) - border, border-width, border-style, border-color
+    - [chapter_05_165.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html/chapter_05_165.html) - border-radius
+    - [chapter_05_165_1.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html/chapter_05_165_1.html) - border, border-radius
+    - [chapter_05_166.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html/chapter_05_166.html) - [display]
+    - [total.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html/total.html) - [HTML/CSS]
   - _src.main.webapp.html_test_
-    - [board.html]() - 
-    - [detail.html]() - 
-    - [join.html]() - 
-    - [table.css]() - 
+    - [board.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html_test/board.html) - (**Board** using HTML/CSS)
+    - [detail.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html_test/detail.html) - (**Movie Detail** using HTML/CSS)
+    - [join.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html_test/join.html) - (**Join** using HTML/CSS)
+    - [table.css](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html_test/table.css) - Board, Movie Detail, Join CSS
 * **2022-01-28(2)**
-  - [_src.main.java.sist.com.dao_]() - (**Music** using JDBC)
+  - _src.main.java.sist.com.dao_
+    - [MusicDAO](https://github.com/eunyooung/TIL/blob/main/2022-01-28(2)/src/main/java/sist/com/dao/MusicDAO.java)
+    - [MusicVO](https://github.com/eunyooung/TIL/blob/main/2022-01-28(2)/src/main/java/sist/com/dao/MusicVO.java)
   - _src.main.webapp.html_
-    - [aaa.jsp]() - 
-    - [bbb.jsp]() - 
-    - [music.html]() - 
-    - [music.jsp]() - 
-    - [table.css]() - 
+    - [aaa.jsp](https://github.com/eunyooung/TIL/blob/main/2022-01-28(2)/src/main/webapp/html/aaa.jsp) - (**Checkbox** using JSP)
+    - [bbb.jsp](https://github.com/eunyooung/TIL/blob/main/2022-01-28(2)/src/main/webapp/html/bbb.jsp) - (**Checkbox Result** using JSP)
+    - [music.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(2)/src/main/webapp/html/music.html) - (**Music Search** using Jquery)
+    - [music.jsp](https://github.com/eunyooung/TIL/blob/main/2022-01-28(2)/src/main/webapp/html/music.jsp) - (**Music** using JSP)
+    - [table.css](https://github.com/eunyooung/TIL/blob/main/2022-01-28(2)/src/main/webapp/html/table.css) - Music CSS
