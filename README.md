@@ -535,18 +535,18 @@ Used Book: 자바의 정석
     - [table.css](https://github.com/eunyooung/TIL/blob/main/2022-01-26(2)/src/main/webapp/html/table.css) - Board CSS
 * **2022-01-27(1)**
   - _src.main.webapp.html_
-    - [chapter_05_125.html]() - 
-    - [chapter_05_129.html]() - 
-    - [chapter_05_130.html]() - 
-    - [chapter_05_131.html]() - 
-    - [chapter_05_133.html]() - 
-    - [chapter_05_133_1.html]()
-    - [chapter_05_135.html]() - 
-    - [chapter_05_136.html]() - 
+    - [chapter_05_125.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_125.html) - [CSS], width, height
+    - [chapter_05_129.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_129.html) - color
+    - [chapter_05_130.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_130.html) - color
+    - [chapter_05_131.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_131.html) - color
+    - [chapter_05_133.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_133.html) - widht, height, opacity, cursor
+    - [chapter_05_133_1.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_133_1.html) - color
+    - [chapter_05_135.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_135.html) - background, width, height, border, 
+    - [chapter_05_136.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(1)/src/main/webapp/html/chapter_05_136.html) - background-color, color
 * **2022-01-27(2)**
   - _src.main.webapp.html_
-    - [chapter_05_141.html]() - 
-    - [chapter_05_144.html]() - 
+    - [chapter_05_141.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(2)/src/main/webapp/html/chapter_05_141.html) - [selector], hover, input:enabled, input:disabled, input:focus, input[tpye="checkbox"]:checked, ul li:first-child, ul li:last-child, ul li:nth-child
+    - [chapter_05_144.html](https://github.com/eunyooung/TIL/blob/main/2022-01-27(2)/src/main/webapp/html/chapter_05_144.html) - ul li:first-child, ul li:last-child, ul li:nth-child
 * **2022-01-28(1)**
   - _src.main.webapp.html_
     - [chapter_05_159.html]() - 
