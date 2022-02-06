@@ -571,7 +571,7 @@ Used Book: 자바의 정석
     - [music.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(2)/src/main/webapp/html/music.html) - (**Music Search** using Jquery)
     - [music.jsp](https://github.com/eunyooung/TIL/blob/main/2022-01-28(2)/src/main/webapp/html/music.jsp) - (**Music** using JSP)
     - [table.css](https://github.com/eunyooung/TIL/blob/main/2022-01-28(2)/src/main/webapp/html/table.css) - Music CSS
-* **2022-03-04(1)**
+* **2022-02-03(1)**
   - _src.main.java.sist.com.dao_
     - [MainClass.java](https://github.com/eunyooung/TIL/blob/main/2022-02-03(1)/src/main/java/sist/com/dao/MainClass.java) - MySQL JDBC
   - _src.main.webapp.html_
@@ -583,7 +583,7 @@ Used Book: 자바의 정석
     - [chapter06_189_2.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(1)/src/main/webapp/html/chapter06_189_2.html) - (**Movie Cards** using HTML/CSS)
     - [chapter06_189_3.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(1)/src/main/webapp/html/chapter06_189_3.html) - list-style-type, display: inline
     - [chapter06_189_4.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(1)/src/main/webapp/html/chapter06_189_4.html) - (**Navigation Bar** using HTML/CSS)
-* **2022-03-04(2)**
+* **2022-02-03(2)**
   - _src.main.webapp.html_
     - [chapter06_192.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(2)/src/main/webapp/html/chapter06_192.html) - float
     - [chapter06_192_1.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(2)/src/main/webapp/html/chapter06_192_1.html) - (**Comment Box && New** using HTML/CSS), ::before, ::after, content, float
