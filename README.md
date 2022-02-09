@@ -490,7 +490,7 @@ Used Book: 자바의 정석
 
 </br>
 
-### **HTML/CSS**
+### **HTML/CSS/JSP**
 
 * **2022-01-25(1)**
   - _src.main.webapp.html_
@@ -596,3 +596,39 @@ Used Book: 자바의 정석
     - [chapter06_202.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(2)/src/main/webapp/html/chapter06_202.html) - float, background
     - [chapter06_297_1.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(2)/src/main/webapp/html/chapter06_297_1.html) - position:fixed, background, line-height, text-indent
     - [total.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(2)/src/main/webapp/html/total.html) - [font CSS], [text CSS], [list CSS], [layout CSS]
+* **2022-02-04(1)**
+  - _src.main.webapp.html_
+    - [chapter_07_219.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(1)/src/main/webapp/html/chapter07_219.html) - float
+    - [chapter_07_219_1.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(1)/src/main/webapp/html/chapter07_219_1.html) - (**Layout** using float), header, nav, aside, section, footer
+    - [chapter_07_219_2.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(1)/src/main/webapp/html/chapter07_219_2.html) - (**Responsive Layout** using float, @media), header, aside, section, footer
+    - [chapter_07_219_3.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(1)/src/main/webapp/html/chapter07_219_3.html) - (**Responsive Layout2** using float, @media), header, nav, aside, section, article, footer
+    - [chapter_07_219_4.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(1)/src/main/webapp/html/chapter07_219_4.html) - (**Responsive Layout3** using float, @media), header, aside, section, footer
+    - [chapter_07_219_5.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(1)/src/main/webapp/html/chapter07_219_5.html) - (**Image Layout** using float)
+* **2022-02-04(2)**
+  - _src.main.webapp.lib_
+    - [chapter_08_1.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(2)/src/main/webapp/lib/chapter08_1.html) - bootstrap, container, col-sm
+    - [chapter_08_2.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(2)/src/main/webapp/lib/chapter08_2.html) - row
+    - [chapter_08_3.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(2)/src/main/webapp/lib/chapter08_3.html) - bootstrap, container, row, jumbotron, btn, btn-sm, btn-lg, btn-xs, btn-danger, btn-info, btn-primary, btn-warning, btn-success, btn-dfault
+    - [chapter_08_4.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(2)/src/main/webapp/lib/chapter08_4.html) - bootstrap, container, row, input-sm, btn, btn-sm, btn-danger
+    - [chapter_08_5.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(2)/src/main/webapp/lib/chapter08_5.html) - (**Grade** using bootstrap, table)
+* **2022-02-07**
+  - _src.main.webapp.jsp_
+    - [basic1.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-07/src/main/webapp/jsp/basic1.jsp) - [JSP]
+    - [basic2_23.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-07/src/main/webapp/jsp/basic2_23.jsp) - (**Multiplication Table** using JSP), [JSP], for loop, <% %>
+    - [basic3_121.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-07/src/main/webapp/jsp/basic3_121.jsp) - [declaration], <%! %>, <%= %>
+    - [basic4_124.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-07/src/main/webapp/jsp/basic4_124.jsp) - <%! %>, <%= %>
+    - [basic5_126.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-07/src/main/webapp/jsp/basic5_126.jsp) - <% %>, <%= %>
+    - [basic6_131.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-07/src/main/webapp/jsp/basic6_131.jsp) - <% %>, <%= %>
+  - _src.main.webapp.jsp2_
+    - [basic1_135.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-07/src/main/webapp/jsp2/basic1_135.jsp) - (**Restaurants (Mango Plate)**), [control statements], <% %>, for loop, if statement
+    - [basic2_137.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-07/src/main/webapp/jsp2/basic2_137.jsp) - <% %>, for loop
+* **2022-02-08**
+  - _src.main.webapp.jsp_
+    - [basic1_145.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp/basic1_145.jsp) - [page directive], errorPage([error.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp/error.jsp)), <%@ %>
+    - [basic2_154.jsp]() - (**Layout** using page directive([aside.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp/aside.jsp), [footer.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp/footer.jsp), [header.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp/header.jsp), [section.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp/section.jsp)), include file
+    - [basic3_154_1.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp/basic3_154_1.jsp) - jstl
+  - _src.main.webapp.jsp2_
+    - [basic1_171.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp2/basic1_171.jsp) - bootstrap, container, row, text-center, success
+    - [input.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp2/input.jsp) - (**Input Form**)
+    - [output.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp2/output.jsp) - request.setCharacterEncoding("UTF-8"), request.getParameter, request.getRemoteAddr(), request.getServerName(), request.getServerPort(), request.getMethod(), request.getRequestURL(), request.getRequestURI(), request.getContextPath()
+    - [postfind.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp2/postfind.jsp) - (**Post Find** using JDBC)
