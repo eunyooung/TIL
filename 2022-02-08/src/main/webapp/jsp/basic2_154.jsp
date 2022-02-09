@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%--
-     <%@ incude file="파일지정"%>
+     <%@ include file="파일지정"%>
      => 정적 페이지 (고정)
      => 동적 페이지 
         <jsp:include page="파일지정(파일을 필요시마다 변경이 가능)">
