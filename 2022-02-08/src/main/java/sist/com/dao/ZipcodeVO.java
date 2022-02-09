@@ -1,4 +1,4 @@
-package com.sist.dao;
+package sist.com.dao;
 
 // 멤버변수 == 컬럼명 (한번에 모아서 전송할 목적) => 자바빈 (데이터를 모아서 관리)
 /*

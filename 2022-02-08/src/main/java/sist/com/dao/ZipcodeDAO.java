@@ -1,4 +1,4 @@
-package com.sist.dao;
+package sist.com.dao;
 
 // 10장 / 11장  => 생략
 // 데이터베이스 연결 : JDBC

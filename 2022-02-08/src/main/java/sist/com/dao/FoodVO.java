@@ -1,4 +1,4 @@
-package com.sist.dao;
+package sist.com.dao;
 
 public class FoodVO {
 
