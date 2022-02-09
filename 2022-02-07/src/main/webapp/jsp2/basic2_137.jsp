@@ -8,21 +8,22 @@
   //                                   실제 배열에 저장된 데이터를 받는다
   // 홍길동(남자)
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
 </head>
 <body>
   <h1>이름 리스트</h1>
   <ul>
     <%
-    for (String name : names) {
+        for (String name : names) {
     %>
-    <li><%=name%></li>
+            <li><%=name%></li>
     <%
-    }
+        }
     %>
   </ul>
   <h1>이름 - 성별 리스트</h1>

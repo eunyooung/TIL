@@ -16,15 +16,13 @@
          -------------------
           <%! %> : 멤버변수, 메소드 ==> 직접 클래스 제작후 메소드 호출 
          -------------------
-         public void _jspService()
-         {
+         public void _jspService() {
            ----------------------
             <% %>
             <%= %> : 지역변수, 제어문 ...
            ----------------------
          }
       }
-      
  --%>
  
 <%!// 선언부 (사용빈도가 거의 없다)
@@ -43,8 +41,9 @@
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         return sdf.format(date);
-    }%>
-    
+    }
+%>
+
 <!DOCTYPE html>
 <html>
 <head>

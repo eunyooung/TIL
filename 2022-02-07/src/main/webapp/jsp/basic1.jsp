@@ -2,8 +2,8 @@
     pageEncoding="UTF-8"%>
 <%--
       JSP (Java Server Page) : 서버에서 실행되는 파일 
-      JSP (WEB 파일+Java)
-          -------- HTML,CSS,JavaScript 
+      JSP (WEB 파일 + Java)
+          -------- HTML, CSS, JavaScript 
       JSP의 최종 결과값 ==> HTML => 브라우저에 전송 (Java코딩은 사라진다)
       ---
        사용되는 도구 
@@ -67,6 +67,7 @@
                    int a = 10; 변수선언 => 지역변수 
                                         --------
                    for() {
+                   
                    }
                    
                    여기서 주의점 
@@ -80,7 +81,7 @@
                %>
             <%= %> : 표현식 => 화면 출력 (System.out.println())
                      <td><%= "홍길동"%></td>
-                             ------- 변수 , 메소드 
+                             ------- 변수, 메소드 
                      *** ;을 사용하지 않는다 
                               <%= %> => 출력할 내용만 출력 
                                 ↓
@@ -99,6 +100,7 @@
             <%@ page %>
             <%!
                  public void display() {
+                 
                  }
                  int number = 1; ==> 클래스 블록안에 설정 
             %>
@@ -117,7 +119,8 @@
                  
                -%>
                public void display() {
-                 }
+               
+               }
                  int number = 1;
                public void _jspInit() { => 생성자 대신 초기화시에 사용 
                   ==> 생성자 

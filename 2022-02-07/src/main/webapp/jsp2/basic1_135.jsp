@@ -177,6 +177,7 @@
     
     // JSP에서 주로 사용되는 반복문 (for,for-each을 주로 사용한다)
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
