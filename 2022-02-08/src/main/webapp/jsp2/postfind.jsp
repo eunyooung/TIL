@@ -17,13 +17,13 @@
     */
     // 우편번호 가지고 오기 
     
-    ZipcodeDAO dao=new ZipcodeDAO();
-    List<ZipcodeVO> list=null;
-    if(dong!=null)
-    {
+    ZipcodeDAO dao = new ZipcodeDAO();
+    List<ZipcodeVO> list = null;
+    if(dong!=null) {
     	list=dao.zipcodeListData(dong);
     }
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,29 +31,28 @@
   <title>Insert title here</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <style type="text/css">
-    .container{
+    .container {
        margin-top: 50px;
     }
     .row {
        width:800px;
        margin: 0px auto; /*가운데 정렬*/
     }
-    h1{
+    h1 {
         text-align: center;
     }
   </style>
   <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
   <script type="text/javascript">
-    $(function(){
-    	$('.btn').click(function(){
-    		let dong=$('.input-sm').val();
-    		if(dong.trim()=="")
-    		{
-    			$('.input-sm').focus();
-    			return;
-    		}
-    		$('form').submit();
-    	})
+    $(function() {
+        $('.btn').click(function() {
+            let dong=$('.input-sm').val();
+            if(dong.trim()=="") {
+                $('.input-sm').focus();
+                return;
+            }
+            $('form').submit();
+        })
     })
   </script>
 </head>

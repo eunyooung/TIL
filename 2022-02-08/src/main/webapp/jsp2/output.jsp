@@ -4,16 +4,20 @@
     // 1. 전송된 데이터를 받는다 
     // 보내는 JSP / 받는 JSP
     // form (action), a (href), javascript(location.href="")
+    
     // 2. 한글 포함여부 확인
     request.setCharacterEncoding("UTF-8"); // encoding(byte[])=>decoding
+    
     // 3. 보낸 데이터를 받는다 
-    String name=request.getParameter("name");
-    String sex=request.getParameter("sex");
-    String loc=request.getParameter("loc");
-    String content=request.getParameter("content");
-    String[] hobby=request.getParameterValues("hobby");
+    String name = request.getParameter("name");
+    String sex = request.getParameter("sex");
+    String loc = request.getParameter("loc");
+    String content = request.getParameter("content");
+    String[] hobby = request.getParameterValues("hobby");
+    
     // 4. 출력 / 오라클 
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +28,7 @@
   <h1>요청한 값 출력</h1>
   ***접속자의 IP:<%= request.getRemoteAddr() %><br>
   서버 주소:<%= request.getServerName() %><br>
-  서버 PORT:<%=request.getServerPort() %><br>
+  서버 PORT:<%= request.getServerPort() %><br>
   접속자가 보낸 메소드방식 :<%= request.getMethod() %><br>
   ***요청 URL:<%= request.getRequestURL() %><br>
   ***요청 URI:<%= request.getRequestURI() %><br>
