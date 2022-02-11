@@ -79,7 +79,6 @@ local.properties
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.nar
 *.ear
@@ -91,3 +90,4 @@ local.properties
 hs_err_pid*
 
 
+/build/
