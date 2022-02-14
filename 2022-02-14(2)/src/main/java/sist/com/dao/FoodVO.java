@@ -1,20 +1,20 @@
 package sist.com.dao;
 
 /*
-    NO      NOT NULL NUMBER         
-    CNO              NUMBER         
-    POSTER  NOT NULL VARCHAR2(4000) 
-    NAME    NOT NULL VARCHAR2(200)  
-    SCORE   NOT NULL NUMBER(2,1)    
-    ADDRESS NOT NULL VARCHAR2(500)  
-    TEL     NOT NULL VARCHAR2(20)   
-    TYPE    NOT NULL VARCHAR2(100)  
-    PRICE   NOT NULL VARCHAR2(100)  
-    TIME             VARCHAR2(200)  
-    MENU             CLOB           
-    GOOD             NUMBER         
-    SOSO             NUMBER         
-    BAD              NUMBER 
+    NO      NOT NULL NUMBER
+    CNO              NUMBER
+    POSTER  NOT NULL VARCHAR2(4000)
+    NAME    NOT NULL VARCHAR2(200)
+    SCORE   NOT NULL NUMBER(2,1)
+    ADDRESS NOT NULL VARCHAR2(500)
+    TEL     NOT NULL VARCHAR2(20)
+    TYPE    NOT NULL VARCHAR2(100)
+    PRICE   NOT NULL VARCHAR2(100)
+    TIME             VARCHAR2(200)
+    MENU             CLOB
+    GOOD             NUMBER
+    SOSO             NUMBER
+    BAD              NUMBER
     
     => FoodHouse, FoodLocation
        ------------------------ 테이블에 있는 데이터를 저장 

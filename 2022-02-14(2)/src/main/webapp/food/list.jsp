@@ -97,9 +97,9 @@
   <!-- 
       서블릿은 설정 => 실행순서(생명주기)
                     init() => service() => destory()
-      => 1. 페이징기법 
+      => 1. 페이징기법
          2. Cookie설정 
-         3. Session설정 => 댓글 (로그인처리) id,name => 댓글 
+         3. Session설정 => 댓글 (로그인처리) id,name => 댓글
    -->
   <style type="text/css">
     .container{
@@ -142,7 +142,7 @@
             // 5 10 15 20 ... endPage
             if(startPage > 1) {
         %>
-                <li><a href="list.jsp?page=<%=startPage-1%>">&lt;</a></li>     
+                <li><a href="list.jsp?page=<%=startPage-1%>">&lt;</a></li>
         <%
             }
         %>
@@ -171,8 +171,8 @@
       </div>
     </div>
     <%--
-          1. 자바 
-          2. 오라클 
+          1. 자바
+          2. 오라클
           3. HTML / CSS / JavaScript (일반,Ajax,Jquery)
           4. JSP / Servlet / MVC
      --%>

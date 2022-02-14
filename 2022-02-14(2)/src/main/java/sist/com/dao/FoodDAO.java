@@ -11,7 +11,7 @@ import javax.sql.*; // DataSource => 데이터베이스에 대한 정보
  *     ----------------
  *     => 오라클 연결 getConnection()
  *     => 오라클 닫기 disConnection() 
- *     ---------------- 요청시마다 반복 => 오라클에 연결하는 시간이 많이 걸린다 
+ *     ---------------- 요청시마다 반복 => 오라클에 연결하는 시간이 많이 걸린다
  *    DBCP 
  *      commons-dbcp.jar
  *      commons-pool.jar
@@ -27,10 +27,10 @@ import javax.sql.*; // DataSource => 데이터베이스에 대한 정보
  *                maxActive => 사용자가 10개를 초과했을 경우 => 최대한 Connection 20
  *                maxIdle   => 사용중인 Connection => 10
  *                maxWait   => 반환시까지 대기시간 => 음수면 무한정 (-1) 
- *     => 사용후에는 반환 
+ *     => 사용후에는 반환
  *     => DBCP ==> Connection과 관련 (열기/닫기) 
- *                                  미리생성 => 사용이 가능 
- *                                  닫기(반환) 
+ *                                  미리생성 => 사용이 가능
+ *                                  닫기(반환)
  *     ------------------------------------------
  */
 
@@ -42,7 +42,7 @@ public class FoodDAO {
     // 미리 만들어진 Connection을 가지고 온다 
     public void getConnection() {
         try {
-            // 메모리 구조 => 탐색기 : JNDI의 초기화 => 탐색기를 연다 
+            // 메모리 구조 => 탐색기 : JNDI의 초기화 => 탐색기를 연다
             // JNDI => Java Naming Directory Interface
             Context init = new InitialContext();
             // C드라이버에 접근 => java://comp//env
@@ -51,7 +51,7 @@ public class FoodDAO {
             conn = ds.getConnection();
 
             // DBCP가 만들어진 것이 있다(실무) => ORM(MyBatis, JPA)
-            //  보안 
+            //  보안
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -76,7 +76,7 @@ public class FoodDAO {
             // 미리 생성된 Connection(관리하는 메모리 공간 => POOL) 주소를 얻어서 사용한다 
             // 1. SQL문장을 생성 
             String sql = "SELECT no,name,poster,num " + "FROM (SELECT no,name,poster,rownum as num "
-                    + "FROM (SELECT no,name,poster " + "FROM foodhouse ORDER BY no ASC)) " + "WHERE num BETWEEN ? AND ?"; // 인라인뷰 => 페이지 나누기 
+                    + "FROM (SELECT no,name,poster " + "FROM foodhouse ORDER BY no ASC)) " + "WHERE num BETWEEN ? AND ?"; // 인라인뷰 => 페이지 나누기
             // 2. 오라클에 SQL문장을 먼저 전송 
             ps = conn.prepareStatement(sql);
             // 3. ?에 값을 채운후에 실행을 요청 

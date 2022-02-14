@@ -46,7 +46,7 @@
       <table class="table">
         <tr>
           <td class="text-center">
-            <img src="<%=vo.getPoster() %>" width=100%>
+            <img src="<%=vo.getPoster() %>">
           </td>
         </tr>
         <tr>
