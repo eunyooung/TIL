@@ -6,12 +6,12 @@
 <%
      model.databoardListData(request); // JSP가 가지고 있는 request에
      // 데이터를 담아 달라 
-     // 해당 자동 호출이 가능하게 만든다 => Controller (MV=>MVC)
-     // 목표 => SQL문장 (답변(SQL문장 4개 사용),삭제(SQL 5개 사용)=>트랜잭션)
-     // 데이터를 받아서 처리 => EL/JSTL
-     // 파일업로드 , 파일 다운로드 (response => setHeader)
-     // JSP에서 자바/HTML분리 작업 ==> MVC
-     // 자바/오라클/HTML/CSS/JSP ==> Spring-MVC
+     // 해당 자동 호출이 가능하게 만든다 → Controller (MV→MVC)
+     // 목표 → SQL문장 (답변(SQL문장 4개 사용), 삭제(SQL 5개 사용)→트랜잭션)
+     // 데이터를 받아서 처리 → EL/JSTL
+     // 파일업로드, 파일 다운로드 (response → setHeader)
+     // JSP에서 자바/HTML분리 작업 → MVC
+     // 자바/오라클/HTML/CSS/JSP → Spring-MVC
 %>
 
 <!DOCTYPE html>

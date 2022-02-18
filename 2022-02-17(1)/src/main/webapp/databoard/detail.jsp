@@ -6,20 +6,20 @@
 <%
     model.databoardDetailData(request);
     // model에 request를 보내주고 결과값을 request에 담아 달라 
-    // 클래스, 배열 => Call By Reference : 자체에 처리 
+    // 클래스, 배열 → Call By Reference : 자체에 처리 
 %>
 <%--
       JSP에서 자바코딩을 하는 것이 아니라 
              ------ 일반 자바파일로 만들어서 처리 (Model)
-                    => 1. 목적 : 보안 (jsp=>jsp, java=>class)
+                    → 1. 목적 : 보안 (jsp→jsp, java→class)
                            *** JSP파일은 _jspService()메소드안에 첨부하는 코딩
                                        --------------
-                    => 2. 자바파일 : 확장성 (상속, 포함), 재사용 
-                    => 3. 역할 : 사용자로부터 요청값을 받는다 
+                    → 2. 자바파일 : 확장성 (상속, 포함), 재사용 
+                    → 3. 역할 : 사용자로부터 요청값을 받는다 
                                 ---------------------
-                                  JSP =====> Model
+                                  JSP ====→ Model
                                      request
-                                요청에 해당되는 처리 => 결과값을 
+                                요청에 해당되는 처리 → 결과값을 
                                 request에 첨부해서 JSP로 다시 전송 
                                   request.setAttribute()
                                   JSP: 처리 결과만 출력하는 역할 (View)
@@ -89,18 +89,18 @@
         <tr>
           <td class="text-right" colspan="4">
           <%--
-                 detail.jsp ==> Model ==> reply.jsp 
+                 detail.jsp =→ Model =→ reply.jsp 
                    답변하기       (reply.jsp에 필요한 데이터를 전송)
-                 웹 => JSP 
-                       먼저 실행 => 자바 
+                 웹 → JSP 
+                       먼저 실행 → 자바 
                        HTML에 데이터 출력 
                        
-                 사용자 요청 ===> Controller ===== Model ==== Controller
+                 사용자 요청 ==→ Controller ===== Model ==== Controller
                                        HandlerMapping          ViewResolver
-                          ===> View(JSP)
+                          ==→ View(JSP)
                  사용자 중심의 프로그램 
                  -----------------
-                  결재 => 버튼 ...
+                  결재 → 버튼 ...
           --%>
             <a href="reply.jsp?no=${vo.no }&page=${page}" class="btn btn-xs btn-danger">답변</a>
             <a href="update.jsp?no=${vo.no }&page=${page}" class="btn btn-xs btn-warning">수정</a>

@@ -22,7 +22,7 @@ public class DataBoardDAO {
         }
     }
 
-    // 사용후에 반환 => POOL(Connection객체 관리 영역)
+    // 사용후에 반환 → POOL(Connection객체 관리 영역)
     public void disConnection() {
         try {
             if (ps != null)
@@ -72,14 +72,14 @@ public class DataBoardDAO {
     }
 
     /*
-     *                   요청 처리와 관련된 자바 파일을 모아서 => Model 
-     *                   Model => Model + VO + DAO
-     *    JSP =========> Model(Java) ========> DAO(사이트에 필요한 데이터 저장)
+     *                   요청 처리와 관련된 자바 파일을 모아서 → Model 
+     *                   Model → Model + VO + DAO
+     *    JSP ========→ Model(Java) =======→ DAO(사이트에 필요한 데이터 저장)
      *     요청 (request)    |
      *                    1.요청정보 받기 
      *                    2.DAO연결 
      *                    3.결과값을 request담아 준다
-     *                      request.setAttribute() => 여러개 사용이 가능  
+     *                      request.setAttribute() → 여러개 사용이 가능  
      *                      ---------------------
      *                       화면에 출력해야되는 모든 데이터 전송 
      */
@@ -93,26 +93,26 @@ public class DataBoardDAO {
             // 2. SQL문장 
             String sql = "SELECT CEIL(COUNT(*)/10.0) FROM databoard";
             
-            // 3. 오라클로 전송 (DAO만이 => 오라클)
+            // 3. 오라클로 전송 (DAO만이 → 오라클)
             ps = conn.prepareStatement(sql);
             
-            // 4. 실행요청을 요청 => 결과값 읽기
+            // 4. 실행요청을 요청 → 결과값 읽기
             ResultSet rs = ps.executeQuery();
             
-            // 5. rs에 있는 데이터를 total에 저장 => 필요시마다 사용이 가능 
+            // 5. rs에 있는 데이터를 total에 저장 → 필요시마다 사용이 가능 
             rs.next();
             total = rs.getInt(1);
             rs.close();
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
-            // 반환 => POOL안에 다시 재사용이 가능하게 만든다 
+            // 반환 → POOL안에 다시 재사용이 가능하게 만든다 
             disConnection();
         }
         return total;
     }
 
-    // 새글 올리기 => 파일 업로드 
+    // 새글 올리기 → 파일 업로드 
     public void databoardInsert(DataBoardVO vo) {
         try {
             getConnection();
@@ -140,10 +140,10 @@ public class DataBoardDAO {
         }
     }
 
-    // 상세보기 => 파일 다운로드 (메소드 => SQL문장이 1개 아니다)
-    // 답변 => SQL문장 5개, 삭제 => SQL문장 5개 => 일괄 처리 (트랜잭션)
+    // 상세보기 → 파일 다운로드 (메소드 → SQL문장이 1개 아니다)
+    // 답변 → SQL문장 5개, 삭제 → SQL문장 5개 → 일괄 처리 (트랜잭션)
     /*
-     *   DELETE, UPADTE, INSERT => COMMIT, ROLLBACK
+     *   DELETE, UPADTE, INSERT → COMMIT, ROLLBACK
      *   ** 자바의 JDBC 단점 : AutoCommit을 기본으로 수행 
      */
     public DataBoardVO databoardDetailData(int no) {
@@ -179,10 +179,10 @@ public class DataBoardDAO {
             vo.setFilesize(rs.getInt(8));
             rs.close();
             /*
-             *    핵심 => 페이지 (인라인뷰) => 블록단위로 페이지 설정 
+             *    핵심 → 페이지 (인라인뷰) → 블록단위로 페이지 설정 
              *    - JOIN / SubQuery 
              *    - INSERT / UPDATE / DELETE 
-             *    - Spring : PL/SQL => 모든 상세보기에 댓글이 가능 
+             *    - Spring : PL/SQL → 모든 상세보기에 댓글이 가능 
              *      ------- DAO(MyBatis)
              *                  -------- Annotation / XML 
              */
@@ -203,7 +203,7 @@ public class DataBoardDAO {
             // 2.commit을 해제 
             conn.setAutoCommit(false);
             
-            // 3. => pno가 가지고 있는 그룹 정보를 읽어 온다 (SELECT)
+            // 3. → pno가 가지고 있는 그룹 정보를 읽어 온다 (SELECT)
             String sql = "SELECT group_id,group_step,group_tab " + "FROM databoard " + "WHERE no=?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, pno);
@@ -214,27 +214,27 @@ public class DataBoardDAO {
             int gt = rs.getInt(3);
             rs.close();
             
-            // 4. => group_step을 한개 증가 (UPDATE) *** 답변형의 핵심 SQL
+            // 4. → group_step을 한개 증가 (UPDATE) *** 답변형의 핵심 SQL
             sql = "UPDATE databoard SET " + "group_step=group_step+1 " + "WHERE group_id=? AND group_step>?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, gi);
             ps.setInt(2, gs);
-            ps.executeUpdate();//commit() => rollback()(X)
+            ps.executeUpdate();//commit() → rollback()(X)
             
             /*
              *    g_step ASC
              *             g_id   g_step  g_tab
              *    AAAAA      1       0      0
              *    BBBBB      2       0      0
-             *     =>PPPP    2       1      1
-             *     =>KKKK    2       2      1
-             *     =>CCCC    2       3      1
-             *      =>DDDD   2       4      2
-             *       =>EEEE  2       5      3
+             *     →PPPP    2       1      1
+             *     →KKKK    2       2      1
+             *     →CCCC    2       3      1
+             *      →DDDD   2       4      2
+             *       →EEEE  2       5      3
              *     
              *     
              */
-            // 5. => insert (INSERT)
+            // 5. → insert (INSERT)
             sql = "INSERT INTO databoard VALUES(db_no_seq.nextval," + "?,?,?,?,SYSDATE,0,'',0,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
             ps.setString(1, vo.getName());
@@ -250,12 +250,12 @@ public class DataBoardDAO {
             // 실행 요청 
             ps.executeUpdate();//commit()
             
-            // 6. => depth증가 (UPDATE)
+            // 6. → depth증가 (UPDATE)
             sql = "UPDATE databoard SET " + "depth=depth+1 " + "WHERE no=?"; // pno
             ps = conn.prepareStatement(sql);
             ps.setInt(1, pno);
             ps.executeUpdate();//commit()
-            // 오라클의 단점은 비절차적 언어 => 동시에 처리 
+            // 오라클의 단점은 비절차적 언어 → 동시에 처리 
             conn.commit();
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -351,7 +351,7 @@ public class DataBoardDAO {
             rs.close();
             if (db_pwd.equals(pwd)) {
                 bCheck = true;
-                if (depth == 0) { // 답변이 없는 상태 => 삭제
+                if (depth == 0) { // 답변이 없는 상태 → 삭제
                     sql = "DELETE FROM databoard " + "WHERE no=?";
                     ps = conn.prepareStatement(sql);
                     ps.setInt(1, no);
@@ -361,7 +361,7 @@ public class DataBoardDAO {
                     ps = conn.prepareStatement(sql);
                     ps.setInt(1, root);
                     ps.executeUpdate();
-                } else  { // 답변이 있는 상태 => 수정
+                } else  { // 답변이 있는 상태 → 수정
                     sql = "UPDATE databoard SET " + "subject='관리자가 삭제한 게시물입니다'," + "content='관리자가 삭제한 게시물입니다' "
                             + "WHERE no=?";
                     ps = conn.prepareStatement(sql);
@@ -373,7 +373,7 @@ public class DataBoardDAO {
                 bCheck = false;
             }
             
-            // 2-2 depth => 0(단변X), 0이상 (답변이 있는 상태)
+            // 2-2 depth → 0(단변X), 0이상 (답변이 있는 상태)
             //                삭제          수정 
             
             // 2-3 depth를 감소 

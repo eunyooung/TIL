@@ -1,11 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="sist.com.model.*"%>
-<jsp:useBean id="model" class="sist.com.model.DataBoardModel"/>
-<%
-    // 자바를 통해서 데이터 얻어 오기 => detail (no,page)
-    model.databoardUpdate(request);
-%>
-
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,46 +7,50 @@
   <title>Insert title here</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <style type="text/css">
-    .container{
+    .container {
        margin-top: 50px;
     }
     .row {
        width:800px;
        margin: 0px auto; /*가운데 정렬*/
     }
-    h1{
+    h1 {
         text-align: center;
     }
-    .table td{
+    .table td {
       font-size: 9pt;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>수정하기</h1>
+    <h1>파일올리기 & 글쓰기</h1>
     <div class="row">
       <%-- enctype="multipart/form-data" 파일업로드 프로토콜 반드시 첨부  --%>
-      <form method=post action="update_ok.jsp">
+      <form method=post action="insert_ok.jsp" enctype="multipart/form-data">
         <table class="table">
           <tr>
             <th width=15% class="text-right success">이름</th>
             <td width=85%>
-              <input type=text name=name size=15 class="input-sm" value="${vo.name }">
-              <input type=hidden name=no value="${no }">
-              <input type=hidden name=page value="${page }">
+              <input type=text name=name size=15 class="input-sm">
             </td>
           </tr>
           <tr>
             <th width=15% class="text-right success">제목</th>
             <td width=85%>
-              <input type=text name=subject size=50 class="input-sm" value="${vo.subject }">
+              <input type=text name=subject size=50 class="input-sm">
             </td>
           </tr>
           <tr>
             <th width=15% class="text-right success">내용</th>
             <td width=85%>
-              <textarea rows="8" cols="55" name=content>${vo.content}</textarea>
+              <textarea rows="8" cols="55" name=content></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th width=15% class="text-right success">첨부파일</th>
+            <td width=85%>
+              <input type=file name=upload size=20 class="input-sm">
             </td>
           </tr>
           <tr>
@@ -63,7 +61,7 @@
           </tr>
           <tr>
             <td colspan=2 class="text-center">
-              <button class="btn btn-sm btn-danger">수정하기</button>
+              <button class="btn btn-sm btn-danger">글쓰기</button>
               <input type=button value="취소" class="btn btn-sm btn-warning" onclick="javascript:history.back()">
             </td>
           </tr>
