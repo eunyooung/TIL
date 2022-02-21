@@ -490,7 +490,7 @@ Used Book: 자바의 정석
 
 </br>
 
-### **HTML/CSS/JSP**
+### **HTML & CSS/JSP**
 
 * **2022-01-25(1)**
   - _src.main.webapp.html_
@@ -555,11 +555,11 @@ Used Book: 자바의 정석
     - [chapter_05_165.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html/chapter_05_165.html) - border-radius
     - [chapter_05_165_1.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html/chapter_05_165_1.html) - border, border-radius
     - [chapter_05_166.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html/chapter_05_166.html) - [display]
-    - [total.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html/total.html) - [HTML/CSS]
+    - [total.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html/total.html) - [HTML & CSS]
   - _src.main.webapp.html_test_
-    - [board.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html_test/board.html) - (**Board** using HTML/CSS)
-    - [detail.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html_test/detail.html) - (**Movie Detail** using HTML/CSS)
-    - [join.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html_test/join.html) - (**Join** using HTML/CSS)
+    - [board.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html_test/board.html) - (**Board** using HTML & CSS)
+    - [detail.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html_test/detail.html) - (**Movie Detail** using HTML & CSS)
+    - [join.html](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html_test/join.html) - (**Join** using HTML & CSS)
     - [table.css](https://github.com/eunyooung/TIL/blob/main/2022-01-28(1)/src/main/webapp/html_test/table.css) - Board, Movie Detail, Join CSS
 * **2022-01-28(2)**
   - _src.main.java.sist.com.dao_
@@ -580,13 +580,13 @@ Used Book: 자바의 정석
     - [chapter06_183.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(1)/src/main/webapp/html/chapter06_183.html) - font-size, font-weight, text-align
     - [chapter06_189.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(1)/src/main/webapp/html/chapter06_189.html) - font-size, font-weight, text-align, font-style, border, border-radius, box-shadow, text-decoration
     - [chapter06_189_1.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(1)/src/main/webapp/html/chapter06_189_1.html) - color, text-decoration, text-transform, text-shadow, letter-spacing, vertical-align, text-indent, overflow-y
-    - [chapter06_189_2.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(1)/src/main/webapp/html/chapter06_189_2.html) - (**Movie Cards** using HTML/CSS)
+    - [chapter06_189_2.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(1)/src/main/webapp/html/chapter06_189_2.html) - (**Movie Cards** using HTML & CSS)
     - [chapter06_189_3.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(1)/src/main/webapp/html/chapter06_189_3.html) - list-style-type, display: inline
-    - [chapter06_189_4.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(1)/src/main/webapp/html/chapter06_189_4.html) - (**Navigation Bar** using HTML/CSS)
+    - [chapter06_189_4.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(1)/src/main/webapp/html/chapter06_189_4.html) - (**Navigation Bar** using HTML & CSS)
 * **2022-02-03(2)**
   - _src.main.webapp.html_
     - [chapter06_192.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(2)/src/main/webapp/html/chapter06_192.html) - float
-    - [chapter06_192_1.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(2)/src/main/webapp/html/chapter06_192_1.html) - (**Comment Box && New** using HTML/CSS), ::before, ::after, content, float
+    - [chapter06_192_1.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(2)/src/main/webapp/html/chapter06_192_1.html) - (**Comment Box && New** using HTML & CSS), ::before, ::after, content, float
     - [chapter06_192_2.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(2)/src/main/webapp/html/chapter06_192_2.html) - float
     - [chapter06_192_3.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(2)/src/main/webapp/html/chapter06_192_3.html) - position:absolute, left, top, z-index
     - [chapter06_192_4.html](https://github.com/eunyooung/TIL/blob/main/2022-02-03(2)/src/main/webapp/html/chapter06_192_4.html) - float, clear:both
@@ -612,6 +612,7 @@ Used Book: 자바의 정석
     - [chapter_08_4.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(2)/src/main/webapp/lib/chapter08_4.html) - bootstrap, container, row, input-sm, btn, btn-sm, btn-danger
     - [chapter_08_5.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(2)/src/main/webapp/lib/chapter08_5.html) - (**Grade** using bootstrap, table)
 * **2022-02-07**
+  - JSPBasicProject1
   - _src.main.webapp.jsp_
     - [basic1.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-07/src/main/webapp/jsp/basic1.jsp) - [JSP]
     - [basic2_23.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-07/src/main/webapp/jsp/basic2_23.jsp) - (**Multiplication Table** using JSP), [JSP], for loop, <% %>
@@ -623,6 +624,7 @@ Used Book: 자바의 정석
     - [basic1_135.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-07/src/main/webapp/jsp2/basic1_135.jsp) - (**Restaurants (Mango Plate)**), [control statements], <% %>, for loop, if statement
     - [basic2_137.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-07/src/main/webapp/jsp2/basic2_137.jsp) - <% %>, for loop
 * **2022-02-08**
+  - JSPBasicProject2
   - _src.main.webapp.jsp_
     - [basic1_145.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp/basic1_145.jsp) - [page directive], errorPage([error.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp/error.jsp)), <%@ %>
     - [basic2_154.jsp]() - (**Layout** using page directive([aside.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp/aside.jsp), [footer.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp/footer.jsp), [header.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp/header.jsp), [section.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp/section.jsp)), include file
@@ -632,3 +634,41 @@ Used Book: 자바의 정석
     - [input.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp2/input.jsp) - (**Input Form**)
     - [output.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp2/output.jsp) - request.setCharacterEncoding("UTF-8"), request.getParameter, request.getRemoteAddr(), request.getServerName(), request.getServerPort(), request.getMethod(), request.getRequestURL(), request.getRequestURI(), request.getContextPath()
     - [postfind.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-08/src/main/webapp/jsp2/postfind.jsp) - (**Post Find** using JDBC)
+* **2022-02-09(1)**
+  - JSPDataProject
+  - _src.main.java.sist.com.main_ - (**Genie Music** using Jsoup)
+  - _src.main.java.sist.com.webapp.main_ - (**Book** using HTML & CSS)
+* **2022-02-09(2)** - (**Board** using Jsp & JDBC)
+  - BoardProject
+* **2022-02-10(1)**
+  - JSPBasicProject3
+* **2022-02-10(2)**
+  - JSPBasicProject4
+* **2022-02-11(1)**
+  - JSPBasicProject5
+* **2022-02-11(2)**
+  - JSPBasicProject6
+* **2022-02-14(1)**
+  - JSPMiddleProject1
+* **2022-02-14(2)**
+  - JSPMiddleProject1 - Food Version
+* **2022-02-15**
+  - JSPMiddleProject2
+* **2022-02-16**
+  - JSPMiddleProject3
+* **2022-02-17(1)**
+  - DataBoardProject
+* **2022-02-17(2)**
+  - JSPTotalProject
+* **2022-02-18(1)**
+  - MVCBaiscProject1
+* **2022-02-18(2)**
+  - MVCBasicProject2
+* **2022-02-18(3)**
+  - MVCBasicProject3
+* **2022-02-18(4)**
+  - MVCFInalProject
+* **2022-02-18(5)**
+  - MVCIncludeProject
+* **2022-02-21(1)**
+  - SpringMVCProject
