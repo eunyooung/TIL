@@ -70,7 +70,7 @@ public class DispatcherServlet extends HttpServlet {
                         //System.out.println(rm.value());
                         //System.out.println(m.getName());
                         // public String boardListData(HttpServletRequest request, HttpServletResponse response)
-                        String jsp = (String) m.invoke(obj, request);
+                        String jsp = (String) m.invoke(obj, request, response);
                         // 메소드 호출 (invoke) → 메소드이름을 몰라도 호출이 가능 
                         // return "redirect:list.do" → send
                         // _ok.jsp 

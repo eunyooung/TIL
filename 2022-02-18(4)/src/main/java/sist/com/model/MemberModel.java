@@ -1,6 +1,6 @@
 package sist.com.model;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.*;
 
 import sist.com.controller.RequestMapping;
 
@@ -14,7 +14,7 @@ import sist.com.controller.RequestMapping;
 public class MemberModel {
     
     @RequestMapping("member/join.do")
-    public String memberJoin(HttpServletRequest request) {
+    public String memberJoin(HttpServletRequest request, HttpServletResponse response) {
         request.setAttribute("msg", "회원가입");
         return "../member/join.jsp";
     }
