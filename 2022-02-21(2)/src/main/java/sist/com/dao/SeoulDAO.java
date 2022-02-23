@@ -18,9 +18,8 @@ public class SeoulDAO {
     public List<SeoulLocationVO> seoulLocationData(int page) {
         List<SeoulLocationVO> list = new ArrayList<SeoulLocationVO>();
         try {
-            // 1. 주소 읽기
+            // 1. 주소 읽기 
             conn = dbcp.getConnection();
-            
             // 2. SQL문장 
             String sql = "SELECT no,title,poster,num "
                     + "FROM (SELECT no,title,poster,rownum as num "
@@ -35,12 +34,12 @@ public class SeoulDAO {
             /*
             *   rownum은 1번부터 시작 
             *   1page → 1~12 start = (rowSize * page) - (rowSize - 1);
-            *                            12     - 11      1
-            *                int end = rowSize * page →  12
+            *                              12         -   11  1
+            *                 int end = rowSize * page →   12
             *   2page → 13~24
-            *                start = (rowSize * page) - (rowSize - 1);
-            *                           24   →   11   →   13
-            *                int end = rowSize * page → 24
+            *                 start = (rowSize * page) - (rowSize - 1);
+            *                           24   →  11 → 13
+            *                 int end = rowSize * page → 24
             *   3     → 25~36
             */
             // ?에 값을 채운다 
@@ -92,7 +91,6 @@ public class SeoulDAO {
         try {
             // 1. 주소 읽기 
             conn = dbcp.getConnection();
-            
             // 2. SQL문장 
             String sql = "SELECT no,title,poster,num "
                     + "FROM (SELECT no,title,poster,rownum as num "
@@ -107,12 +105,12 @@ public class SeoulDAO {
             /*
             *   rownum은 1번부터 시작 
             *   1page → 1~12 start = (rowSize * page) - (rowSize - 1);
-            *                            12     - 11      1
-            *                int end = rowSize * page →  12
+            *                            12           -    11    1
+            *                 int end = rowSize * page →   12
             *   2page → 13~24
-            *                start = (rowSize * page) - (rowSize - 1);
-            *                           24   →   11   →   13
-            *                int end = rowSize * page → 24
+            *                 start = (rowSize * page) - (rowSize - 1);
+            *                           24  → 11 → 13
+            *                 int end = rowSize * page → 24
             *   3     → 25~36
             */
             // ?에 값을 채운다 
@@ -214,5 +212,140 @@ public class SeoulDAO {
         }
         return total;
     }
-    // 1-2. 호텔 상세보기 
+
+    // 1-2. 명소 상세보기
+    /*
+     NO                   NOT NULL NUMBER
+     TITLE                NOT NULL VARCHAR2(200)
+     POSTER               NOT NULL VARCHAR2(500)
+     MSG                  NOT NULL VARCHAR2(4000)
+     ADDRESS
+    */
+    public SeoulLocationVO locationDetail(int no) {
+        // sql , ? , vo
+        // return getSqlSession().selectList(sql,no);
+        SeoulLocationVO vo = new SeoulLocationVO();
+        try {
+            conn = dbcp.getConnection();
+            String sql = "SELECT no,title,poster,msg,address "
+                    + "FROM seoul_location "
+                    + "WHERE no=?";
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, no);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            vo.setNo(rs.getInt(1));
+            vo.setTitle(rs.getString(2));
+            vo.setPoster(rs.getString(3));
+            vo.setMsg(rs.getString(4));
+            String addr = rs.getString(5);
+            addr = addr.substring(addr.indexOf(" ") + 1);
+            vo.setAddress(addr.trim());
+            rs.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            dbcp.disConnection(conn, ps);
+        }
+        return vo;
+    }
+
+    public SeoulNatureVO natureDetail(int no) {
+        // sql, ?, vo
+        // return getSqlSession().selectList(sql, no);
+        SeoulNatureVO vo = new SeoulNatureVO();
+        try {
+            conn = dbcp.getConnection();
+            String sql = "SELECT no,title,poster,msg,address "
+                    + "FROM seoul_nature "
+                    + "WHERE no=?";
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, no);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            vo.setNo(rs.getInt(1));
+            vo.setTitle(rs.getString(2));
+            vo.setPoster(rs.getString(3));
+            vo.setMsg(rs.getString(4));
+            String addr = rs.getString(5);
+            addr = addr.substring(addr.indexOf(" ") + 1);
+            vo.setAddress(addr.trim());
+            rs.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            dbcp.disConnection(conn, ps);
+        }
+        return vo;
+    }
+
+    public SeoulHotelVO hotelDetail(int no) {
+        // sql, ?, vo
+        // return getSqlSession().selectList(sql, no);
+        SeoulHotelVO vo = new SeoulHotelVO();
+        try {
+            conn = dbcp.getConnection();
+            String sql = "SELECT no,name,poster,score,address "
+                    + "FROM seoul_hotel "
+                    + "WHERE no=?";
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, no);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            vo.setNo(rs.getInt(1));
+            vo.setName(rs.getString(2));
+            vo.setPoster(rs.getString(3));
+            vo.setScore(rs.getDouble(4));
+            String addr = rs.getString(5);
+            addr = addr.substring(addr.indexOf(" ") + 1);
+            vo.setAddress(addr.trim());
+            rs.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            dbcp.disConnection(conn, ps);
+        }
+        return vo;
+    }
+
+    // 인근 맛집(명소)
+    /*
+    *   JSP 
+    *    page → import, errorPage ...
+    *    <% %> <%! %> <%= %>
+    *    -----------------------------
+    *    내장 객체 : request, response, session, cookie 
+    *    EL / JSTL 
+    *    =→ MVC
+    *    =→ Spring (XML,Annotation)
+    *    JSP + DAO + JavaScript(Ajax)
+    *    Spring + MyBatis + JSON (Vue)
+    */
+    public List<FoodVO> locationFoodData(String addr) {
+        List<FoodVO> list = new ArrayList<FoodVO>();
+        try {
+            conn = dbcp.getConnection();
+            String sql = "SELECT no,poster,name,rownum "
+                    + "FROM food_location "
+                    + "WHERE rownum<=9 AND address LIKE '%'||?||'%'";
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, addr);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                FoodVO vo = new FoodVO();
+                vo.setNo(rs.getInt(1));
+                String poster = rs.getString(2);
+                poster = poster.substring(0, poster.indexOf("^"));
+                vo.setPoster(poster);
+                vo.setName(rs.getString(3));
+                list.add(vo);
+            }
+            rs.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            dbcp.disConnection(conn, ps);
+        }
+        return list;
+    }
 }
