@@ -68,8 +68,8 @@
              메뉴별 19~30 
           --%>
           <%--
-              varStatus → list의 index번호 가지고 온다 
-           --%>
+              varStatus → list의 index 번호 가지고 온다 
+          --%>
           <c:forEach var="vo" items="${list }" varStatus="s">
             <c:if test="${s.index>=0 && s.index<12 }">
               <li>
