@@ -129,12 +129,14 @@
       <!-- <img class="imgl radius-10" src="../images/demo/100x100.gif" alt=""> -->
       <!-- ################################################################################################ -->
       <div class="inline">
-  	    <c:forEach var="vo" items="${cList }" varStatus="s">
-  	      <c:if test="${s.index<9 }">
-  	        <img class="radius-10" src="${vo.poster }" style="width:100px;height:100px" title="${vo.name }">
-  	      </c:if>
-  	    </c:forEach>
-  	  </div>
+        <c:forEach var="vo" items="${cList }" varStatus="s">
+          <c:if test="${s.index<9 }">
+           <a href="../food/food_detail.do?no=${vo.no }">
+            <img class="radius-10" src="${vo.poster }" style="width:100px;height:100px" title="${vo.name }">
+           </a>
+          </c:if>
+        </c:forEach>
+      </div>
       <!-- ################################################################################################ --> 
       <!-- / main body -->
       <div class="clear"></div>
