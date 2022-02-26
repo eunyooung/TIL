@@ -23,7 +23,7 @@
   <meta charset="UTF-8">
   <title>Insert title here</title>
   <script type="text/javascript">
-    window.onload=function(){
+    window.onload = function(){
         /*
         let a = 10;
         console.log("a=" + a);

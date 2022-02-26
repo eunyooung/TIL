@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%--
     데이터를 모아서 관리 : 배열 [] , 객체 {} 
-    객체표현 → let a={} → 자바스크립트에서 객체를 표현하는 방법 (JSON)
+    객체표현 → let a = {} → 자바스크립트에서 객체를 표현하는 방법 (JSON)
     JSON : 예전 (XML => 파싱이 어렵다), XML 대체 → JSON
     XML, JSON를 사용하는 목적 : 모든 운영체제에서 호환이 된다 
                             -----------
@@ -29,7 +29,7 @@
   <meta charset="UTF-8">
   <title>Insert title here</title>
   <script type="text/javascript">
-    window.onload=function(){
+    window.onload = function(){
         //let hong = {sabun:1, name:"홍길동", dept:"개발부", job:"대리", pay:3000}
         /*
             class Sawon{
