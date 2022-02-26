@@ -45,7 +45,7 @@
         
         let e = "10"
         let f = 20
-        console.log("e+f="+(e+f)) // 문자열 결합 (1020)
+        console.log("e+f=" + (e + f)) // 문자열 결합 (1020)
         
         let m = 'A'
         let n = 1
