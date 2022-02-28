@@ -51,10 +51,10 @@
                 *** 매개변수는 let, var을 사용하면 안된다 (변수명만 설정)
                
                 let func_name = function(){}
-                ***let func_name = ()=>{}
+                ***let func_name = () => {}
                
                 let func_name = function(매개변수){}
-                ***let func_name = (매개변수)=>{}
+                ***let func_name = (매개변수) => {}
                 function 제외 → 람다식
             ------------------- 브라우저 자체에서 처리 (ajax)
             내장 객체, DOMScript 

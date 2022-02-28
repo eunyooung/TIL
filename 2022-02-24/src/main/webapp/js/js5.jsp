@@ -99,7 +99,7 @@
            break : 반복문을 종료 할때 사용 
            
         -------------------------------------------
-        태그를 제어하는 프로그램 (구분자: name,id,class)
+        태그를 제어하는 프로그램 (구분자: name, id, class)
         1. 태그에 id 속성을 가지고 있는 경우 
            document.getElementById(id명)
         2. 태그에 class 속성을 가지고 있는 경우
@@ -136,51 +136,51 @@
     }
   </style>
   <script type="text/javascript">
-  /*
-  window.onload=function(){
-    let id = document.querySelector("#id") → let id = $('#id')
-    id.value = "admin";
-    let pwd = document.querySelector("#pwd")
-    pwd.value = "1234";
-  }
-   */
-  // 유효성 검사
-  /*
-      오라클 연결 = 10명 
-      1명 값을 입력하지 않는다 → 오라클을 내린다 (9명을 사이트에서 나온다)
-   */
-
-  function login() {
-
-    let id = document.querySelector("#id")
-
-    if (id.value == "") {
-      // 값이 입력이 없는 경우
-      //alert("ID를 입력하세요!!");
-      let div = document.querySelector(".id");
-      div.innerHTML = "<font color=red>아이디를 입력하세요</font>"
-      id.focus();
-      return;
-    } else {
-      let div = document.querySelector(".id");
-      div.innerHTML = ""
+    /*
+    window.onload=function(){
+        let id = document.querySelector("#id") → let id = $('#id')
+        id.value = "admin";
+        let pwd = document.querySelector("#pwd")
+        pwd.value = "1234";
     }
+     */
+    // 유효성 검사
+    /*
+        오라클 연결 = 10명 
+        1명 값을 입력하지 않는다 → 오라클을 내린다 (9명을 사이트에서 나온다)
+     */
+  
+    function login() {
+  
+        let id = document.querySelector("#id")
 
-    let pw = document.querySelector("#pwd")
-
-    if (pw.value == "") {
-      // 값이 입력이 없는 경우
-      //alert("비밀번호를 입력하세요!!");
-      let div = document.querySelector(".pwd");
-      div.innerHTML = "<font color=red>비밀번호를 입력하세요</font>"
-      pw.focus()
-      return;
-    } else {
-      let div = document.querySelector(".pwd");
-      div.innerHTML = ""
+        if (id.value == "") {
+            // 값이 입력이 없는 경우
+            //alert("ID를 입력하세요!!");
+            let div = document.querySelector(".id");
+            div.innerHTML = "<font color=red>아이디를 입력하세요</font>"
+            id.focus();
+            return;
+        } else {
+            let div = document.querySelector(".id");
+            div.innerHTML = ""
+        }
+  
+      let pw = document.querySelector("#pwd")
+  
+        if (pw.value == "") {
+            // 값이 입력이 없는 경우
+            //alert("비밀번호를 입력하세요!!");
+            let div = document.querySelector(".pwd");
+            div.innerHTML = "<font color=red>비밀번호를 입력하세요</font>"
+            pw.focus()
+            return;
+        } else {
+            let div = document.querySelector(".pwd");
+            div.innerHTML = ""
+        }
     }
-  }
-</script>
+  </script>
 </head>
 <body>
   <div class="container">

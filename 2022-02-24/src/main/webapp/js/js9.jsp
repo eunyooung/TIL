@@ -52,16 +52,16 @@
         document.write("<hr>")
         
         document.write("===== for of 이용 배열 데이터 출력 =====<br>")
-        // for of => 배열에 실제 데이터값을 한개씩 받아서 출력 
+        // for of → 배열에 실제 데이터값을 한개씩 받아서 출력 
         for (let name of names) { // 홍길동 ...
-            document.write(name+"&nbsp;")
+            document.write(name + "&nbsp;")
         }
         
         document.write("<hr>")
         
         document.write("===== for in 이용 배열 데이터 출력 =====<br>")
         // 배열의 인덱스 번호 
-        for (let i in names) { // 0,1,2...
+        for (let i in names) { // 0, 1, 2...
             document.write(names[i] + "&nbsp;")
         }
         // forEach, map
@@ -72,7 +72,7 @@
         document.write("===== forEach 이용 배열 데이터 출력(1) =====<br>")
         // 배열명.forEach(function(name){})
         // for(변수:배열)
-        names.forEach(function(name){
+        names.forEach(function(name) {
             document.write(name + "&nbsp;")
         })
         
@@ -80,23 +80,23 @@
         
         // 가장 많다 → function, return 생략 (화살표 함수)
         document.write("===== forEach 이용 배열 데이터 출력(2) =====<br>")
-        names.forEach((name)=>{
-            document.write(name+"&nbsp;")
+        names.forEach((name) => {
+            document.write(name + "&nbsp;")
         })
         
         document.write("<hr>")
         
         document.write("===== map 이용 배열 데이터 출력(1) =====<br>")
-        // 배열명.map(function(name){}), 배열명.map((name)=>{})
-        names.map(function(name){
+        // 배열명.map(function(name){}), 배열명.map((name) => {})
+        names.map(function(name) {
             document.write(name + "&nbsp;")
         })
         
         document.write("<hr>")
         
         document.write("===== map 이용 배열 데이터 출력(2) =====<br>")
-        // 배열명.map(function(name){}), 배열명.map((name)=>{})
-        names.map((name)=>{
+        // 배열명.map(function(name){}), 배열명.map((name) => {})
+        names.map((name) => {
             document.write(name + "&nbsp;")
         })
     }
