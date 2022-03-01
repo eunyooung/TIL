@@ -490,7 +490,7 @@ Used Book: 자바의 정석
 
 </br>
 
-### **HTML & CSS/JSP**
+### **HTML / CSS**
 
 * **2022-01-25(1)**
   - HTML Project 1
@@ -624,6 +624,15 @@ Used Book: 자바의 정석
     - [chapter_08_3.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(2)/src/main/webapp/lib/chapter08_3.html) - bootstrap, container, row, jumbotron, btn, btn-sm, btn-lg, btn-xs, btn-danger, btn-info, btn-primary, btn-warning, btn-success, btn-dfault
     - [chapter_08_4.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(2)/src/main/webapp/lib/chapter08_4.html) - bootstrap, container, row, input-sm, btn, btn-sm, btn-danger
     - [chapter_08_5.html](https://github.com/eunyooung/TIL/blob/main/2022-02-04(2)/src/main/webapp/lib/chapter08_5.html) - (**Grade** using bootstrap, table)
+
+</br>
+
+---
+
+</br>
+
+### **JSP**
+
 * **2022-02-07**
   - JSP Basic Project 1
   - _src.main.webapp.jsp_
@@ -687,5 +696,56 @@ Used Book: 자바의 정석
   - Spring MVC Project
 * **2022-02-21(2)**
   - JSP Final Project (2022.02.22 ~ 2022.02.24)
-* **2022-02-24(1)**
+* **2022-02-22**
+  - DataCollectionProject
+  - Food, Movie, Recipe, Seoul
+
+</br>
+
+---
+
+</br>
+
+### **JavaScript / Jquery**
+
+* **2022-02-24**
   - JavaScript Project 1
+  - _src.main.webapp.js_
+    - [js1.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-24/src/main/webapp/js/js1.jsp) - [JavaScript], window.onload = function(), let, console.log, document.write, typeof
+    - [js2.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-24/src/main/webapp/js/js2.jsp) - ++, Number, parseInt, Boolean
+    - [js3.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-24/src/main/webapp/js/js3.jsp) -  +, -, *, /, %
+    - [js4.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-24/src/main/webapp/js/js4.jsp) - ===, !=, <, >, <=, >=
+    - [js5.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-24/src/main/webapp/js/js5.jsp) - (**Login** using JavaScript), if statement, .focus, document.querySelector, .innerHTML
+    - [js6.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-24/src/main/webapp/js/js6.jsp) - (**Odd/Even** using if statement)
+    - [js7.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-24/src/main/webapp/js/js7.jsp) - (**Score** using if statement)
+    - [js8.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-24/src/main/webapp/js/js8.jsp) - [loop], do while loop, while loop, for loop, continue, break
+    - [js9.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-24/src/main/webapp/js/js9.jsp) - array, .forEach, => arrow function, .map
+    - [js10.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-24/src/main/webapp/js/js10.jsp) - (**Sawon Table** using map)
+    - [js11.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-24/src/main/webapp/js/js11.jsp) - (**Movie Table** using forEach)
+    - [js12.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-24/src/main/webapp/js/js12.jsp) - [function]
+* **2022-02-25(1)**
+  - JavaScript Project 2
+  - _src.main.java.sist.com.dao_
+    - [ZipcodeDAO](https://github.com/eunyooung/TIL/blob/main/2022-02-25(1)/src/main/java/sist/com/dao/ZipcodeDAO.java) - postfind
+    - [ZipcodeVO](https://github.com/eunyooung/TIL/blob/main/2022-02-25(1)/src/main/java/sist/com/dao/ZipcodeVO.java)
+  - _src.main.webapp.js_
+    - [function.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(1)/src/main/webapp/js/function.jsp) - (**Score Total Average Calculator**), Math.round()
+    - [function2.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(1)/src/main/webapp/js/function2.jsp) - (**Image Slider**)
+    - [function3.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(1)/src/main/webapp/js/function3.jsp) - array
+    - [function4.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(1)/src/main/webapp/js/function4.jsp) - array
+    - [join.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(1)/src/main/webapp/js/join.jsp), [post.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(1)/src/main/webapp/js/post.jsp) - (**Join Form Post Find**)
+    - [objectModel1.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(1)/src/main/webapp/js/objectModel1.jsp) - [tag]
+* **2022-02-25(2)**
+  - JQueryProject1
+  - _src.main.java.sist.com.dao_
+    - [SeoulDAO.java](https://github.com/eunyooung/TIL/blob/main/2022-02-25(2)/src/main/java/sist/com/dao/SeoulDAO.java) - locationAllData
+    - [SeoulLocationVO.java](https://github.com/eunyooung/TIL/blob/main/2022-02-25(2)/src/main/java/sist/com/dao/SeoulLocationVO.java)
+  - _src.main.webapp.js_
+    - [jquery1.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(2)/src/main/webapp/js/jquery1.jsp) - style.backgroundColor
+    - [jquery2.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(2)/src/main/webapp/js/jquery2.jsp) - $(function(){}), $('tag').css
+    - [jquery3.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(2)/src/main/webapp/js/jquery3.jsp) - $('tag').css
+    - [jquery4.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(2)/src/main/webapp/js/jquery4.jsp) - $(this)
+    - [jquery5.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(2)/src/main/webapp/js/jquery5.jsp) - $('tag').css
+    - [jquery6.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(2)/src/main/webapp/js/jquery6.jsp) - $('tag').val
+    - [jquery7.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(2)/src/main/webapp/js/jquery7.jsp) - $('tag').click, alert()
+    - [jquery8.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(2)/src/main/webapp/js/jquery8.jsp) - $('tag').keyup
