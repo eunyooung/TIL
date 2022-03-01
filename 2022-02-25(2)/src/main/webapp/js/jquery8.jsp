@@ -38,15 +38,12 @@ List<SeoulLocationVO> list = dao.locationAllData();
             $('#m' + no).show();
             $('.m' + no).text(msg);
         })
-        $('#keyword')
-                .keyup(
-                        function() {
-                            let k = $('#keyword').val();
-                            $('.user-table > tbody > tr').hide("slow")
-                            let temp = $('.user-table>tbody>tr>td:nth-child(4n+3):contains("'
-                                    + k + '")')
-                            $(temp).parent().show("slow");
-                        })
+        $('#keyword').keyup(function() {
+            let k = $('#keyword').val();
+            $('.user-table > tbody > tr').hide("slow");
+            let temp = $('.user-table > tbody > tr > td:nth-child(4n+3):contains("' + k + '")');
+            $(temp).parent().show("slow");
+        })
     })
   </script>
 </head>
@@ -70,21 +67,21 @@ List<SeoulLocationVO> list = dao.locationAllData();
         </tr>
         <tbody>
           <%
-          for (SeoulLocationVO vo : list) {
+              for (SeoulLocationVO vo : list) {
           %>
-          <tr>
-            <td class="text-center"><%=vo.getNo()%></td>
-            <td class="text-center">
-              <img src="<%=vo.getPoster()%>" width=30 height=30>
-            </td>
-            <td class="titles" value="<%=vo.getMsg()%>" data="<%=vo.getNo()%>"><%=vo.getTitle()%></td>
-            <td><%=vo.getAddress()%></td>
-          </tr>
-          <tr id="m<%=vo.getNo()%>" style="display: none" class="trs">
-            <td colspan=4 class="m<%=vo.getNo()%>"></td>
-          </tr>
+                  <tr>
+                    <td class="text-center"><%=vo.getNo()%></td>
+                    <td class="text-center">
+                      <img src="<%=vo.getPoster()%>" width=30 height=30>
+                    </td>
+                    <td class="titles" value="<%=vo.getMsg()%>" data="<%=vo.getNo()%>"><%=vo.getTitle()%></td>
+                    <td><%=vo.getAddress()%></td>
+                  </tr>
+                  <tr id="m<%=vo.getNo()%>" style="display: none" class="trs">
+                    <td colspan=4 class="m<%=vo.getNo()%>"></td>
+                  </tr>
           <%
-          }
+              }
           %>
         </tbody>
       </table>
