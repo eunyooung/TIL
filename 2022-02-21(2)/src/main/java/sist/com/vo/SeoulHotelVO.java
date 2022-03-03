@@ -1,16 +1,16 @@
 package sist.com.vo;
 
 /*
- *    NO               NOT NULL NUMBER
-      NAME             NOT NULL VARCHAR2(100)
-      SCORE            NUMBER(2,1)
-      ADDRESS          NOT NULL VARCHAR2(300)
-      POSTER           NOT NULL VARCHAR2(4000)
-      IMAGES           VARCHAR2(4000)
+    NO                                        NOT NULL NUMBER
+    NAME                                      NOT NULL VARCHAR2(100)
+    SCORE                                              NUMBER(2,1)
+    ADDRESS                                   NOT NULL VARCHAR2(300)
+    POSTER                                    NOT NULL VARCHAR2(4000)
+    IMAGES                                             VARCHAR2(4000)
  */
 
 public class SeoulHotelVO {
-    
+
     private int no;
     private String name;
     private double score;

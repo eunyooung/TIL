@@ -1,24 +1,26 @@
 package sist.com.model;
 
+import java.util.*;
+
 import javax.servlet.http.*;
 
 import sist.com.controller.RequestMapping;
-import java.util.*;
+
 import sist.com.dao.*;
 import sist.com.vo.*;
 
 /*
- *    JSP → 프로그래머가 메모리 할당을 못한다 (톰캣만 메모리 할당을 한다)
+ *    JSP -→ 프로그래머가 메모리 할당을 못한다 (톰캣만 메모리 할당을 한다)
  *    public void _jspService() {
  *      ------------------------------
- *        JSP 소스 코딩은 여기에 들어 간다 → 사이트
+ *        JSP 소스 코딩은 여기에 들어 간다 -→ 사이트
  *      ------------------------------
  *    }
  *    a.jsp → a.jsp a = new a.jsp() (X)
  *    
- *    jsp  ←------→ Java
+ *    jsp  ←-----→ Java
  *          request
- *    Java ←------→ Java
+ *    Java ←-----→ Java
  *        메소드 (매개변수)
  */
 // Cookie / Session → 모든 JSP사용이 가능 
@@ -26,7 +28,7 @@ public class MainModel {
     
     @RequestMapping("main/main.do")
     public String main_main(HttpServletRequest request, HttpServletResponse response) {
-        // DAO => 출력에 필요한 데이터 가지고 오기 
+        // DAO → 출력에 필요한 데이터 가지고 오기 
         FoodDAO dao = new FoodDAO();
         List<CategoryVO> list = dao.categoryAllData();
         // home.jsp에 list를 보내준다(list안에는 카테고리 정보가 들어가 있다)

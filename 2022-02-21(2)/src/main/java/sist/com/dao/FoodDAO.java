@@ -1,24 +1,23 @@
 package sist.com.dao;
 
 import java.util.*;
+import java.sql.*;
 
 import sist.com.vo.*;
-
-import java.sql.*;
 
 public class FoodDAO {
     
     private Connection conn;
     private PreparedStatement ps;
     private DBCPConnection dbcp = new DBCPConnection(); // 포함 (재사용)
-    
     // getConnection(), disConnection()
     // 기능 
-    // 1. 카테고리 읽기 
+    
+    // 1.카테고리 읽기
     public List<CategoryVO> categoryAllData() {
         List<CategoryVO> list = new ArrayList<CategoryVO>();
         try {
-            // 미리 생성된 Connection 객체를 얻어 온다 
+            // 미리 생성된 Connection 객체를 얻어 온다
             conn = dbcp.getConnection();
             String sql = "SELECT cno,title,subject,poster "
                     + "FROM food_category "
@@ -127,14 +126,15 @@ public class FoodDAO {
             // 1. 주소값을 얻어 온다 
             conn = dbcp.getConnection();
             // 2. SQL 
-            String sql = "SELECT no,name,score,address,tel,type,price,parking,menu,time,poster "
+            String sql = "SELECT no,name,score,address,tel,type,"
+                    + "price,parking,menu,time,poster "
                     + "FROM " + tname + " "
                     + "WHERE no=?";
             // 3. 전송 (SQL)
             ps = conn.prepareStatement(sql);
             // 4. ?에 값을 채운다 
             ps.setInt(1, no);
-            // ps.setString(2,tname) → 'food_house'
+            // ps.setString(2, tname) -→ 'food_house'
             // 5. 결과값 → vo
             ResultSet rs = ps.executeQuery();
             rs.next();
@@ -161,7 +161,7 @@ public class FoodDAO {
         return vo;
     }
 
-    // 지역별 찾기 (동, 구) →
+    // 지역별 찾기 (동, 구) -→ 
     public List<FoodVO> foodLocationFindData(String ss, int page) {
         List<FoodVO> list = new ArrayList<FoodVO>();
         try {
@@ -171,7 +171,8 @@ public class FoodDAO {
                     + "FROM (SELECT no,poster,name,rownum as num "
                     + "FROM (SELECT no,poster,name "
                     + "FROM food_location WHERE address LIKE '%'||?||'%' "
-                    + "ORDER BY 1)) " + "WHERE num BETWEEN ? AND ?";
+                    + "ORDER BY 1)) "
+                    + "WHERE num BETWEEN ? AND ?";
             ps = conn.prepareStatement(sql);
             int rowSize = 12;
             int start = (rowSize * page) - (rowSize - 1);
@@ -205,7 +206,8 @@ public class FoodDAO {
         int total = 0;
         try {
             conn = dbcp.getConnection();
-            String sql = "SELECT CEIL(COUNT(*)/12.0) FROM food_location " + "WHERE address LIKE '%'||?||'%'";
+            String sql = "SELECT CEIL(COUNT(*)/12.0) FROM food_location "
+                    + "WHERE address LIKE '%'||?||'%'";
             ps = conn.prepareStatement(sql);
             ps.setString(1, ss);
             ResultSet rs = ps.executeQuery();

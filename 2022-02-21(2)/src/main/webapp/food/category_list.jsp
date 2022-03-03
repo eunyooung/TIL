@@ -28,38 +28,38 @@
       <table class="table">
         <tr>
           <td>
-          <%--
-             자바 : for(FoodVO fvo : list) 
-             자바스크립트 : for(let fvo of list)
-                         map, forEach 
-             jquery
-             
-             링크 => Model => 
-                    -----          
-          --%>
-          <c:forEach var="fvo" items="${list }">
-            <table class="table">
-              <tr>
-                <td width=30% class="text-center" rowspan="4">
-                  <a href="../food/food_detail_before.do?no=${fvo.no }">
-                    <img src="${fvo.poster }" width=100%>
-                  </a>
-                </td>
-                <td width=70%>
-                  <h3><a href="../food/food_detail_before.do?no=${fvo.no }">${fvo.name }</a>&nbsp;<span style="color:orange">${fvo.score }</span></h3>
-                </td>
-              </tr>
-              <tr>
-                <td width=70%>${fvo.address }</td>
-              </tr>
-              <tr>
-                <td width=70%>전화:${fvo.tel }</td>
-              </tr>
-              <tr>
-                <td width=70%>음식종료:${fvo.type }</td>
-              </tr>
-            </table>
-          </c:forEach>
+            <%--
+               자바 : for(FoodVO fvo : list) 
+               자바스크립트 : for(let fvo of list)
+                           map, forEach 
+               jquery
+               
+               링크 => Model => 
+                      -----          
+            --%>
+            <c:forEach var="fvo" items="${list }">
+              <table class="table">
+                <tr>
+                  <td width=30% class="text-center" rowspan="4">
+                    <a href="../food/food_detail_before.do?no=${fvo.no }">
+                      <img src="${fvo.poster }" width=100%>
+                    </a>
+                  </td>
+                  <td width=70%>
+                    <h3><a href="../food/food_detail_before.do?no=${fvo.no }">${fvo.name }</a>&nbsp;<span style="color:orange">${fvo.score }</span></h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td width=70%>${fvo.address }</td>
+                </tr>
+                <tr>
+                  <td width=70%>전화:${fvo.tel }</td>
+                </tr>
+                <tr>
+                  <td width=70%>음식종료:${fvo.type }</td>
+                </tr>
+              </table>
+            </c:forEach>
           </td>
         </tr>
       </table>

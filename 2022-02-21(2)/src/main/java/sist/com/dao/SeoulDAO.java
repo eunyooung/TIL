@@ -1,10 +1,9 @@
 package sist.com.dao;
 
 import java.util.*;
+import java.sql.*;
 
 import sist.com.vo.*;
-
-import java.sql.*;
 
 public class SeoulDAO {
 
@@ -34,15 +33,15 @@ public class SeoulDAO {
             /*
             *   rownum은 1번부터 시작 
             *   1page → 1~12 start = (rowSize * page) - (rowSize - 1);
-            *                              12         -   11  1
+            *                            12       - 11  1
             *                 int end = rowSize * page →   12
             *   2page → 13~24
             *                 start = (rowSize * page) - (rowSize - 1);
-            *                           24   →  11 → 13
+            *                           24   →   11    → 13
             *                 int end = rowSize * page → 24
             *   3     → 25~36
             */
-            // ?에 값을 채운다 
+            // ?에 값을 채운다
             ps.setInt(1, start);
             ps.setInt(2, end);
             ResultSet rs = ps.executeQuery();
@@ -55,7 +54,6 @@ public class SeoulDAO {
                 list.add(vo);
             }
             rs.close();
-
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
@@ -105,11 +103,11 @@ public class SeoulDAO {
             /*
             *   rownum은 1번부터 시작 
             *   1page → 1~12 start = (rowSize * page) - (rowSize - 1);
-            *                            12           -    11    1
+            *                            12   →  11     1
             *                 int end = rowSize * page →   12
             *   2page → 13~24
             *                 start = (rowSize * page) - (rowSize - 1);
-            *                           24  → 11 → 13
+            *                            24   →  11  → 13
             *                 int end = rowSize * page → 24
             *   3     → 25~36
             */
@@ -215,15 +213,15 @@ public class SeoulDAO {
 
     // 1-2. 명소 상세보기
     /*
-     NO                   NOT NULL NUMBER
-     TITLE                NOT NULL VARCHAR2(200)
-     POSTER               NOT NULL VARCHAR2(500)
-     MSG                  NOT NULL VARCHAR2(4000)
-     ADDRESS
+        NO                                        NOT NULL NUMBER
+        TITLE                                     NOT NULL VARCHAR2(200)
+        POSTER                                    NOT NULL VARCHAR2(500)
+        MSG                                       NOT NULL VARCHAR2(4000)
+        ADDRESS
     */
     public SeoulLocationVO locationDetail(int no) {
-        // sql , ? , vo
-        // return getSqlSession().selectList(sql,no);
+        // sql, ?, vo
+        // return getSqlSession().selectList(sql, no);
         SeoulLocationVO vo = new SeoulLocationVO();
         try {
             conn = dbcp.getConnection();
@@ -316,8 +314,8 @@ public class SeoulDAO {
     *    -----------------------------
     *    내장 객체 : request, response, session, cookie 
     *    EL / JSTL 
-    *    =→ MVC
-    *    =→ Spring (XML,Annotation)
+    *    -→ MVC
+    *    -→ Spring (XML,Annotation)
     *    JSP + DAO + JavaScript(Ajax)
     *    Spring + MyBatis + JSON (Vue)
     */
@@ -325,8 +323,7 @@ public class SeoulDAO {
         List<FoodVO> list = new ArrayList<FoodVO>();
         try {
             conn = dbcp.getConnection();
-            String sql = "SELECT no,poster,name,rownum "
-                    + "FROM food_location "
+            String sql = "SELECT no,poster,name,rownum " + "FROM food_location "
                     + "WHERE rownum<=9 AND address LIKE '%'||?||'%'";
             ps = conn.prepareStatement(sql);
             ps.setString(1, addr);

@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%--
-      JSP → 링크, 입력 
-      Model → 입력 받기
-      FoodDAO → 
-      JSP로 전송 
+    JSP → 링크, 입력 
+    Model → 입력 받기
+    FoodDAO → 
+    JSP로 전송 
  --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
@@ -62,14 +62,14 @@
       <!-- ################################################################################################ -->
       <div class="flexslider carousel basiccarousel btmspace-80">
         <ul class="slides">
-         <%--
-             믿고 보는 맛집 리스트 cno → 1~12
-             지역별 13~18
-             메뉴별 19~30 
-          --%>
-          <%--
-              varStatus → list의 index 번호 가지고 온다 
-          --%>
+        <%--
+            믿고 보는 맛집 리스트 cno → 1~12
+            지역별 13~18
+            메뉴별 19~30 
+         --%>
+        <%--
+            varStatus → list의 index 번호 가지고 온다 
+        --%>
           <c:forEach var="vo" items="${list }" varStatus="s">
             <c:if test="${s.index>=0 && s.index<12 }">
               <li>
@@ -91,20 +91,21 @@
                 <figure><img class="radius-10 btmspace-10" style="width:320px;height:185px" src="${vo.poster }" alt="">
                   <figcaption><a href="../food/category_list.do?cno=${vo.cno }">${vo.title }</a></figcaption>
                   <%-- 
-                     link → Controller - Model에서 처리 ←→ DAO 
-                     ----사용자 요청 |
-                                  | Controller
-                                  실행 결과를 JSP로 전송 (request)
-                     link(jsp) --→ Model ←--→ DAO
-                                      |
-                                     JSP (request)
-                                     
-                     ../food/category_list.do → Model ←→ DAO
-                                                  |
-                                              화면 출력할 JSP로 전송
+                       link => Controller - Model에서 처리 <==> DAO 
+                       ----사용자 요청 |
+                                    | Controller
+                                    실행 결과를 JSP로 전송 (request)
+                       link(jsp) ===> Model <====> DAO
+                                        |
+                                       JSP (request)
+                                       
+                       ../food/category_list.do => Model <==> DAO
+                                                     |
+                                                  화면 출력할 JSP로 전송 
+                                    
                   --%>
                 </figure>
-             </li>
+              </li>
             </c:if>
           </c:forEach>
         </ul>
@@ -128,15 +129,16 @@
       <h2 class="sectiontitle">최신 방문 맛집</h2>
       <!-- <img class="imgl radius-10" src="../images/demo/100x100.gif" alt=""> -->
       <!-- ################################################################################################ -->
+     
       <div class="inline">
-        <c:forEach var="vo" items="${cList }" varStatus="s">
-          <c:if test="${s.index<9 }">
-           <a href="../food/food_detail.do?no=${vo.no }">
-            <img class="radius-10" src="${vo.poster }" style="width:100px;height:100px" title="${vo.name }">
-           </a>
-          </c:if>
-        </c:forEach>
-      </div>
+  	    <c:forEach var="vo" items="${cList }" varStatus="s">
+  	      <c:if test="${s.index<9 }">
+  	        <a href="../food/food_detail.do?no=${vo.no }">
+  	          <img class="radius-10" src="${vo.poster }" style="width:100px;height:100px" title="${vo.name }">
+  	        </a>
+  	      </c:if>
+  	     </c:forEach>
+  	  </div>
       <!-- ################################################################################################ --> 
       <!-- / main body -->
       <div class="clear"></div>

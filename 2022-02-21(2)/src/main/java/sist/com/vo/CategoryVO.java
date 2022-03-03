@@ -1,9 +1,7 @@
 package sist.com.vo;
 
 // 변수는 은닉화 → 외부에서 접근시에 메소드를 통해서 접근하는 방식 (캡슐화)
-
 public class CategoryVO {
-
     private int cno;
     private String title;
     private String subject;
@@ -11,7 +9,7 @@ public class CategoryVO {
     private String link;
 
     //  변수 → 쓰기(메모리에 저장) / 읽기(메모리에서 읽기)
-    //         setter            getter
+    //          setter            getter
     public int getCno() {
         return cno;
     }

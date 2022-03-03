@@ -1,9 +1,10 @@
 package sist.com.model;
 
-import sist.com.controller.RequestMapping;
 import java.util.*;
 
 import javax.servlet.http.*;
+
+import sist.com.controller.RequestMapping;
 
 import sist.com.dao.*;
 import sist.com.vo.*;
@@ -34,24 +35,22 @@ public class FoodModel {
         // 화면 include가 없다 → detail로 화면을 변경 → sendRedirect
         // 쿠키만 저장 → 사용자에게 쿠키 전송
         String no = request.getParameter("no");
-        
-        // 1. 쿠키생성
+        // 1. 쿠키생성 
         Cookie cookie = new Cookie("f" + no, no);
         cookie.setPath("/");
-        
-        // 2. 저장 기간 설정
-        cookie.setMaxAge(60 * 60 * 24); // 24시간 → 초단위로 저장
-        
-        // 3. 클라이언트 브라우저로 전송
+        // 2. 저장 기간 설정 
+        cookie.setMaxAge(60 * 60 * 24); // 24시간 → 초단위로 저장 
+        // 3. 클라이언트 브라우저로 전송 
         response.addCookie(cookie);
-        // sendRedirect =→ 링크없이 바로 화면이동 _ok.jsp
+        // sendRedirect -→ 링크없이 바로 화면이동 _ok.jsp
         return "redirect:../food/food_detail.do?no=" + no;
+
     }
 
     @RequestMapping("food/food_detail.do")
-    // DispatcherServlet → invoke(obj, request, response) → Cookie
+    // DispatcherServlet -→ invoke(obj,request,response) → Cookie
     public String food_detail(HttpServletRequest request, HttpServletResponse response) {
-        // 화면 변경 → main_jsp 
+        // 화면 변경 -→ main_jsp 
         // 1.  사용자가 보내준 데이터 출력 
         String no = request.getParameter("no");
         String type = request.getParameter("type");
@@ -60,8 +59,7 @@ public class FoodModel {
             table_name = "food_house";
         else
             table_name = "food_location";
-        
-        // 2. 처리 → 오라클 → 데이터 얻기 → View(JSP)로 전송 → request에 있는 내용 출력 
+        // 2. 처리 → 오라클 → 데이터 얻기 -→ View(JSP)로 전송 → request에 있는 내용 출력 
         FoodDAO dao = new FoodDAO();
         FoodVO vo = dao.foodDetailData(Integer.parseInt(no), table_name);
         String address = vo.getAddress();
@@ -72,8 +70,10 @@ public class FoodModel {
         // food_detail.jsp로 vo를 전송 
         request.setAttribute("vo", vo);
         // 댓글 (X)
-        
-        // 3. 자바/JSP분리해서 사용 = 확장성, 재사용이 편리하다 
+        ReplyDAO rDao = new ReplyDAO();
+        List<ReplyVO> list = rDao.replyListData(Integer.parseInt(no), 1);
+        request.setAttribute("rList", list);
+        //3. 자바/JSP분리해서 사용 = 확장성 , 재사용이 편리하다 
         request.setAttribute("main_jsp", "../food/food_detail.jsp");
         return "../main/main.jsp";
     }
@@ -89,25 +89,21 @@ public class FoodModel {
             // web.xml → post
         } catch (Exception ex) {
         }
-        // 1. 검색어 
+        // 1.검색어 
         String ss = request.getParameter("ss"); //searchString
         if (ss == null)
             ss = "강남";
-        
-        // 2. 페이지 
+        // 2.페이지 
         String page = request.getParameter("page");
         if (page == null)
             page = "1";
 
         int curpage = Integer.parseInt(page);
-        
         // 1. page에 해당되는 데이터 읽기 → List
         FoodDAO dao = new FoodDAO();
         List<FoodVO> list = dao.foodLocationFindData(ss, curpage);
-        
         // 2. 총페이지 읽기 
         int totalpage = dao.foodLoactionFindTotalPage(ss);
-        
         // 3. 출력에 필요한 데이터를 location.jsp로 전송 
         // jsp(링크) → Model(RequestMapping설정) → DAO → Model 
         // Model→ request.setAttribute → 데이터를 전송 
