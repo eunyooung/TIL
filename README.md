@@ -695,7 +695,7 @@ Used Book: 자바의 정석
 * **2022-02-21(1)**
   - Spring MVC Project
 * **2022-02-21(2)**
-  - JSP Final Project (2022.02.22 ~ 2022.02.24)
+  - JSP Final Project (2022.02.22 ~ 2022.02.24, 2022.03.02, 2022.03.03)
 * **2022-02-22**
   - DataCollectionProject
   - Food, Movie, Recipe, Seoul
