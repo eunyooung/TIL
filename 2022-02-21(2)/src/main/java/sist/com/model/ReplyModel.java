@@ -17,9 +17,8 @@ public class ReplyModel {
         } catch (Exception ex) {
         }
         String rno = request.getParameter("rno"); // 맛집번호 
-        String type = request.getParameter("type"); // 맛집 -→ 1, 2 = 명소 ...
+        String type = request.getParameter("type"); // 맛집 → 1, 2 = 명소 ...
         String msg = request.getParameter("msg"); // 댓글 
-        
         // DAO로 전송 → 오라클 추가 
         HttpSession session = request.getSession();
         String id = (String) session.getAttribute("id");
@@ -31,47 +30,46 @@ public class ReplyModel {
         vo.setName(name);
         vo.setRno(Integer.parseInt(rno));
         vo.setType(Integer.parseInt(type));
-        
         ReplyDAO dao = new ReplyDAO();
         dao.replyInsert(vo);
-        
         String s = "";
         if (Integer.parseInt(type) == 1) {
-            s = "food/food";
+            s = "food/food_";
         } else if (Integer.parseInt(type) == 2) {
-            s = "seoul/location";
+            s = "seoul/location_";
         } else if (Integer.parseInt(type) == 3) {
-            s = "seoul/hotel";
+            s = "seoul/hotel_";
         } else if (Integer.parseInt(type) == 4) {
-            s = "seoul/nature";
+            s = "seoul/nature_";
+        } else if (Integer.parseInt(type) == 5) {
+            s = "freeboard/";
         }
-
-        return "redirect:../" + s + "_detail.do?no=" + rno;
+        return "redirect:../" + s + "detail.do?no=" + rno;
     }
 
-    // annotation = if → invoke()
+    // annotation=if → invoke()
     @RequestMapping("reply/reply_delete.do")
     public String reply_delete(HttpServletRequest request, HttpServletResponse response) {
         String no = request.getParameter("no"); // 댓글 번호
-        String rno = request.getParameter("rno"); // 맛집 번호 
+        String rno = request.getParameter("rno"); // 맛집번호 
         String type = request.getParameter("tp");
-        
         ReplyDAO dao = new ReplyDAO();
         // 숙달 
 
         dao.replyDelete(Integer.parseInt(no));
         String s = "";
         if (Integer.parseInt(type) == 1) {
-            s = "food/food";
+            s = "food/food_";
         } else if (Integer.parseInt(type) == 2) {
-            s = "seoul/location";
+            s = "seoul/location_";
         } else if (Integer.parseInt(type) == 3) {
-            s = "seoul/hotel";
+            s = "seoul/hotel_";
         } else if (Integer.parseInt(type) == 4) {
-            s = "seoul/nature";
+            s = "seoul/nature_";
+        } else if (Integer.parseInt(type) == 5) {
+            s = "freeboard/";
         }
-
-        return "redirect:../" + s + "_detail.do?no=" + rno;
+        return "redirect:../" + s + "detail.do?no=" + rno;
     }
 
     @RequestMapping("reply/reply_update.do")
@@ -80,27 +78,26 @@ public class ReplyModel {
             request.setCharacterEncoding("UTF-8");
         } catch (Exception ex) {
         }
-        
         String no = request.getParameter("no"); // 댓글 번호
         String rno = request.getParameter("rno"); // 맛집번호 
         String msg = request.getParameter("msg");
         String type = request.getParameter("tp");
-        
         ReplyDAO dao = new ReplyDAO();
         // 수정 메소드 호출 
         dao.replyUpdate(Integer.parseInt(no), msg);
 
         String s = "";
         if (Integer.parseInt(type) == 1) {
-            s = "food/food";
+            s = "food/food_";
         } else if (Integer.parseInt(type) == 2) {
-            s = "seoul/location";
+            s = "seoul/location_";
         } else if (Integer.parseInt(type) == 3) {
-            s = "seoul/hotel";
+            s = "seoul/hotel_";
         } else if (Integer.parseInt(type) == 4) {
-            s = "seoul/nature";
+            s = "seoul/nature_";
+        } else if (Integer.parseInt(type) == 5) {
+            s = "freeboard/";
         }
-
-        return "redirect:../" + s + "_detail.do?no=" + rno;
+        return "redirect:../" + s + "detail.do?no=" + rno;
     }
 }

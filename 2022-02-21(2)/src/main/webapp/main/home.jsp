@@ -91,18 +91,17 @@
                 <figure><img class="radius-10 btmspace-10" style="width:320px;height:185px" src="${vo.poster }" alt="">
                   <figcaption><a href="../food/category_list.do?cno=${vo.cno }">${vo.title }</a></figcaption>
                   <%-- 
-                       link => Controller - Model에서 처리 <==> DAO 
+                       link -→ Controller - Model에서 처리 ←→ DAO
                        ----사용자 요청 |
                                     | Controller
                                     실행 결과를 JSP로 전송 (request)
-                       link(jsp) ===> Model <====> DAO
+                       link(jsp) --→ Model ←--→ DAO
                                         |
                                        JSP (request)
                                        
-                       ../food/category_list.do => Model <==> DAO
-                                                     |
-                                                  화면 출력할 JSP로 전송 
-                                    
+                       ../food/category_list.do → Model ←→ DAO
+                                                    |
+                                              화면 출력할 JSP로 전송        
                   --%>
                 </figure>
               </li>

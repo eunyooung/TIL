@@ -90,7 +90,7 @@ public class BoardDAO {
         return list;
     }
     */
-    
+
     // 구현 
     //<select id="boardListData" resultType="BoardVO" parameterType="hashmap">
     public static List<BoardVO> boardListData(Map map) {
@@ -136,16 +136,16 @@ public class BoardDAO {
 
     // 총페이지 읽기
     public static int boardTotalPage() {
-        // ps=conn.preparedStatement(sql) → ResultSet 
+        // ps = conn.preparedStatement(sql) → ResultSet 
         int total = 0; // resultType → ? (parameterType)
         SqlSession session = null;
         try {
             session = ssf.openSession();
             total = session.selectOne("boardTotalPage");
             /*
-            *   map.put("boardTotalPage",
-            *           "SELECT CEIL(COUNT(*)/10.0) FROM project_freeboard")
-            */
+             *   map.put("boardTotalPage",
+             *           "SELECT CEIL(COUNT(*)/10.0) FROM project_freeboard")
+             */
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
@@ -156,5 +156,114 @@ public class BoardDAO {
             }
         }
         return total;
+    }
+
+    // 상세보기 
+    public static BoardVO boardDetailData(int no) {
+        BoardVO vo = new BoardVO();
+        SqlSession session = null;
+        try {
+            // 연결 → session 
+            session = ssf.openSession(); // update수행 
+            // autoCommit()
+            // 조회수 증가 
+            session.update("boardHitIncrement", no);
+            session.commit();
+            // 상세보기 데이터 읽기
+            vo = session.selectOne("boardDetailData", no);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            try {
+                if (session != null)
+                    session.close(); // ps.close(), conn.close()
+            } catch (Exception ex) {
+            }
+        }
+        return vo;
+    }
+
+    // 수정 데이터 읽기 
+    public static BoardVO boardUpdateData(int no) {
+        BoardVO vo = new BoardVO();
+        SqlSession session = null;
+        try {
+            session = ssf.openSession();
+            vo = session.selectOne("boardDetailData", no);
+            /*
+                SELECT no,name,subject,content,regdate,hit 
+                FROM project_freeboard
+                WHERE no=? =? #{}
+                   
+             */
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            try {
+                if (session != null)
+                    session.close(); // ps.close(), conn.close()
+            } catch (Exception ex) {
+            }
+        }
+        return vo;
+    }
+
+    // 수정 
+    public static boolean boardUpdate(BoardVO vo) {
+        boolean bCheck = false;
+        SqlSession session = null;
+        try {
+            session = ssf.openSession();
+            // 1.비밀번호 
+            String db_pwd = session.selectOne("boardGetPassword", vo.getNo());
+            if (db_pwd.equals(vo.getPwd())) {
+                bCheck = true;
+                // 실제 수정 
+                session.update("boardUpdate", vo);
+                session.commit();
+            } else {
+                bCheck = false;
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace(); // Mybatis(60), Hibernate(15), JPA(25)
+            // pro-c → JSP/Spring → ASP/C#, ASPX, PHP
+        } finally {
+            try {
+                if (session != null)
+                    session.close(); // ps.close(), conn.close()
+            } catch (Exception ex) {
+            }
+        }
+        return bCheck;
+    }
+
+    // 삭제 
+    public static boolean boardDelete(int no, String pwd) {
+        SqlSession session = null;
+        boolean bCheck = false; // 비밀번호 여부 확인 
+        try {
+            session = ssf.openSession();
+            // 비밀번호 검색 
+            String db_pwd = session.selectOne("boardGetPassword", no);
+            // id (SQL을 가지고 오는 목적 ), 데이터(#{}→?) 
+            if (db_pwd.equals(pwd)) {
+                bCheck = true;
+                // 삭제 
+                session.delete("boardDelete", no);
+                session.commit();
+            } else {
+                bCheck = false;
+            }
+            // 데이터 삭제 
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            try {
+                if (session != null)
+                    session.close(); // ps.close(), conn.close()
+            } catch (Exception ex) {
+            }
+        }
+        return bCheck;
     }
 }
