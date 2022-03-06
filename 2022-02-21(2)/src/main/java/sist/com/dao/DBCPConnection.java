@@ -15,7 +15,7 @@ public class DBCPConnection {
     // Connection의 객체가 일정하기 때문에 관리하기 편하다(부하없이)
     // 한번 여러 접속가 동시에 접속시에 서버가 쉽게 다운이 되지 않는다 
     // DBCP → 웹 프로그램에서 일반적으로 사용한다 (MyBatis → DBCP) → XML파일로 설정 
-    // Spring => Model등록(XML), Controller → .jar첨부 
+    // Spring → Model등록(XML), Controller → .jar첨부 
     public Connection getConnection() {
         Connection conn = null;
         try {

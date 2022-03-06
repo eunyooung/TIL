@@ -23,7 +23,8 @@ import sist.com.vo.*;
  *    Java ←-----→ Java
  *        메소드 (매개변수)
  */
-// Cookie / Session → 모든 JSP사용이 가능 
+// Cookie / Session → 모든 JSP사용이 가능
+
 public class MainModel {
     
     @RequestMapping("main/main.do")

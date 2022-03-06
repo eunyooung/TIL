@@ -26,7 +26,7 @@ public class MemberModel {
         String pwd = request.getParameter("pwd");
         MemberDAO dao = new MemberDAO();
         MemberVO vo = dao.isLogin(id, pwd);
-        request.setAttribute("result", vo.getMsg()); //id, pwd, ok
+        request.setAttribute("result", vo.getMsg()); // id, pwd, ok
         if (vo.getMsg().equals("OK")) {
             HttpSession session = request.getSession();
 
@@ -40,7 +40,7 @@ public class MemberModel {
     @RequestMapping("member/logout.do")
     public String memberLogout(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession();
-        session.invalidate(); // session해제
+        session.invalidate(); // session 해제
         return "redirect:../main/main.do";
     }
 
@@ -102,7 +102,7 @@ public class MemberModel {
         vo.setContent(content);
         vo.setTel(tel1 + "-" + tel2);
         MemberDAO dao = new MemberDAO();
-        //메소드 (INSERT)
+        // 메소드 (INSERT)
         dao.memberJoin(vo);
         return "redirect:../main/main.do";
     }
@@ -125,7 +125,7 @@ public class MemberModel {
         // Ajax는 단독 실행 → 실행결과를 읽어 간다 
         // 1.전화번호 받기 
         String tel = request.getParameter("tel");
-        tel = tel.replaceAll("[^0-9]", "");// [^0-9] → 숫자를 제외 
+        tel = tel.replaceAll("[^0-9]", ""); // [^0-9] → 숫자를 제외 
         // ^[0-9] → 숫자로 시작 
         // DAO로 전송 → 01011111111 01011111111
         MemberDAO dao = new MemberDAO();

@@ -36,6 +36,7 @@ import sist.com.vo.*;
  *  
  *  aaa(arr) 
  */
+
 public class SeoulModel {
     
     @RequestMapping("seoul/seoul_location.do") // 찾기(인덱스)
@@ -156,7 +157,7 @@ public class SeoulModel {
             page = "1"; // default페이지 (1.면접)
         // 1. Session VS Cookie 
         // 2. GET VS POST
-        // 3. MVC (model1,model2) 장단점 
+        // 3. MVC (model1, model2) 장단점 
         // 4. paging 
         // 5. DAO VS Service
         // 6. OOP VS AOP 차이점, DI, Transaction 
@@ -176,7 +177,7 @@ public class SeoulModel {
         // startPage  1~10 → 1, 11~20 → 11
 
         int endPage = ((curpage - 1) / BLOCK * BLOCK) + BLOCK;
-        // 1~10 → 10 , 11~20 → 20 
+        // 1~10 → 10, 11~20 → 20 
         if (endPage > totalpage) {
             endPage = totalpage;
         }

@@ -34,8 +34,8 @@
                            map, forEach 
                jquery
                
-               링크 => Model => 
-                      -----          
+               링크 → Model → 
+                    -----          
             --%>
             <c:forEach var="fvo" items="${list }">
               <table class="table">

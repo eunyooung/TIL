@@ -36,7 +36,7 @@
             // 서버로 요청 → 결과값을 읽기 
             $.ajax({
                 type : 'POST',
-                url : '../member/idcheck_result.do',// 요청
+                url : '../member/idcheck_result.do', // 요청
                 data : {"id":id},
                 success : function(result) { // 결과값 받기
                     let count=result.trim(); // 0, 1

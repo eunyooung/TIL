@@ -10,8 +10,8 @@
   <script type="text/javascript">
     let i = 0;
     $(function() {
-        $('.ups').hide();//table => 닫기 => 더보기 
-        $('.updates').click(function() { // span => 수정버튼 클릭 
+        $('.ups').hide(); // table → 닫기 → 더보기 
+        $('.updates').click(function() { // span → 수정버튼 클릭 
             $('.ups').hide(); // 수정창 닫기 
             let no = $(this).attr("data-no");
             if (i == 0) {
