@@ -1,7 +1,7 @@
 package sist.com.vo;
 
 public class FoodVO {
-    
+
     private int no;
     private int cno;
     private String name;
@@ -15,6 +15,7 @@ public class FoodVO {
     private String menu;
     private String time;
     private String addr1, addr2;
+    private String reserve_days;
 
     public String getAddr1() {
         return addr1;
@@ -126,5 +127,13 @@ public class FoodVO {
 
     public void setMenu(String menu) {
         this.menu = menu;
+    }
+
+    public String getReserve_days() {
+        return reserve_days;
+    }
+
+    public void setReserve_days(String reserve_days) {
+        this.reserve_days = reserve_days;
     }
 }

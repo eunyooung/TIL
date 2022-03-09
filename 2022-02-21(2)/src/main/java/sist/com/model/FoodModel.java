@@ -8,9 +8,10 @@ import sist.com.controller.RequestMapping;
 
 import sist.com.dao.*;
 import sist.com.vo.*;
+import sist.com.jjim.dao.*;
 
 public class FoodModel {
-    
+
     @RequestMapping("food/category_list.do")
     public String food_category_list(HttpServletRequest request, HttpServletResponse response) {
         // ../food/category_list.do?cno=10
@@ -48,7 +49,7 @@ public class FoodModel {
     }
 
     @RequestMapping("food/food_detail.do")
-    // DispatcherServlet -→ invoke(obj,request,response) → Cookie
+    // DispatcherServlet -→ invoke(obj, request, response) → Cookie
     public String food_detail(HttpServletRequest request, HttpServletResponse response) {
         // 화면 변경 -→ main_jsp 
         // 1.  사용자가 보내준 데이터 출력 
@@ -62,18 +63,33 @@ public class FoodModel {
         // 2. 처리 → 오라클 → 데이터 얻기 -→ View(JSP)로 전송 → request에 있는 내용 출력 
         FoodDAO dao = new FoodDAO();
         FoodVO vo = dao.foodDetailData(Integer.parseInt(no), table_name);
+        
         String address = vo.getAddress();
         String addr1 = address.substring(0, address.lastIndexOf("지"));
         vo.setAddr1(addr1.trim());
         String addr2 = address.substring(address.lastIndexOf("지"));
         vo.setAddr2(addr2);
+        
         // food_detail.jsp로 vo를 전송 
         request.setAttribute("vo", vo);
         // 댓글 (X)
         ReplyDAO rDao = new ReplyDAO();
         List<ReplyVO> list = rDao.replyListData(Integer.parseInt(no), 1);
         request.setAttribute("rList", list);
-        //3. 자바/JSP분리해서 사용 = 확장성 , 재사용이 편리하다 
+        
+        // 3. 자바/JSP분리해서 사용 = 확장성, 재사용이 편리하다 
+        JjimVO jvo = new JjimVO();
+        HttpSession session = request.getSession();
+        String id = (String) session.getAttribute("id");
+        jvo.setFno(Integer.parseInt(no));
+        jvo.setId(id);
+        int count = 0;
+        if (id == null)
+            count = 0;
+        else
+            count = JjimDAO.jjimCountData(jvo);
+        //int count = JjimDAO.jjimCountData(jvo);
+        request.setAttribute("count", count);
         request.setAttribute("main_jsp", "../food/food_detail.jsp");
         return "../main/main.jsp";
     }

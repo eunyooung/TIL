@@ -9,6 +9,10 @@
        packages 
      -->
     <typeAlias type="sist.com.board.dao.BoardVO" alias="BoardVO"/><!-- VO등록 -->
+    <typeAlias type="sist.com.jjim.dao.JjimVO" alias="JjimVO"/>
+    <typeAlias type="sist.com.data.input.DaysVO" alias="DaysVO"/>
+    <typeAlias type="sist.com.data.input.TimesVO" alias="TimesVO"/>
+    <typeAlias type="sist.com.vo.FoodVO" alias="FoodVO"/>
   </typeAliases>
   <environments default="development">
     <!--  (environment)+  -->
@@ -31,6 +35,9 @@
   <!-- SQL을 저장 -->
   <mappers><!-- (mapper*, package*) -->
     <mapper resource="sist/com/board/dao/pf-mapper.xml"/>
+    <mapper resource="sist/com/jjim/dao/jjim-mapper.xml"/>
+    <mapper resource="sist/com/data/input/data-mapper.xml"/>
+    <mapper resource="sist/com/dao/reserve-mapper.xml"/>
   </mappers>
 </configuration>
 <!-- 

@@ -11,7 +11,7 @@
   <script type="text/javascript">
     let i = 0;
     $(function() {
-        $('.ups').hide(); // table → 닫기 → 더보기 
+        $('.ups').hide(); // table => 닫기 → 더보기 
         $('.updates').click(function() { // span → 수정버튼 클릭 
             $('.ups').hide(); // 수정창 닫기 
             let no = $(this).attr("data-no");
@@ -30,13 +30,13 @@
 </head>
 <body>
   <div class="wrapper row3">
-  <div id="breadcrumb" class="clear"> 
-    <!-- ################################################################################################ -->
-    <ul>
-      <li>맛집 상세보기</li>
-    </ul>
-    <!-- ################################################################################################ --> 
-   </div>
+    <div id="breadcrumb" class="clear"> 
+      <!-- ################################################################################################ -->
+      <ul>
+        <li>맛집 상세보기</li>
+      </ul>
+      <!-- ################################################################################################ --> 
+    </div>
   </div>
   <div class="wrapper row3">
     <main class="container clear">
@@ -61,16 +61,16 @@
           </tr>
           <tr>
             <th width=15%>주소</th>
-              <td width=85%>${vo.addr1 }<br>
-              ${vo.addr2 }
-              </td>
+            <td width=85%>${vo.addr1 }<br>
+            ${vo.addr2 }
+            </td>
           </tr>
           <tr>
             <th width=20%>전화</th>
             <td width=80%>${vo.tel }</td>
           </tr>
           <tr>
-           <th width=20%>음식종류</th>
+            <th width=20%>음식종류</th>
             <td width=80%>${vo.type }</td>
           </tr>
           <tr>
@@ -99,9 +99,16 @@
           </c:if>
           <tr>
             <td colspan="2" class="text-right">
-              <a href="#" class="btn btn-xs btn-danger">찜하기</a>
-              <a href="#" class="btn btn-xs btn-success">예약하기</a>
-              <a href="javascript:history.back()" class="btn btn-xs btn-primary">목록</a>
+              <c:if test="${sessionScope.id!=null }"><%-- 로그인시에만  --%>
+                <c:if test="${count==0 }">
+                  <a href="../jjim/jjim_insert.do?fno=${vo.no }" class="btn btn-xs btn-danger">찜하기</a>
+                </c:if>
+                <c:if test="${count!=0 }">
+                  <span class="btn btn-xs btn-default">찜하기</span>
+                </c:if>
+                <a href="../reserve/reserve.do" class="btn btn-xs btn-success">예약하기</a>
+              </c:if>
+             <a href="javascript:history.back()" class="btn btn-xs btn-primary">목록</a>
             </td>
           </tr>
         </table>
@@ -123,7 +130,7 @@
                     </address>
                   </header>
                   <div class="comcont">
-                     <p><pre style="white-space:pre-wrap;background-color:white;border:none">${rvo.msg }</pre></p>
+                    <p><pre style="white-space:pre-wrap;background-color:white;border:none">${rvo.msg }</pre></p>
                   </div>
                 </article>
                 <table class="table ups" id="m${rvo.no }" style="display:none">
@@ -139,7 +146,7 @@
                     </td>
                   </tr>
                 </table>
-              </li>  
+              </li>
             </c:forEach>
           </ul>
         </div>
@@ -162,42 +169,42 @@
         <div id="map" style="width:100%;height:350px;"></div>
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=676eb5fa2637b234997b24dd7566e9ba&libraries=services"></script>
         <script>
-          var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-          mapOption = {
-              center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-              level: 3 // 지도의 확대 레벨
-          };  
-        
-          // 지도를 생성합니다    
-          var map = new kakao.maps.Map(mapContainer, mapOption); 
-          
-          // 주소-좌표 변환 객체를 생성합니다
-          var geocoder = new kakao.maps.services.Geocoder();
-          
-          // 주소로 좌표를 검색합니다
-          geocoder.addressSearch('${vo.addr1}', function(result, status) {
-          
-              // 정상적으로 검색이 완료됐으면 
-              if (status === kakao.maps.services.Status.OK) {
-                  
-                  var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-          
-                  // 결과값으로 받은 위치를 마커로 표시합니다
-                  var marker = new kakao.maps.Marker({
-                      map: map,
-                      position: coords
-                  });
-          
-                  // 인포윈도우로 장소에 대한 설명을 표시합니다
-                  var infowindow = new kakao.maps.InfoWindow({
-                      content: '<div style="width:150px;text-align:center;padding:6px 0;">${vo.name}</div>'
-                  });
-                  infowindow.open(map, marker);
-          
-                  // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
-                  map.setCenter(coords);
-              } 
-          });    
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                mapOption = {
+                    center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                    level: 3 // 지도의 확대 레벨
+                };  
+            
+            // 지도를 생성합니다    
+            var map = new kakao.maps.Map(mapContainer, mapOption); 
+            
+            // 주소-좌표 변환 객체를 생성합니다
+            var geocoder = new kakao.maps.services.Geocoder();
+            
+            // 주소로 좌표를 검색합니다
+            geocoder.addressSearch('${vo.addr1}', function(result, status) {
+            
+                // 정상적으로 검색이 완료됐으면 
+                 if (status === kakao.maps.services.Status.OK) {
+            
+                    var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+            
+                    // 결과값으로 받은 위치를 마커로 표시합니다
+                    var marker = new kakao.maps.Marker({
+                        map: map,
+                        position: coords
+                    });
+            
+                    // 인포윈도우로 장소에 대한 설명을 표시합니다
+                    var infowindow = new kakao.maps.InfoWindow({
+                        content: '<div style="width:150px;text-align:center;padding:6px 0;">${vo.name}</div>'
+                    });
+                    infowindow.open(map, marker);
+            
+                    // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                    map.setCenter(coords);
+                } 
+            });
         </script>
       </div>
     </main>
