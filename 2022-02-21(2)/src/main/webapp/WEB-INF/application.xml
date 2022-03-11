@@ -21,4 +21,5 @@
   <bean class="sist.com.model.FreeBoardModel"/>
   <bean class="sist.com.model.JjimModel"/>
   <bean class="sist.com.model.ReserveModel"/>
+  <bean class="sist.com.model.CartModel"/>
 </beans>

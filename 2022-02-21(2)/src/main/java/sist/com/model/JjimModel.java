@@ -4,16 +4,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import sist.com.cart.CartVO;
+import sist.com.cart.GoodsDAO;
 import sist.com.controller.RequestMapping;
-import java.util.*;
+import sist.com.dao.ReserveDAO;
+import sist.com.data.input.ReserveVO;
 
+import java.util.*;
 import sist.com.jjim.dao.*;
+
 
 public class JjimModel {
     
     @RequestMapping("jjim/jjim_insert.do")
     public String jjim_insert(HttpServletRequest request, HttpServletResponse response) {
-        
         // jjim/jjim_insert.do?fno=${vo.fno }
         String fno = request.getParameter("fno");
         HttpSession session = request.getSession();
@@ -32,16 +36,30 @@ public class JjimModel {
 
     @RequestMapping("main/mypage.do")
     public String main_mypage(HttpServletRequest request, HttpServletResponse response) {
-        
         HttpSession session = request.getSession();
         String id = (String) session.getAttribute("id");
         List<JjimVO> list = JjimDAO.jjimListData(id);
-        
         for (JjimVO vo : list) {
             String poster = vo.getPoster();
             poster = poster.substring(0, poster.indexOf("^"));
             vo.setPoster(poster);
         }
+
+        List<ReserveVO> rList = ReserveDAO.reserveMyData(id);
+        if (rList != null) {
+            for (ReserveVO vo : rList) {
+
+                String poster = vo.getPoster();
+                if (poster != null) {
+                    poster = poster.substring(0, poster.indexOf("^"));
+                    vo.setPoster(poster);
+                }
+            }
+        }
+
+        List<CartVO> cList = GoodsDAO.cartMypageData(id);
+        request.setAttribute("cList", cList);
+        request.setAttribute("rList", rList);
         request.setAttribute("list", list);
         request.setAttribute("main_jsp", "../main/mypage.jsp");
         return "../main/main.jsp";
@@ -49,9 +67,18 @@ public class JjimModel {
 
     @RequestMapping("jjim/jjim_delete.do")
     public String jjim_jjim_delete(HttpServletRequest request, HttpServletResponse response) {
-        
         String no = request.getParameter("no");
         JjimDAO.jjimDelete(Integer.parseInt(no));
         return "redirect:../main/mypage.do";
+    }
+
+    @RequestMapping("main/adminpage.do")
+    public String admin_page(HttpServletRequest request, HttpServletResponse response) {
+        List<ReserveVO> rList = ReserveDAO.reserveAdminData();
+        List<CartVO> cList = GoodsDAO.cartAdminpageData();
+        request.setAttribute("cList", cList);
+        request.setAttribute("rList", rList);
+        request.setAttribute("main_jsp", "../main/adminpage.jsp");
+        return "../main/main.jsp";
     }
 }

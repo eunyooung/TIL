@@ -7,6 +7,29 @@
   <meta charset="UTF-8">
   <title>Insert title here</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- Jquery -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+  <script type="text/javascript">
+    $(function(){
+    	$('.rdays').css("cursor","pointer")
+    	$('.rdays').click(function(){
+    		let year=$(this).attr("data-year");
+    		let month=$(this).attr("data-month");
+    		let day=$(this).text();
+    		$('#reserve_day').text(year+"년도 "+month+"월 "+day+"일")
+    		$('#day_data').val(year+"-"+month+"-"+day);
+    		$.ajax({
+    			type:'post',
+    			url:'../reserve/reserve_time.do',
+    			data:{"day":day},
+    			success:function(res)
+    			{
+    				$('#food_time').html(res)
+    			}
+    		})
+    	})
+    })
+  </script>
 </head>
 <body>
   <table class="table">
@@ -26,7 +49,7 @@
         </c:forEach>
       </c:if>
       <c:if test="${i==rdays[i]}">
-        <td class="text-center danger">${i }</td>
+        <td class="text-center danger rdays" data-year="${year }" data-month="${month }">${i }</td>
       </c:if>
       <c:if test="${i!=rdays[i] }">
         <td class="text-center">${i }</td>
@@ -34,11 +57,20 @@
       <c:set var="week" value="${week+1 }"/>
       <c:if test="${week>6 }">
         <c:set var="week" value="0"/>
-          </tr>
-          <tr height="50">
-        </c:if>
-      </c:forEach>
+        </tr>
+        <tr height="50">
+      </c:if>
+    </c:forEach>
     </tr>
   </table>
 </body>
 </html>
+
+
+
+
+
+
+
+
+

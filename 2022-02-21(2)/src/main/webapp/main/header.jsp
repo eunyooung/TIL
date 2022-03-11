@@ -17,18 +17,18 @@
       </div>
       <div class="fl_right">
         <c:if test="${sessionScope.id==null }">
-        <%--
-              login.do -→ DispatcherServlet(Controller)
-                                 |위임(request) 
-                          Model(RequestMapping())
-              .do -→ Model
-         --%>
+          <%--
+              login.do ==> DispatcherServlet(Controller)
+                                |위임(request) 
+                              Model(RequestMapping())
+              .do ==> Model
+           --%>
           <form method="post" action="../member/login.do">
-    	      <ul class="inline">
-    	        <li>ID:<input type=text name=id size=15 class="input-sm"></li>
-    	        <li>PW:<input type=password name=pwd size=15 class="input-sm"></li>
-    	        <li><input type=submit value="로그인" class="btn btn-lg btn-danger"></li>
-    	      </ul>
+            <ul class="inline">
+              <li>ID:<input type=text name=id size=15 class="input-sm"></li>
+              <li>PW:<input type=password name=pwd size=15 class="input-sm"></li>
+              <li><input type=submit value="로그인" class="btn btn-lg btn-danger"></li>
+            </ul>
           </form>
         </c:if>
         <c:if test="${sessionScope.id!=null }">
@@ -80,7 +80,7 @@
             <li><a href="pages/gallery.html">레시피목록</a></li>
             <li><a href="pages/full-width.html">쉐프목록</a></li>
             <c:if test="${sessionScope.id!=null }">
-              <li><a href="pages/sidebar-left.html">레시피스토어</a></li>
+              <li><a href="../cart/goods_list.do">레시피스토어</a></li>
               <li><a href="pages/sidebar-left.html">레시피만들기</a></li>
             </c:if>
           </ul>
@@ -106,7 +106,7 @@
             <li><a href="../main/mypage.do">마이페이지</a></li>
           </c:if>
           <c:if test="${sessionScope.admin=='y' }">
-            <li><a href="#">어드민페이지</a></li>
+            <li><a href="../main/adminpage.do">어드민페이지</a></li>
           </c:if>
         </c:if>
       </ul>
