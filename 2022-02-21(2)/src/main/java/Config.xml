@@ -13,6 +13,7 @@
     <typeAlias type="sist.com.data.input.DaysVO" alias="DaysVO"/>
     <typeAlias type="sist.com.data.input.TimesVO" alias="TimesVO"/>
     <typeAlias type="sist.com.vo.FoodVO" alias="FoodVO"/>
+    <typeAlias type="sist.com.cart.GoodsVO" alias="GoodsVO"/>
   </typeAliases>
   <environments default="development">
     <!--  (environment)+  -->
@@ -38,6 +39,7 @@
     <mapper resource="sist/com/jjim/dao/jjim-mapper.xml"/>
     <mapper resource="sist/com/data/input/data-mapper.xml"/>
     <mapper resource="sist/com/dao/reserve-mapper.xml"/>
+    <mapper resource="sist/com/cart/goods-mapper.xml"/>
   </mappers>
 </configuration>
 <!-- 

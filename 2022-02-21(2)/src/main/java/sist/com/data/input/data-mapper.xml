@@ -9,7 +9,7 @@
     INSERT INTO days VALUES(#{rno},#{rday},#{rtime})
   </insert>
   <!-- food_house (날짜) -->
-  <update id="foodHouseUpdate" parameterType="com.sist.vo.FoodVO">
+  <update id="foodHouseUpdate" parameterType="sist.com.vo.FoodVO">
     UPDATE food_house SET
     reserve_days=#{reserve_days}
     WHERE no=#{no}

@@ -150,7 +150,6 @@ public class FoodDAO {
             vo.setMenu(rs.getString(9));
             vo.setTime(rs.getString(10));
             vo.setPoster(rs.getString(11));
-            System.out.println(vo.getName());
             rs.close();
         } catch (Exception ex) {
             ex.printStackTrace();

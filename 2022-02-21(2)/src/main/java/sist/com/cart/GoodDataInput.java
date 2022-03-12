@@ -43,7 +43,6 @@ public class GoodDataInput {
                     }
                 }
             }
-
         } catch (Exception ex) {
         }
     }

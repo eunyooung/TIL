@@ -72,7 +72,7 @@
                 <span class="btn btn-sm btn-warning">예약대기</span>
               </c:if>
               <c:if test="${vo.ok==1 }">
-                <span class="btn btn-sm btn-danger ends" data-no="${vo.no }">예약완료</a>
+                <span class="btn btn-sm btn-danger ends" data-no="${vo.no }">예약완료</span>
               </c:if>
             </td>
           </tr>

@@ -11,8 +11,8 @@
   <!-- 찜 목록  -->
   <select id="jjimListData" parameterType="string" resultType="JjimVO">
     SELECT /*+ INDEX_DESC(jjim jjim_no_pk)*/ no,id,fno,
-          (SELECT name FROM food_house WHERE no=jjim.fno) as name,
-          (SELECT poster FROM food_house WHERE no=jjim.fno) as poster
+      (SELECT name FROM food_house WHERE no=jjim.fno) as name,
+      (SELECT poster FROM food_house WHERE no=jjim.fno) as poster
     FROM jjim 
     WHERE id=#{id}
   </select>

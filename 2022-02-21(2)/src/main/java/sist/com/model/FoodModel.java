@@ -45,7 +45,6 @@ public class FoodModel {
         response.addCookie(cookie);
         // sendRedirect -→ 링크없이 바로 화면이동 _ok.jsp
         return "redirect:../food/food_detail.do?no=" + no;
-
     }
 
     @RequestMapping("food/food_detail.do")

@@ -1,34 +1,34 @@
 package sist.com.jjim.dao;
 
 /*
- *  <!-- 찜 등록  -->
- <insert id="jjimInsert" parameterType="JjimVO">
-  <selectKey keyProperty="no" resultType="int" order="BEFORE">
-    SELECT NVL(MAX(no)+1,1) as no FROM jjim
-  </selectKey>
-  INSERT INTO jjim VALUES(#{no},#{id},#{fno})
- </insert>
- 
- <!-- 찜 목록  -->
- <select id="jjimListData" parameterType="string" resultType="JjimVO">
-   SELECT no,id,fno,
-          (SELECT name FROM food_house WHERE no=jjim.fno) as name,
-          (SELECT poster FROM food_house WHERE no=jjim.fno) as poster
-   FROM jjim
- </select>
- 
- <!-- 찜 대상  -->
- <select id="jjimCountData" parameterType="JjimVO" resultType="int">
-   SELECT COUNT(*) 
-   FROM jjim
-   WHERE id=? AND fno=?
- </select>
- 
- <!-- 찜 삭제  -->
- <delete id="jjimDelete" parameterType="int">
-  DELETE FROM jjim
-  WHERE no=?
- </delete>
+    <!-- 찜 등록  -->
+    <insert id="jjimInsert" parameterType="JjimVO">
+      <selectKey keyProperty="no" resultType="int" order="BEFORE">
+        SELECT NVL(MAX(no)+1,1) as no FROM jjim
+      </selectKey>
+      INSERT INTO jjim VALUES(#{no},#{id},#{fno})
+    </insert>
+     
+    <!-- 찜 목록  -->
+    <select id="jjimListData" parameterType="string" resultType="JjimVO">
+      SELECT no,id,fno,
+        (SELECT name FROM food_house WHERE no=jjim.fno) as name,
+        (SELECT poster FROM food_house WHERE no=jjim.fno) as poster
+      FROM jjim
+     </select>
+     
+    <!-- 찜 대상  -->
+    <select id="jjimCountData" parameterType="JjimVO" resultType="int">
+      SELECT COUNT(*) 
+      FROM jjim
+      WHERE id=? AND fno=?
+    </select>
+     
+    <!-- 찜 삭제  -->
+    <delete id="jjimDelete" parameterType="int">
+      DELETE FROM jjim
+      WHERE no=?
+    </delete>
  */
 
 import java.util.*;
@@ -57,8 +57,8 @@ public class JjimDAO {
     }
 
     /*
-      기능 수행 
-      찜 등록하기 
+        기능 수행 
+        찜 등록하기 
         <insert id="jjimInsert" parameterType="JjimVO">
     	  <selectKey keyProperty="no" resultType="int" order="BEFORE">
     	    SELECT NVL(MAX(no)+1,1) as no FROM jjim
@@ -83,11 +83,11 @@ public class JjimDAO {
     }
 
     /*
-      <!-- 찜 목록  -->
+        <!-- 찜 목록  -->
     	<select id="jjimListData" parameterType="string" resultType="JjimVO">
     	  SELECT no,id,fno,
-    	        (SELECT name FROM food_house WHERE no=jjim.fno) as name,
-    	        (SELECT poster FROM food_house WHERE no=jjim.fno) as poster
+    	    (SELECT name FROM food_house WHERE no=jjim.fno) as name,
+    	    (SELECT poster FROM food_house WHERE no=jjim.fno) as poster
     	  FROM jjim
     	  WHERE id=#{id}
     	</select>
@@ -112,11 +112,11 @@ public class JjimDAO {
     }
 
     /*
-      <!-- 찜 대상  -->
+        <!-- 찜 대상  -->
         <select id="jjimCountData" parameterType="JjimVO" resultType="int">
-           SELECT COUNT(*) 
-           FROM jjim
-           WHERE id=? AND fno=?
+          SELECT COUNT(*) 
+          FROM jjim
+          WHERE id=? AND fno=?
         </select>
     */
     public static int jjimCountData(JjimVO vo) {
@@ -138,7 +138,7 @@ public class JjimDAO {
     }
 
     /*
-      <!-- 찜 삭제  -->
+        <!-- 찜 삭제  -->
     	<delete id="jjimDelete" parameterType="int">
     	  DELETE FROM jjim
     	  WHERE no=?
