@@ -631,7 +631,7 @@ Used Book: 자바의 정석
 
 </br>
 
-### **JSP**
+### **JSP / MVC**
 
 * **2022-02-07**
   - JSP Basic Project 1
@@ -660,11 +660,11 @@ Used Book: 자바의 정석
   - JSP Data Project
   - _src.main.java.sist.com.main_ - (**Genie Music** using Jsoup)
   - _src.main.java.sist.com.webapp.main_ - (**Book** using HTML & CSS)
-* **2022-02-09(2)** - (**Board** using Jsp & JDBC)
+* **2022-02-09(2)** - (**Freeboard** using JSP)
   - Board Project
-* **2022-02-10(1)**
+* **2022-02-10(1)** - (**Login** using JSP)
   - JSP Basic Project 3
-* **2022-02-10(2)**
+* **2022-02-10(2)** - (**Menu** using JSP)
   - JSP Basic Project 4
 * **2022-02-11(1)**
   - JSP Basic Project5
