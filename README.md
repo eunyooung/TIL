@@ -660,14 +660,20 @@ Used Book: 자바의 정석
   - JSP Data Project
   - _src.main.java.sist.com.main_ - (**Genie Music** using Jsoup)
   - _src.main.java.sist.com.webapp.main_ - (**Book** using HTML & CSS)
-* **2022-02-09(2)** - (**Freeboard** using JSP)
+* **2022-02-09(2)** 
   - Board Project
-* **2022-02-10(1)** - (**Login** using JSP)
+  - (**Freeboard** using JSP) - paging, crud, search
+* **2022-02-10(1)** 
   - JSP Basic Project 3
-* **2022-02-10(2)** - (**Menu** using JSP)
+  - (**Login** using JSP)
+* **2022-02-10(2)**
   - JSP Basic Project 4
+  - _src.main.webapp.jsp2_ - page modularization
 * **2022-02-11(1)**
   - JSP Basic Project5
+  - _src.main.webapp.jsp_ - JSP action tag
+  - _src.main.webapp.jsp3_ - page modularization
+  - _src.main.webapp.jsp4_ - forward, sendRedirect
 * **2022-02-11(2)**
   - JSP Basic Project 6
 * **2022-02-14(1)**
@@ -695,7 +701,7 @@ Used Book: 자바의 정석
 * **2022-02-21(1)**
   - Spring MVC Project
 * **2022-02-21(2)**
-  - JSP Final Project (2022.02.22 ~ 2022.02.24, 2022.03.02, 2022.03.03)
+  - JSP Final Project (2022.02.22 ~ 2022.02.24, 2022.03.02, 2022.03.03, 2022.03.04, 2022.03.07, 2022.03.08, 2022.03.10, 2022.03.11)
 * **2022-02-22**
   - DataCollectionProject
   - Food, Movie, Recipe, Seoul
@@ -749,3 +755,35 @@ Used Book: 자바의 정석
     - [jquery6.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(2)/src/main/webapp/js/jquery6.jsp) - $('tag').val
     - [jquery7.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(2)/src/main/webapp/js/jquery7.jsp) - $('tag').click, alert()
     - [jquery8.jsp](https://github.com/eunyooung/TIL/blob/main/2022-02-25(2)/src/main/webapp/js/jquery8.jsp) - $('tag').keyup
+    
+</br>
+
+---
+
+</br>
+
+### **Spring**
+* **2022-03-07(1)**
+  - Chapter2-ContainerProject
+* **2022-03-07(2)**
+  - CHapter2-DIProject_1(SetterDI)
+* **2022-03-08(1)**
+  - Chpater2-DIProject_2(ConstructorDI)
+* **2022-03-08(2)**
+  - Chapter2-DIProject_3(SetterDI_5)
+* **2022-03-11(1)**
+  - Chapter2-DIProject_4(Autowired)
+* **2022-03-11(2)**
+  - Chapter2-DIProject_5(Annotation)
+* **2022-03-14(1)**
+  - Chapter4-MyBaits(XML)
+* **2022-03-14(2)**
+  - Chapter4-MyBatis(Annotation)
+* **2022-03-14(3)**
+  - Chapter4-MyBatis(XML+Annotation)
+* **2022-03-14(4)**
+  - Chapter4-MyBatis(Autowired)
+* **2022-03-14(5)**
+  - Chapter4-Annotation(Service)
+* **2022-03-14(6)**
+  - Chapter4-DI(5Version)
