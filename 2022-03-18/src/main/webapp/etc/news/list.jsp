@@ -46,8 +46,8 @@
             news_data:[],
             fd:'영화'
         },
-        mounted:function() {
-            axios.get("http://localhost:8080/main/etc/mews/news_data.do", {
+        mounted:function(){
+            axios.get("http://localhost:8080/main/etc/news/news_data.do",{
                 params:{
                     fd:this.fd
                 }

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.sist.vo.*;
 import com.sist.mapper.*;
 
-
 @Repository
 public class HotelDAO {
 
