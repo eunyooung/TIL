@@ -7,7 +7,12 @@ Records of my daily studies at SIST from 2021.11.11 until the end of training. �
 ## **Table of Contents**
 This is just for a faster approach when reviewing!  
 
-Used Book: 자바의 정석  
+Text Books
+- 자바의 정석  
+- 모두의 네트워크
+- HTML5 웹 프로그래밍 입문
+- 데이터베이스 개론과 실습
+- JSP & Servlet 웹 프로그래밍 입문 + 활용
 
 [ ] = _Notes, Comments_  
 ( ) = _Programs_
@@ -815,3 +820,8 @@ Used Book: 자바의 정석
   - [Chapter6 MVC Project Include](https://github.com/chaijewon/2021-12-09-SpringStudy/tree/master/Chapter6-MVCProject_Include)
 * **[2022-03-17](https://github.com/eunyooung/TIL/tree/main/2022-03-17/src/main)**
   - [Chapter6 File Upload Project](https://github.com/chaijewon/2021-12-09-SpringStudy/tree/master/Chapter6-FileUploadProject)
+    - Multipartfile
+* **[2022-03-18](https://github.com/eunyooung/TIL/tree/main/2022-03-18/src/main)**
+  - [Chapter6 Basic Total Project (Include)](https://github.com/chaijewon/2021-12-09-SpringStudy/tree/master/Chapter6-BasicTotalProject(Include))
+* **[2022-03-21](https://github.com/eunyooung/TIL/tree/main/2022-03-21/src/main)**
+  - [Chapter6 (161 page) Basic Total Project](https://github.com/chaijewon/2021-12-09-SpringStudy/tree/master/Chapter6(161page)_BasicTotalProject)
