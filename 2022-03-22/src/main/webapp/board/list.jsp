@@ -28,7 +28,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>답변형게시판(7장-트랜잭션,MyBatis동적 쿼리)</h1>
+    <h1>답변형게시판(7장-트랜잭션, MyBatis동적 쿼리)</h1>
     <div class="row">
       <table class="table">
         <tr>

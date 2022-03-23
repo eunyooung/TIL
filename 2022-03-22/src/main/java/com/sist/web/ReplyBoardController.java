@@ -19,6 +19,7 @@ import com.sist.vo.*;
 
 @Controller // 사용자 요청을 받아서 처리 → 결과값을 전송 (모아서 전송 → VO : record 단위) 
 public class ReplyBoardController {
+    
     // 스프링에서 모든 클래스 → 필요한 객체를 스프링으로부터 얻어 온다 
     // Controller → DAO, Manager를 받아서 처리 
     @Autowired
@@ -36,14 +37,6 @@ public class ReplyBoardController {
         String uri = request.getRequestURI();
         uri = uri.substring(request.getContextPath().length() + 1)
         if(uri.equals("board/list.do")) → @GetMapping   
-    */
-    /*
-        ***Back-End : Java가능,  Spring가능, ORM가능, 오라클 가능 
-        Front-End : JavaScript 기능, Ajax, VueJs, NodeJS, React
-        Full Stack  
-        퍼블리셔 : HTML, CSS (계약직)
-        ---------------
-        SI(자바 웹개발) / SM  / 솔루션 (SW개발) / (Framework:파견이 없다) / 기획 / DBA 
     */
     public String board_list(String page, Model model) {
         // Model → 전달자 (request) → 필요시마다 사용 (JSP로 전송하는 값이 있는 경우)

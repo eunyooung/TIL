@@ -33,7 +33,7 @@ public class ReplyBoardDAO {
     }
 
     public ReplyBoardVO replyBoardDetailData(int no) {
-        mapper.hitIncrement(no);// 조회수 증가 
+        mapper.hitIncrement(no); // 조회수 증가 
         return mapper.replyBoardDetailData(no);
     }
 
