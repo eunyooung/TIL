@@ -825,3 +825,5 @@ Text Books
   - [Chapter6 Basic Total Project (Include)](https://github.com/chaijewon/2021-12-09-SpringStudy/tree/master/Chapter6-BasicTotalProject(Include))
 * **[2022-03-21](https://github.com/eunyooung/TIL/tree/main/2022-03-21/src/main)**
   - [Chapter6 (161 page) Basic Total Project](https://github.com/chaijewon/2021-12-09-SpringStudy/tree/master/Chapter6(161page)_BasicTotalProject)
+* **[2022-03-22](https://github.com/eunyooung/TIL/tree/main/2022-03-22/src/main)**
+  - [Chapter7 MVCProject (Basic)](https://github.com/chaijewon/2021-12-09-SpringStudy/tree/master/Chapter7-MVCProject(Basic))
