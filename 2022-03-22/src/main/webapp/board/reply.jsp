@@ -3,26 +3,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Insert title here</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <style type="text/css">
-    .container {
-      margin-top: 50px;
-    }
-    
-    .row {
-      margin: 0px auto;
-      width: 850px;
-    }
-    
-    h1 {
-      text-align: center;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style type="text/css">
+.container{
+  margin-top: 50px;
+}
+.row{
+  margin: 0px auto;
+  width:850px;
+}
+h1{
+   text-align: center;
+}
+</style>
 </head>
 <body>
-  <div class="container">
+   <div class="container">
     <h1>답변형 게시판 답변하기</h1>
     <div class="row">
       <form method="post" action="reply_ok.do">
@@ -31,6 +29,7 @@
             <th width=10% class="warning text-right">이름</th>
             <td width=90%>
               <input type=text size=20 class="input-sm" name=name>
+              <input type=hidden name=pno value="${no }">
             </td>
           </tr>
           <tr>
@@ -43,7 +42,7 @@
             <th width=10% class="warning text-right">내용</th>
             <td width=90%>
               <textarea rows="10" cols="62" name=content></textarea>
-           </td>
+            </td>
           </tr>
           <tr>
             <th width=10% class="warning text-right">비밀번호</th>

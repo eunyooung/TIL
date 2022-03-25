@@ -25,11 +25,11 @@
   <div class="container">
     <h1>답변형 게시판 수정하기</h1>
     <div class="row">
-      <%--
-           @Controller → 이동할 수 있는 파일지정 (스크립트를 전송 할 수 없다)
-                       → update_ok.jsp를 추가 
-           @RestController → 스크립트 전송이 가능 
-       --%>
+    <%--
+        @Controller     → 이동할 수 있는 파일지정 (스크립트를 전송 할 수 없다)
+                        → update_ok.jsp를 추가 
+        @RestController → 스크립트 전송이 가능 
+     --%>
       <form method="post" action="update_ok.do">
         <table class="table">
           <tr>
@@ -59,8 +59,8 @@
           </tr>
           <tr>
             <td colspan="2" class="text-center">
-              <input type=submit class="btn btn-sm btn-danger"  value="수정">
-              <input type=button class="btn btn-sm btn-primary"  value="취소" onclick="javascript:history.back()">
+              <input type=submit class="btn btn-sm btn-danger" value="수정">
+              <input type=button class="btn btn-sm btn-primary" value="취소" onclick="javascript:history.back()">
             </td>
           </tr>
         </table>
