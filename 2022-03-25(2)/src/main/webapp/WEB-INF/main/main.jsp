@@ -5,12 +5,11 @@
 <html>
 <head>
 <title>Gravity</title>
-<meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
-
   <!-- Header 위치 -->
   <tiles:insertAttribute name="header"/>
   <!-- 내용 (변경) -->
