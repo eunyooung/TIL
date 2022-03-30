@@ -16,7 +16,7 @@ import com.sist.vo.*;
 
 @Repository
 public class FoodDAO {
-    
+
     @Autowired
     private FoodMapper mapper;
 
@@ -30,5 +30,13 @@ public class FoodDAO {
 
     public List<FoodVO> foodFindData(Map map) {
         return mapper.foodFindData(map);
+    }
+
+    public int foodFindTotalpage(String address) {
+        return mapper.foodFindTotalpage(address);
+    }
+
+    public List<RecipeVO> recipeTypeData(String type) {
+        return mapper.recipeTypeData(type);
     }
 }

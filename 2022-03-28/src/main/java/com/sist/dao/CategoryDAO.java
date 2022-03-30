@@ -10,7 +10,7 @@ import com.sist.vo.*;
 
 @Repository
 public class CategoryDAO {
-    
+
     @Autowired // 인터페이스를 구현한 클래스의 주소값을 주입 (자동 주입)
     private CategoryMapper mapper;
 

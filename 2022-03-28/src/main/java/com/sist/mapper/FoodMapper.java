@@ -13,7 +13,8 @@ import com.sist.vo.*;
  *     = DML
  *        SELECT : 데이터 검색 
  *          → 내장 함수 (SUBSTR, RPAD, NVL, CEIL)
- *          → 연산자 (LIKE, IS NULL, IS NOT NULL, NOT, BETWEEN , IN)
+ *          → 연산자 (LIKE, IS NULL, IS NOT NULL, NOT,
+ *             BETWEEN, IN)
  *          → JOIN / Subquery 
  *          → View(인라인뷰) 
  *        INSERT 
@@ -21,7 +22,7 @@ import com.sist.vo.*;
  *        DELETE
  *     = DDL : table (제약조건), view, sequence 
  *     = DCL : DBA 
- *     = TCL : COMMIT / ROLLBACK 
+ *     = TCL : COMMIT / ROLLBACK
  *     
  *     웹 프로그래머 → DML / TCL
  *     = 간단한 table은 제작이 가능해야 된다 ..
@@ -35,6 +36,7 @@ import com.sist.vo.*;
  *   Front : Jquery, Ajax, VueJS, ReactJS
  *   
  *   AWS : 클라우드 (배포) → 운영체제를 빌려서 사용 (웹 호스팅)
+ *  
  */
 public interface FoodMapper {
     
@@ -46,7 +48,7 @@ public interface FoodMapper {
     // food_house, food_location
     /*
      *    name=#{name} → 홍길동 → '홍길동'
-     *    name=${name} → 홍길동 → 홍길동 --→ 일반 데이터가 아니라 테이블명,컬럼명 
+     *    name=${name} → 홍길동 → 홍길동 --→ 일반 데이터가 아니라 테이블명, 컬럼명 
      *    
      *    FROM 'food_location' 
      */
@@ -58,7 +60,7 @@ public interface FoodMapper {
 
     /*
      *    ORDER BY no DESC  INDEX_DESC()
-     *    ORDER BY no ASC   INDEX_ASC()  → 274page
+     *    ORDER BY no ASC   INDEX_ASC() → 274page
      *    UNIQUE / PK → 자동으로 인덱스가 생성된다 
      */
     @Select("SELECT no,poster,name,num "
@@ -67,5 +69,17 @@ public interface FoodMapper {
             + "FROM food_location "
             + "WHERE address LIKE '%'||#{address}||'%')) "
             + "WHERE num BETWEEN #{start} AND #{end}")
+    // #{address} → map.get("address")
     public List<FoodVO> foodFindData(Map map);
+
+    @Select("SELECT CEIL(COUNT(*)/12.0) FROM food_location "
+            + "WHERE address LIKE '%'||#{address}||'%'")
+    public int foodFindTotalpage(String address);
+
+    // REGEXP_LIKE(title,#{type}) → LIKE(단점 보완)
+    @Select("SELECT no,poster,title,rownum "
+            + "FROM recipe "
+            + "WHERE REGEXP_LIKE(title,#{type}) "
+            + "AND rownum<=7")
+    public List<RecipeVO> recipeTypeData(String type);
 }

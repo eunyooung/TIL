@@ -17,4 +17,8 @@ public interface FoodService {
     public List<CategoryVO> categoryListData();
 
     public CategoryVO categoryInfoData(int cno);
+
+    public int foodFindTotalpage(String address);
+
+    public List<RecipeVO> recipeTypeData(String type);
 }

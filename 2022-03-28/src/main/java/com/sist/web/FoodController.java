@@ -1,15 +1,17 @@
 package com.sist.web;
 
 import java.util.*;
-import javax.servlet.http.*;
 
+import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.*;
+
 import com.sist.vo.*;
+import com.sist.dao.*;
 import com.sist.service.*;
 
 // 오라클 데이터를 읽어서 → 요청 처리 → 결과값 전송 
@@ -20,15 +22,18 @@ import com.sist.service.*;
 // 어노테이션 → 구분자 (if) → 2문제
 @RequestMapping("food/")
 /*
- *   GET, POST → @RequestMapping → 로그인 (유효성검사) → GET(로그인창)    
+ *   GET, POST → @RequestMapping → 로그인 (유효성검사) → GET(로그인창)     
  *                                                   POST(정상)
  *   ===  ==== 개발자 요청에 의해 4.3버전
  *   @GetMapping, @PostMapping
  */
 public class FoodController {
-    
+
     @Autowired
     private FoodService service;
+
+    @Autowired
+    private FoodReplyDAO dao;
 
     // 사용자 요청한 주소를 확인 (사용자(브라우저) → 서버(주소))
     // http://localhost:8080/web/food/main.do?no=1 → uri은 ?를 포함하지 않는다 
@@ -52,7 +57,7 @@ public class FoodController {
             String poster = fvo.getPoster();
             poster = poster.substring(0, poster.indexOf("^"));
             fvo.setPoster(poster);
-            
+
             String address = fvo.getAddress();
             address = address.substring(0, address.lastIndexOf("지"));
             fvo.setAddress(address);
@@ -64,25 +69,25 @@ public class FoodController {
 
     @GetMapping("detail_before.do")
     /*
-     *    DispatcherServlet (Front Controller)
-     *    클라이언트 = 요청 = DispatcherServlet → HandlerMapping →
-     *    @Controller
-     *    = ViewResolver = JSP
-     *    
-     *    *** 중요
-     *    DispatcherServlet을 통해서 요청값을 받거나 내장객체 
-     *    → 매개변수를 이용한다 
-     *      1) 사용자 요청값 → 일반 데이터(int, String ...)
-     *      2) 커맨드 객체 → ~VO (insert, update, join...)
-     *      3) List (파일업로드 여러개), [](checkbox)로 받을 수 있다
-     *      4) 내장 객체, 스프링에서 제공하는 클래스 
-     *         HttpServletRequest : cookie값을 읽기 
-     *         HttpServletResponse : cookie전송 
-     *         RediectAttributes 
-     *         HttpSession 
-     *         Model 
-     *         ***Errors
-     */
+    *   DispatcherServlet (Front Controller)
+    *   클라이언트 = 요청 = DispatcherServlet → HandlerMapping → 
+    *   @Controller
+    *   = ViewResolver = JSP
+    *   
+    *   *** 중요
+    *   DispatcherServlet을 통해서 요청값을 받거나 내장객체 
+    *   → 매개변수를 이용한다 
+    *     1) 사용자 요청값 → 일반 데이터(int, String ...)
+    *     2) 커맨드 객체 → ~VO (insert, update, join...)
+    *     3) List (파일업로드 여러개), [](checkbox)로 받을 수 있다
+    *     4) 내장 객체, 스프링에서 제공하는 클래스 
+    *        HttpServletRequest : cookie값을 읽기 
+    *        HttpServletResponse :  cookie전송 
+    *        RediectAttributes 
+    *        HttpSession 
+    *        Model 
+    *        ***Errors
+    */
     public String detail_before(int no, HttpServletResponse response, RedirectAttributes ra) {
         // request는 Cookie생성시에 사용
 
@@ -92,22 +97,22 @@ public class FoodController {
         cookie.setPath("/");
         // 3. 기간 
         cookie.setMaxAge(60 * 60 * 24);
-        // 4. 클라이언트로 전송
+        // 4. 클라이언트로 전송 
         response.addCookie(cookie);
-        
+
         ra.addAttribute("no", no);
         /*
-         *    model → forward일때 전송 (데이터) 
-         *    ra    → sendRedirect() 데이터 전송 
+         *   model → forward일때 전송 (데이터) 
+         *   ra    → sendRedirect() 데이터 전송 
          */
         return "redirect:detail.do";
     }
 
     /*
-     *   GetMapping → <a>, location.href="", sendRedirect():redirect:detail.do
-     *   PostMaping → <form>, ajax({type:'POST'}
-     *                 axios.post() → @PostMapping
-     *                 axios.get() → @GetMapping
+     *   GetMapping → <a> ,location.href="" , sendRedirect():redirect:detail.do
+     *   PostMaping → <form> , ajax({type:'POST'}
+     *                axios.post() => @PostMapping
+     *                axios.get() => @GetMapping
      *   default : GET
      */
     @GetMapping("detail.do")
@@ -117,7 +122,17 @@ public class FoodController {
         map.put("no", no);
         map.put("table_name", "food_house");
         FoodVO vo = service.foodDetailData(map);
+        // 카페 / 디저트  → 카페|디저트
+        List<RecipeVO> list = service.recipeTypeData(vo.getType().replace("/", "|").replace(" ", "").replace("기타", ""));
+        List<FoodReplyVO> rList = dao.replyListData(no);
         model.addAttribute("vo", vo);
+        model.addAttribute("list", list);
+        model.addAttribute("rList", rList);
         return "food/detail";
+    }
+
+    @GetMapping("find.do")
+    public String food_find() {
+        return "food/find";
     }
 }
