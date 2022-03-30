@@ -10,13 +10,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style type="text/css">
-  .container {
-    margin-top: 50px;
-  }
-  .row {
-    margin: 0px auto;
-    width: 960px;
-  }
+    .container {
+      margin-top: 50px;
+    }
+    
+    .row {
+      margin: 0px auto;
+      width: 960px;
+    }
   </style>
 </head>
 <body>
@@ -24,6 +25,8 @@
     <h3 class="text-right">
       <a href="chat.do" class="btn btn-sm btn-info">채팅</a>
       <a href="find.do" class="btn btn-sm btn-info">검색</a>
+      <a href="recipe.do" class="btn btn-sm btn-info">레시피</a>
+      <a href="chef.do" class="btn btn-sm btn-info">쉐프</a>
     </h3>
     <h3>믿고보는 맛집 리스트</h3>
     <hr>

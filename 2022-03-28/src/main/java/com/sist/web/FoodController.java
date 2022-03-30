@@ -2,9 +2,9 @@ package com.sist.web;
 
 import java.util.*;
 
-import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -23,8 +23,8 @@ import com.sist.service.*;
 @RequestMapping("food/")
 /*
  *   GET, POST → @RequestMapping → 로그인 (유효성검사) → GET(로그인창)     
- *                                                   POST(정상)
- *   ===  ==== 개발자 요청에 의해 4.3버전
+ *                                                  POST(정상)
+ *   ===   ==== 개발자 요청에 의해 4.3버전
  *   @GetMapping, @PostMapping
  */
 public class FoodController {
@@ -39,7 +39,7 @@ public class FoodController {
     // http://localhost:8080/web/food/main.do?no=1 → uri은 ?를 포함하지 않는다 
     @GetMapping("main.do")
     public String food_main(Model model) {
-        // request, response는 사용하지 않고 동작이 가능 
+        // request,response는 사용하지 않고 동작이 가능 
         // 사용자가 보내준 값은 : 매개변수를 이용한다 
         // 전송 : 전송객체 (Model)
         List<CategoryVO> list = service.categoryListData();
@@ -69,28 +69,28 @@ public class FoodController {
 
     @GetMapping("detail_before.do")
     /*
-    *   DispatcherServlet (Front Controller)
-    *   클라이언트 = 요청 = DispatcherServlet → HandlerMapping → 
-    *   @Controller
-    *   = ViewResolver = JSP
-    *   
-    *   *** 중요
-    *   DispatcherServlet을 통해서 요청값을 받거나 내장객체 
-    *   → 매개변수를 이용한다 
-    *     1) 사용자 요청값 → 일반 데이터(int, String ...)
-    *     2) 커맨드 객체 → ~VO (insert, update, join...)
-    *     3) List (파일업로드 여러개), [](checkbox)로 받을 수 있다
-    *     4) 내장 객체, 스프링에서 제공하는 클래스 
-    *        HttpServletRequest : cookie값을 읽기 
-    *        HttpServletResponse :  cookie전송 
-    *        RediectAttributes 
-    *        HttpSession 
-    *        Model 
-    *        ***Errors
-    */
+     *   DispatcherServlet (Front Controller)
+     *   클라이언트 = 요청 = DispatcherServlet → HandlerMapping → 
+     *   @Controller
+     *   = ViewResolver = JSP
+     *   
+     *   *** 중요
+     *   DispatcherServlet을 통해서 요청값을 받거나 내장객체 
+     *   → 매개변수를 이용한다 
+     *      1) 사용자 요청값 → 일반 데이터(int, String ...)
+     *      2) 커맨드 객체 → ~VO (insert, update, join...)
+     *      3) List (파일업로드 여러개), [](checkbox)로 받을 수 있다
+     *      4) 내장 객체, 스프링에서 제공하는 클래스 
+     *         HttpServletRequest : cookie값을 읽기 
+     *         HttpServletResponse : cookie전송 
+     *         RediectAttributes 
+     *         HttpSession 
+     *         Model 
+     *         ***Errors
+     */
     public String detail_before(int no, HttpServletResponse response, RedirectAttributes ra) {
         // request는 Cookie생성시에 사용
-
+        
         // 1. Cookie 생성 → 문자열만 저장이 가능 
         Cookie cookie = new Cookie("f" + no, String.valueOf(no));
         // 2. path지정 
@@ -109,10 +109,10 @@ public class FoodController {
     }
 
     /*
-     *   GetMapping → <a> ,location.href="" , sendRedirect():redirect:detail.do
-     *   PostMaping → <form> , ajax({type:'POST'}
-     *                axios.post() => @PostMapping
-     *                axios.get() => @GetMapping
+     *   GetMapping → <a> ,location.href="", sendRedirect():redirect:detail.do
+     *   PostMaping → <form>, ajax({type:'POST'}
+     *                 axios.post() → @PostMapping
+     *                 axios.get() → @GetMapping
      *   default : GET
      */
     @GetMapping("detail.do")
@@ -122,12 +122,13 @@ public class FoodController {
         map.put("no", no);
         map.put("table_name", "food_house");
         FoodVO vo = service.foodDetailData(map);
-        // 카페 / 디저트  → 카페|디저트
+        // 카페 / 디저트 → 카페|디저트
         List<RecipeVO> list = service.recipeTypeData(vo.getType().replace("/", "|").replace(" ", "").replace("기타", ""));
         List<FoodReplyVO> rList = dao.replyListData(no);
         model.addAttribute("vo", vo);
         model.addAttribute("list", list);
         model.addAttribute("rList", rList);
+        model.addAttribute("msg", "관리자가 삭제한 댓글입니다");
         return "food/detail";
     }
 

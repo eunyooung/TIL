@@ -3,8 +3,7 @@ package com.sist.web;
 import java.util.*;
 import javax.servlet.http.HttpSession;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import org.json.simple.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,22 +11,21 @@ import com.sist.dao.*;
 import com.sist.vo.*;
 import com.sist.service.*;
 
-
 @RestController
 public class FoodReplyRestController {
-
+    
     // 문제 → Singleton에 대한 설명 → 스프링에서 사용하고 있는 패턴을 종류 
     // 싱글턴, 팩토리, 어뎁터패턴 (형변환 통일) → HandlerAdapter, 프록시(대리자) : 위빙, 옵버저(이벤트발생 서버에 알려주는)....
     @Autowired
     private FoodReplyDAO dao;
-
+    
     @Autowired
     private FoodService service; // FoodController에도 존재 (같은 객체)
     // 싱글턴 → 싱글턴 패턴 (static)
     // 결과값만 보내는 상태 → Rest, 객체(JSON)
     // Spring-Boot → 자동으로 JSON처리 (jackson-bind) → react/redux, vuejs → 웹스톰(nodejs)
     // 스프링 → 자바 (jdk)
-
+    
     @PostMapping("food/login_ok.do")
     public String food_login_ok(String id, String pwd, HttpSession session) {
         // 1. 정보받기 
@@ -39,7 +37,7 @@ public class FoodReplyRestController {
         }
         return result;
     }
-
+    
     // axios.get, axios.post → find_vue/1/강남 → PathValiable 
     @GetMapping(value = "food/find_vue.do", produces = "text/plain;charset=utf-8")
     public String find_vue(int page, String ss) {

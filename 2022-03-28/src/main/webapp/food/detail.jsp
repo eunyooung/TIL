@@ -87,7 +87,7 @@
           <td width=85%>${vo.time }</td>
         </tr>
         <c:if test="${vo.menu!='no' }">
- 	      <tr>
+	      <tr>
 	        <td width=15%>메뉴</td>
 	        <td width=85%>
 	          <ul>
@@ -110,12 +110,20 @@
               <c:forEach var="fvo" items="${rList }">
                 <table class="table">
                   <tr>
-                    <td class="text-left">◐${fvo.name }(${fvo.dbday })</td>
+                    <td class="text-left">
+                      <c:if test="${fvo.group_tab>0 }">
+                        <c:forEach var="i" begin="1" end="${fvo.group_tab }">
+                        &nbsp;&nbsp;
+                        </c:forEach>
+                        <img src="re_icon.png">
+                      </c:if>
+                      ◐${fvo.name }(${fvo.dbday })
+                    </td>
                     <td class="text-right">
-                      <c:if test="${sessionScope.id!=null }">
+                      <c:if test="${sessionScope.id!=null && fvo.msg!=msg}">
                         <c:if test="${sessionScope.id==fvo.id }">
                           <span class="btn btn-xs btn-info updates" value="${fvo.no }">수정</span>
-                          <span class="btn btn-xs btn-success">삭제</span>
+                            <a href="reply_delete.do?no=${fvo.no }&fno=${vo.no}" class="btn btn-xs btn-success">삭제</a>
                         </c:if>
                         <span class="btn btn-xs btn-warning replys" value="${fvo.no }">댓글</span>
                       </c:if>
@@ -123,7 +131,12 @@
                   </tr>
                   <tr>
                     <td colspan="2">
-                      <pre style="white-space: pre-wrap;background-color:white;border:none">${fvo.msg }</pre>
+                      <c:if test="${fvo.group_tab>0 }">
+                        <pre style="white-space: pre-wrap;background-color:white;border:none;margin-left: ${20*fvo.group_tab}px">${fvo.msg }</pre>
+                      </c:if>
+                      <c:if test="${fvo.group_tab==0 }">
+                        <pre style="white-space: pre-wrap;background-color:white;border:none">${fvo.msg }</pre>
+                      </c:if>
                     </td>
                   </tr>
                 </table>
@@ -131,13 +144,14 @@
                 <table class="table rInsert" id="m${fvo.no }" style="display:none">
 		          <tr>
 		            <td>
-		              <form method="post" action="#">
-		                <input type=hidden name=fno value="${vo.no}">
-		                <textarea rows="6" cols="77" style="float: left" name="msg"></textarea>
-		                <input type=submit value="댓글쓰기"  style="height: 122px;background-color: blue;color:white;">
+		              <form method="post" action="reply_reply_insert.do">
+    		            <input type=hidden name=fno value="${vo.no}">
+    		            <input type=hidden name=pno value="${fvo.no }">
+    		            <textarea rows="6" cols="77" style="float: left" name="msg"></textarea>
+    		            <input type=submit value="댓글쓰기" style="height: 122px;background-color: blue;color:white;">
 		              </form>
-		            </td>
-		          </tr>
+		           </td>
+		         </tr>
 		        </table>
 		        <%-- 수정 --%>
 		        <table class="table rUpdate" id="u${fvo.no }" style="display:none">
@@ -147,7 +161,7 @@
 		                <input type=hidden name=fno value="${vo.no}">
 		                <input type=hidden name=no value="${fvo.no }">
 		                <textarea rows="6" cols="77" style="float: left" name="msg">${fvo.msg }</textarea>
-		                <input type=submit value="수정하기"  style="height: 122px;background-color: blue;color:white;">
+		                <input type=submit value="수정하기" style="height: 122px;background-color: blue;color:white;">
 		              </form>
 		            </td>
 		          </tr>
@@ -158,22 +172,23 @@
         </table>
         <div style="height: 10px"></div>
         <c:if test="${sessionScope.id!=null }">
-	      <table class="table">
-	        <tr>
-	          <td>
-	            <form method="post" action="reply_insert.do">
-	              <input type=hidden name=fno value="${vo.no}">
-	              <textarea rows="6" cols="77" style="float: left" name="msg"></textarea>
-	              <input type=submit value="댓글쓰기" style="height: 122px;background-color: blue;color:white;">
-	            </form>
-	          </td>
-	        </tr>
-	      </table>
+    	  <table class="table">
+    	    <tr>
+    	      <td>
+    	        <form method="post" action="reply_insert.do">
+    	          <input type=hidden name=fno value="${vo.no}">
+    	          <textarea rows="6" cols="77" style="float: left" name="msg"></textarea>
+    	          <input type=submit value="댓글쓰기" style="height: 122px;background-color: blue;color:white;">
+    	        </form>
+    	      </td>
+    	    </tr>
+    	   </table>
         </c:if>
       </div>
       <div class="col-sm-3">
         <%-- 레시피  --%>
         <table class="table">
+          <caption><h3 style="color:orange">맛집 레시피</h3></caption>
           <c:forEach var="rvo" items="${list }">
             <tr>
               <td class="text-center">

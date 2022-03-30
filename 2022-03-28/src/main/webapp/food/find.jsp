@@ -34,18 +34,18 @@
         <div class="col-md-4" v-for="vo in find_list">
 		  <div class="thumbnail">
 		    <img :src="vo.poster" alt="Lights" style="width:300px;height:220px" class="images" v-on:click="food_detail(vo.no)">
-		    <div class="caption">
-		      <p style="font-size: 8px">{{vo.name }}</p>
+		      <div class="caption">
+		        <p style="font-size: 8px">{{vo.name }}</p>
+		      </div>
 		    </div>
 		  </div>
-		</div>
 		<div>
 		  <div class="text-center">
 		    <span class="btn btn-sm btn-info" v-on:click="prev()">이전</span>
-		    {{curpage}} page / {{totalpage}} pages
+		      {{curpage}} page / {{totalpage}} pages
 		    <span class="btn btn-sm btn-success" v-on:click="next()">다음</span>
 		  </div>
-	    </div>
+		</div>
       </div>
       <div class="col-sm-4" v-show="isShow">
         <table class="table">
@@ -101,7 +101,7 @@
     	},
     	// 시작과 동시에 처리 → window.onload
     	// find_vue.do?page=1&ss=강남
-        // data:{"page":1,"ss":'강남'}
+        // data:{"page":1, "ss":'강남'}
     	mounted:function(){
     		let _this=this;
     		axios.get("http://localhost:8080/web/food/find_vue.do",{
@@ -166,8 +166,8 @@
         			}
         			// success:function(res) => JSON 
         			// 자바  != 자바스크립트
-        			// 자바 => List => [{},{},{}...]
-        			// 자바 => VO   => {} (JSON) 자바스크립트 객체 표현법 
+        			// 자바 → List → [{},{},{}...]
+        			// 자바 → VO   → {} (JSON) 자바스크립트 객체 표현법 
         			// Rest / JSONP
     			}).then(res=>{
         			this.find_list=res.data;
@@ -177,15 +177,15 @@
     		},
     		// ?no=1
     		food_detail:function(no){
-    			//alert("no="+no)
+    			// alert("no="+no)
     			axios.get("http://localhost:8080/web/food/detail_vue.do",{
         			params:{
         				no:no
         			}
         			// success:function(res) → JSON 
         			// 자바  != 자바스크립트
-        			// 자바 => List → [{},{},{}...]
-        			// 자바 => VO   → {} (JSON) 자바스크립트 객체 표현법 
+        			// 자바 → List → [{}, {}, {}...]
+        			// 자바 → VO   → {} (JSON) 자바스크립트 객체 표현법 
         			// Rest / JSONP
         		}).then(res=>{
         			this.detail=res.data;
