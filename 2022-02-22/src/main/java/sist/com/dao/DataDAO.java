@@ -315,7 +315,114 @@ public class DataDAO {
             disConnection();
         }
     }
-    // 레시피 
+    // 레시피
+    /*
+        private int no;
+        private String title;
+        private String poster;
+        private String chef;
+        private String link;
+        private int hit;
+     */
+    public void recipeInsert(RecipeVO vo) {
+        try {
+            getConnection();
+            String sql = "INSERT INTO recipe VALUES(?,?,?,?,?,0)";
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, vo.getNo());
+            ps.setString(2, vo.getTitle());
+            ps.setString(3, vo.getPoster());
+            ps.setString(4, vo.getChef());
+            ps.setString(5, vo.getLink());
+            
+            ps.executeUpdate();
+        } catch(Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            disConnection();
+        }
+    }
+    
+    /*
+        private String poster;
+        private String chef;
+        private String mem_cont1;
+        private String mem_cont3;
+        private String mem_cont7;
+        private String mem_cont2;
+     */
+    // 쉐프
+    public void chefInsert(ChefVO vo) {
+        try {
+            getConnection();
+            String sql = "INSERT INTO chef VALUES(?,?,?,?,?,?)";
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, vo.getPoster());
+            ps.setString(2, vo.getChef());
+            ps.setString(3, vo.getMem_cont1());
+            ps.setString(4, vo.getMem_cont3());
+            ps.setString(5, vo.getMem_cont7());
+            ps.setString(6, vo.getMem_cont2());
+            
+            ps.executeUpdate();
+        } catch(Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            disConnection();
+        }
+    }
+
     // 레시피 상세
-    // 쉐프 
+    public List<RecipeVO> recipeInfoData() {
+        
+        List<RecipeVO> list = new ArrayList<RecipeVO>();
+        
+        try {
+            getConnection();
+            String sql = "SELECT no,link "
+                        + "FROM recipe "
+                        + "ORDER BY no ASC";
+            ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()) {
+                RecipeVO vo = new RecipeVO();
+                vo.setNo(rs.getInt(1));
+                vo.setLink(rs.getString(2));
+                
+                list.add(vo);
+            }
+            rs.close();
+        } catch(Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            disConnection();
+        }
+        return list;
+    }
+    
+    // 레시피 상세보기
+    public void recipeDetailInsert(RecipeDetailVO vo) {
+        try {
+            getConnection();
+            String sql = "INSERT INTO recipe_detail VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, vo.getNo());
+            ps.setString(2, vo.getPoster());
+            ps.setString(3, vo.getTitle());
+            ps.setString(4, vo.getChef());
+            ps.setString(5, vo.getChef_poster());
+            ps.setString(6, vo.getChef_profile());
+            ps.setString(7, vo.getInfo1());
+            ps.setString(8, vo.getInfo2());
+            ps.setString(9, vo.getInfo3());
+            ps.setString(10, vo.getContent());
+            ps.setString(11, vo.getFoodmake());
+            ps.setString(12, vo.getEtc());
+            ps.executeUpdate();
+        } catch(Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            disConnection();
+        }
+    }
 }

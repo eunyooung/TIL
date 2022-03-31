@@ -11,6 +11,7 @@ public class RecipeDetailVO {
     private String info1, info2, info3;
     private String content;
     private String foodmake;
+    private String etc;
 
     public int getNo() {
         return no;
@@ -99,4 +100,14 @@ public class RecipeDetailVO {
     public void setFoodmake(String foodmake) {
         this.foodmake = foodmake;
     }
+
+    public String getEtc() {
+        return etc;
+    }
+
+    public void setEtc(String etc) {
+        this.etc = etc;
+    }
+    
+    
 }

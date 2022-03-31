@@ -9,15 +9,14 @@ import org.jsoup.select.Elements;
 
 import sist.com.dao.*;
 
-
 public class RecipeMain {
 
     public void recipeAllData() {
+        DataDAO dao = new DataDAO();
         int k = 1;
         try {
             for (int i = 1; i <= 4100; i++) {
-                Document doc = Jsoup.connect("http://www.10000recipe.com/recipe/list.html?order=accuracy&page=" + i)
-                        .get();
+                Document doc = Jsoup.connect("http://www.10000recipe.com/recipe/list.html?order=accuracy&page=" + i).get();
                 Elements title = doc.select("div.common_sp_caption div.common_sp_caption_tit");
                 Elements poster = doc.select("img[src*=/recipe/]");
                 Elements chef = doc.select("div.common_sp_caption_rv_name");
@@ -26,6 +25,7 @@ public class RecipeMain {
                 for (int j = 0; j < title.size(); j++) {
                     try {
                         RecipeVO vo = new RecipeVO();
+                        vo.setNo(k);
                         vo.setTitle(title.get(j).text());
                         vo.setPoster(poster.get(j).attr("src"));
                         vo.setChef(chef.get(j).text());
@@ -37,8 +37,10 @@ public class RecipeMain {
                         System.out.println("Link:" + vo.getLink());
                         System.out.println("k=" + k);
 
+                        dao.recipeInsert(vo);
+                        
                         k++;
-                        Thread.sleep(100);
+                        Thread.sleep(300);
 
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -53,6 +55,7 @@ public class RecipeMain {
 
     public ArrayList<ChefVO> chefAllData() {
         ArrayList<ChefVO> list = new ArrayList<ChefVO>();
+        DataDAO dao = new DataDAO();
         try {
             int k = 1;
             for (int i = 1; i <= 29; i++) {
@@ -84,7 +87,7 @@ public class RecipeMain {
                         System.out.println("Mem-cont2:" + vo.getMem_cont2());
                         System.out.println("k=" + k);
                         System.out.println("---------------------------------------------------------");
-
+                        dao.chefInsert(vo);
                         k++;
                     } catch (Exception ex) {
                     }
@@ -98,9 +101,15 @@ public class RecipeMain {
         // https://try.jsoup.org/
     }
 
+    /**
+     * @param url
+     * @param no
+     * @return
+     */
     public RecipeDetailVO recipeDetailData(String url, int no) {
         RecipeDetailVO vo = new RecipeDetailVO();
         // http://www.10000recipe.com/recipe/6907454
+        DataDAO dao = new DataDAO();
         int k = 1;
         try {
             Document doc = Jsoup.connect("http://www.10000recipe.com" + url).get();
@@ -116,6 +125,11 @@ public class RecipeMain {
             Element info1 = doc.selectFirst("span.view2_summary_info1");
             Element info2 = doc.selectFirst("span.view2_summary_info2");
             Element info3 = doc.selectFirst("span.view2_summary_info3");
+            Elements etc = doc.select("div.ready_ingre3 ul li");
+            String strEtc = "";
+            for (int i = 0; i < etc.size(); i++) {
+                strEtc += etc.get(i).text() + ",";
+            }
             /*
              *  <img src="https://recipe1.ezmember.co.kr/cache/recipe/2020/08/28/fdbb88682cc022c7b4a8347038d7b8b81.jpg">
              */
@@ -135,7 +149,8 @@ public class RecipeMain {
             vo.setInfo2(info2.text());
             vo.setInfo3(info3.text());
             vo.setNo(no);
-
+            vo.setEtc(strEtc);
+            
             System.out.println("제목:" + vo.getTitle());
             System.out.println("쉐프:" + vo.getChef());
             System.out.println("내용:" + vo.getContent());
@@ -145,6 +160,9 @@ public class RecipeMain {
             System.out.println("정보3:" + vo.getInfo3());
 
             System.out.println("k=" + k);
+            
+            dao.recipeDetailInsert(vo);
+            Thread.sleep(300);
             k++;
         } catch (Exception ex) {
         }
@@ -155,6 +173,13 @@ public class RecipeMain {
         // TODO Auto-generated method stub
         
         RecipeMain rm = new RecipeMain();
-        rm.recipeDetailData("/recipe/6940325", 1);
+        //rm.chefAllData();
+        //rm.recipeAllData();
+        //rm.recipeDetailData("/recipe/6940325", 1);
+        DataDAO dao = new DataDAO();
+        List<RecipeVO> list = dao.recipeInfoData();
+        for(RecipeVO vo:list) {
+            rm.recipeDetailData(vo.getLink(), vo.getNo());
+        }
     }
 }
