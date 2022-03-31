@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import com.sist.vo.*;
 import com.sist.dao.*;
 
+
 /*
  *   key   value
  *  ==============
@@ -26,10 +27,11 @@ import com.sist.dao.*;
  *  ==============
  *  
  *  ddd → for(int i = 0; i < map.size(); i++) {
- *            String value=map.get(i);
+ *             String value=map.get(i);
  *        }
  *        map.get("d")
  */
+
 @Controller
 @RequestMapping("food/")
 public class RecipeController {
@@ -40,18 +42,18 @@ public class RecipeController {
     // @Autowired + @Qualifier("recipeDAO") → @Resource (JDK 1.8) → 실무 1.8
     // @Resource(name="recipeDAO")
     private RecipeDAO dao;
-    
+
     /*
-     *   ========================
+     *   ======================
      *   1. 사용자 요청 → .do 
      *   2. DispatcherServlet
-     *   ======================== web.xml
+     *   ====================== web.xml
      *   3. DispatcherServlet → 명령 → 요청내용을 찾아라 (HandlerMapping)
-     *                        @Controller
-     *                        @RestController
+     *                       @Controller
+     *                       @RestController
      *   4. DispatcherServlet → 찾으면 → 메소드호출 (HandlerAdapter)
      *   5. DispatcherServlet → return을 받아서 JSP찾아라 (ViewResolver)
-     *                        경로명 / 확장자 
+     *                       경로명 / 확장자 
      *   6. DispatcherServlet → JSP를 화면에 출력 한다 
      *      ================= CPU
      *      스프링 : 메인보드 
@@ -59,7 +61,7 @@ public class RecipeController {
     @GetMapping("recipe.do") // HandlerMapping 
     public String food_recipe(String page, Model model) {
         // 메소드 호출 → HandlerAdapter 
-        // 매개변수 → DispatcherServlet → invoke(page,model)
+        // 매개변수 → DispatcherServlet → invoke(page, model)
         if (page == null)
             page = "1"; // default page 
         int curpage = Integer.parseInt(page);
@@ -69,7 +71,7 @@ public class RecipeController {
         int end = rowSize * curpage;
         map.put("start", start);
         map.put("end", end);
-        
+
         List<RecipeVO> list = dao.recipeListData(map);
         // 글자수 조절 
         for (RecipeVO vo : list) {
@@ -81,14 +83,14 @@ public class RecipeController {
         }
         int totalpage = dao.recipeTotalPage();
         int count = dao.recipeCount();
-        
+
         // 블록 
         final int BLOCK = 10;
         int startPage = ((curpage - 1) / BLOCK * BLOCK) + 1;
         int endPage = ((curpage - 1) / BLOCK * BLOCK) + BLOCK;
         if (endPage > totalpage)
             endPage = totalpage;
-        
+
         // JSP 전송 
         model.addAttribute("curpage", curpage);
         model.addAttribute("totalpage", totalpage);
@@ -101,7 +103,6 @@ public class RecipeController {
 
     @GetMapping("chef.do")
     public String food_chef(String page, Model model) {
-        
         if (page == null)
             page = "1"; // default page 
         int curpage = Integer.parseInt(page);
@@ -111,19 +112,19 @@ public class RecipeController {
         int end = rowSize * curpage;
         map.put("start", start);
         map.put("end", end);
-        
+
         List<ChefVO> list = dao.chefListData(map);
         // 글자수 조절 
-        
+
         int totalpage = dao.chefTotalPage();
-        
+
         // 블록 
         final int BLOCK = 10;
         int startPage = ((curpage - 1) / BLOCK * BLOCK) + 1;
         int endPage = ((curpage - 1) / BLOCK * BLOCK) + BLOCK;
         if (endPage > totalpage)
             endPage = totalpage;
-        
+
         // JSP 전송 
         model.addAttribute("curpage", curpage);
         model.addAttribute("totalpage", totalpage);
@@ -137,7 +138,7 @@ public class RecipeController {
     // 데이터 전송, 요청값 → Controller 
     // 화면 출력 → JSP
     // chef_recipe_list.do?chef=${vo.chef }
-    @RequestMapping("chef_recipe_list.do")
+    @RequestMapping("chef_recipe_list.do") // 찾기(post), 페이지 (get)
     public String chef_recipe_list(String ss, String page, String chef, Model model) {
         if (ss == null)
             ss = "all";
@@ -173,14 +174,14 @@ public class RecipeController {
         } else {
             totalpage = dao.chefRecipeCount(map);
         }
-        
+
         // 블록 
         final int BLOCK = 10;
         int startPage = ((curpage - 1) / BLOCK * BLOCK) + 1;
         int endPage = ((curpage - 1) / BLOCK * BLOCK) + BLOCK;
         if (endPage > totalpage)
             endPage = totalpage;
-        
+
         // JSP 전송 
         model.addAttribute("curpage", curpage);
         model.addAttribute("totalpage", totalpage);
@@ -208,5 +209,14 @@ public class RecipeController {
         model.addAttribute("fList", vo.getFList());
         model.addAttribute("iList", vo.getIList());
         return "food/recipe_detail";
+    }
+
+    @GetMapping("recipe_goods_list.do")
+    public String recipe_goods_list(String data, Model model) {
+        // DAO연동 
+        data = data.substring(0, data.indexOf(" "));
+        List<GoodsVO> list = dao.goodsTopData(data);
+        model.addAttribute("list", list);
+        return "food/goods_list";
     }
 }

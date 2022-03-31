@@ -50,9 +50,10 @@
       <h3>재료</h3>
       <table class="table">
         <c:forTokens items="${vo.etc }" delims="," var="data">
-        <tr>
-          <td>${data }</td>
-        </tr>
+          <tr>
+            <%-- Controller  --%>
+            <td><a href="recipe_goods_list.do?data=${data }">${data }</a></td>
+          </tr>
         </c:forTokens>
       </table>
       <h3>조리법</h3>

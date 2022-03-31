@@ -6,11 +6,10 @@ import org.apache.ibatis.annotations.Select;
 
 import com.sist.vo.*;
 
-
 public interface RecipeMapper {
     
     // 1. 레시피 목록 (페이징 기법) → Block별 처리 → 이전 / 다음 (사용하지 않는다)
-    // 인라인뷰,  rownum 
+    // 인라인뷰, rownum 
     @Select("SELECT no,poster,title,chef,num "
             + "FROM (SELECT no,poster,title,chef,rownum as num "
             + "FROM (SELECT /*+ INDEX_ASC(recipe recipe_no_pk) */ no,poster,title,chef "
@@ -75,4 +74,13 @@ public interface RecipeMapper {
     @Select("SELECT * FROM recipe_detail "
             + "WHERE no=#{no}")
     public RecipeDetailVO recipeDetailData(int no);
+    
+    // 상품 목록
+    @Select("SELECT product_id as id,product_price as price,product_name as name,product_poster as poster,rownum "
+           + "FROM (SELECT product_id,product_price,product_name,product_poster "
+           + "FROM goods "
+           + "WHERE product_name LIKE '%'||#{product_name}||'%' "
+           + "ORDER BY product_price ASC) "
+           + "WHERE rownum<=3")
+    public List<GoodsVO> goodsTopData(String product_name);
 }

@@ -95,12 +95,11 @@ public interface FoodReplyMapper {
      *   AAAAA             1            0          0
      *    → DDDDD          1            1          1
      *    =============================================
-     *    → BBBBB          1            2          1 
+     *    → BBBBB          1            2          1
      *     → CCCCCC        1            3          2
-     *     
-     *   오라클 단점 ORDER BY → 같은 번호를 가지고 있는 경우 → 
+     *  
+     *   오라클 단점 ORDER BY → 같은 번호를 가지고 있는 경우 →
      *      먼저 insert된 데이터 우선순
-     *    
      */
     // 6-3. 실제 데이터 추가 → 답변 (insert와 동일) 
     /*

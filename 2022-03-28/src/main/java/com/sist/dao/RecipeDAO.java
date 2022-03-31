@@ -8,13 +8,12 @@ import org.springframework.stereotype.Repository;
 import com.sist.vo.*;
 import com.sist.mapper.*;
 
-
 @Repository // default id → recipeDAO
 public class RecipeDAO {
     
-    // 구현된 매퍼의 주소값을 없어 온다
+    // 구현된 매퍼의 주소값을 없어 온다 
     @Autowired
-    private RecipeMapper mapper; // 객체를 지정 할 수 없다
+    private RecipeMapper mapper; // 객체를 지정 할 수 없다 
 
     public List<RecipeVO> recipeListData(Map map) {
         return mapper.recipeListData(map);
@@ -54,5 +53,9 @@ public class RecipeDAO {
 
     public RecipeDetailVO recipeDetailData(int no) {
         return mapper.recipeDetailData(no);
+    }
+
+    public List<GoodsVO> goodsTopData(String product_name) {
+        return mapper.goodsTopData(product_name);
     }
 }
