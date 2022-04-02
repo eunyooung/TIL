@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import com.sist.vo.*;
 import com.sist.dao.*;
 
-
 @RestController
 public class BoardRestController {
-    
+
     @Autowired
     private BoardDAO dao;
 
@@ -35,7 +34,7 @@ public class BoardRestController {
             List<BoardVO> list = dao.boardListData(map);
             // 총페이지 
             int totalpage = dao.boardTotalPage();
-            
+
             // board.jsp -→ 1. curpage,totalpage, 2. list 
             // JavaScript -→ List → [] (JSONArray)
             // List<BoardVO> → VO → {} (JSONObject)
@@ -77,10 +76,55 @@ public class BoardRestController {
             obj.put("content", vo.getContent());
             obj.put("regdate", vo.getDbday());
             obj.put("hit", vo.getHit());
-            
+
             result = obj.toJSONString();
             System.out.println(result);
         } catch (Exception ex) {
+        }
+        return result;
+    }
+
+    @GetMapping(value = "food/board_delete_ok.do", produces = "text/plain;charset=utf-8")
+    public String board_delete(int no, String pwd) {
+        String result = "";
+        // DB → 데이터 전송 → then(function(res))
+        boolean bCheck = dao.boardDelete(no, pwd);
+        if (bCheck == true) {
+            // 삭제 완료
+            result = "YES";
+        } else {
+            // 비밀번호가 틀린 상태
+            result = "NO";
+        }
+        return result;
+    }
+
+    @GetMapping(value = "food/board_update_vue.do", produces = "text/plain;charset=utf-8")
+    public String food_board_update_vue(int no) {
+        String result = "";
+        try {
+            BoardVO vo = dao.boardUpdateData(no);
+            // vo → {} (JSONObject)
+            JSONObject obj = new JSONObject();
+            obj.put("name", vo.getName());
+            obj.put("subject", vo.getSubject());
+            obj.put("content", vo.getContent());
+
+            result = obj.toJSONString();
+        } catch (Exception ex) {
+        }
+        return result;
+    }
+
+    @GetMapping(value = "food/update_ok_vue.do", produces = "text/plain;charset=utf-8")
+    public String food_update_ok_vue(BoardVO vo) {
+        String result = "";
+        // DB 처리 
+        boolean bCheck = dao.boardUpdate(vo);
+        if (bCheck == true) {
+            result = "YES";
+        } else {
+            result = "NO";
         }
         return result;
     }

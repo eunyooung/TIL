@@ -43,12 +43,12 @@ public class BoardController {
     @GetMapping("food/insert_ok.do")
     @ResponseBody
     public String food_insert_ok(BoardVO vo) {
-    /*
-        System.out.println("이름:"+vo.getName());
-        System.out.println("제목:"+vo.getSubject());
-        System.out.println("내용:"+vo.getContent());
-        System.out.println("비밀번호:"+vo.getPwd());
-    */
+        /*
+            System.out.println("이름:"+vo.getName());
+            System.out.println("제목:"+vo.getSubject());
+            System.out.println("내용:"+vo.getContent());
+            System.out.println("비밀번호:"+vo.getPwd());
+        */
         dao.boardInsert(vo);
         return "ok";
     }
@@ -57,5 +57,25 @@ public class BoardController {
     public String food_detail(int no, Model model) {
         model.addAttribute("no", no);
         return "food/board_detail";
+    }
+
+    /*
+     *    <a>, location.href="", sendRedirect → GET
+     *    <form> = POST
+     *    -------------------- @RequestMapping(GET/POST) 
+     *    버전변경 → 프로그래머의 요구사항 
+     */
+    @GetMapping("food/board_delete.do")
+    public String food_board_delete(int no, Model model) {
+        model.addAttribute("no", no); // spring = vuejs, reactjs 
+        // 스프링 : 요청처리 (@RestController), 화면 변경 (@Controller)
+        // 스프링 : 요청 처리  --→ Front (Router)
+        return "food/board_delete";
+    }
+
+    @GetMapping("food/board_update.do")
+    public String food_board_update(int no, Model model) {
+        model.addAttribute("no", no);
+        return "food/board_update";
     }
 }

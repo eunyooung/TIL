@@ -42,7 +42,7 @@ import com.sist.vo.*;
 
 @Repository
 public class BoardDAO {
-    
+
     @Autowired
     private BoardMapper mapper;
 
@@ -50,17 +50,45 @@ public class BoardDAO {
     public List<BoardVO> boardListData(Map map) { // JSP로 전송이 안됨 
         return mapper.boardListData(map);
     }
-
+    
     public int boardTotalPage() {
         return mapper.boardTotalPage();
     }
-
+    
     public void boardInsert(BoardVO vo) {
         mapper.boardInsert(vo);
     }
-
+    
     public BoardVO boardDetailData(int no) {
         mapper.boardHitIncrement(no);
         return mapper.boardDetailData(no);
+    }
+    
+    public boolean boardDelete(int no, String pwd) {
+        boolean bCheck = false;
+        String db_pwd = mapper.boardGetPassword(no); // 오라클에 저장 비밀번호 읽기
+        if (db_pwd.equals(pwd)) {
+            // 삭제 
+            bCheck = true;
+            mapper.boardDelete(no);
+        } else {
+            // 비밀번호가 틀린 상태 
+            bCheck = false;
+        }
+        return bCheck;
+    }
+    
+    public BoardVO boardUpdateData(int no) {
+        return mapper.boardDetailData(no);
+    }
+    
+    public boolean boardUpdate(BoardVO vo) {
+        boolean bCheck = false;
+        String db_pwd = mapper.boardGetPassword(vo.getNo());
+        if (db_pwd.equals(vo.getPwd())) {
+            bCheck = true;
+            mapper.boardUpdate(vo);
+        }
+        return bCheck;
     }
 }
