@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.sist.mapper.*;
 import com.sist.vo.*;
 
-
 @Repository
 // @Autowired를 사용하려면 반드시 스프링에서 메모리를 할당한다 
 /*
@@ -31,7 +30,7 @@ import com.sist.vo.*;
  *     5. 메소드 호출 (destroy-method)     객체와 객체의 의존 관계도설정 (DI)
  */
 public class RecipeDAO {
-    
+
     // 스프링으로부터 필요한 객체를 가지고 온다 
     @Autowired
     private RecipeMapper mapper;
@@ -42,5 +41,25 @@ public class RecipeDAO {
 
     public int recipeTotalPage() {
         return mapper.recipeTotalPage();
+    }
+
+    public RecipeDetailVO recipeDetailData(int no) {
+        return mapper.recipeDetailData(no);
+    }
+
+    public List<ChefVO> chefListData(Map map) {
+        return mapper.chefListData(map);
+    }
+
+    public int chefTotalPage() {
+        return mapper.chefTotalPage();
+    }
+
+    public List<RecipeVO> chefMakeRecipeData(Map map) {
+        return mapper.chefMakeRecipeData(map);
+    }
+
+    public int chefMakeRecipeTotalpage(String chef) {
+        return mapper.chefMakeRecipeTotalpage(chef);
     }
 }
