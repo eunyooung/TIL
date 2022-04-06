@@ -74,7 +74,7 @@ public class RecipeController {
             mList.add(st.nextToken());
             pList.add(st.nextToken());
         }
-        
+
         model.addAttribute("mList", mList);
         model.addAttribute("pList", pList);
         model.addAttribute("vo", vo);
@@ -90,22 +90,22 @@ public class RecipeController {
         int rowSize = 12;
         int start = (rowSize * curpage) - (rowSize - 1);
         int end = rowSize * curpage;
-        
+
         map.put("start", start);
         map.put("end", end);
-        
+
         List<ChefVO> rList = dao.chefListData(map);
         int totalpage = dao.chefTotalPage();
-        
+
         final int BLOCK = 10;
         int startPage = ((curpage - 1) / BLOCK * BLOCK) + 1;
         //                (10-1)/10*10 → 0+1 -→ 1
         // 1(curpage=1,10), 11(curpage=11~20), 21, 31
         int endPage = ((curpage - 1) / BLOCK * BLOCK) + BLOCK; // 10, 20....
-        
+
         if (endPage > totalpage)
             endPage = totalpage;
-        
+
         // list.jsp에서 출력에 필요한 데이터 전송
         model.addAttribute("curpage", curpage);
         model.addAttribute("totalpage", totalpage);
@@ -162,5 +162,10 @@ public class RecipeController {
         model.addAttribute("endPage", endPage);
         model.addAttribute("chef", chef);
         return "recipe/chef_detail";
+    }
+
+    @GetMapping("recipe/recipe_find.do")
+    public String recipe_find(String fd, Model model) {
+        return "recipe/recipe_find";
     }
 }

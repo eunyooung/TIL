@@ -30,6 +30,7 @@
         <!-- ################################################################################################ -->
         <div id="gallery">
           <figure>
+            <header class="heading">&lt;${chef }&gt;님의 레시피</header>
             <ul class="nospace clear">
               <c:forEach var="vo" items="${rList }" varStatus="s">
                 <c:if test="${s.index%4==0 }">
@@ -59,7 +60,6 @@
               </c:if>
               <li ${style }><a href="../recipe/chef_detail.do?page=${i }&chef=${chef}">${i }</a></li>
             </c:forEach>
-            
             <c:if test="${endPage<totalpage }">
               <li><a href="../recipe/chef_detail.do?page=${endPage+1 }&chef=${chef}">Next &raquo;</a></li>
             </c:if>

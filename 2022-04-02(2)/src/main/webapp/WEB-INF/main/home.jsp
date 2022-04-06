@@ -155,39 +155,41 @@
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <div class="wrapper row3">
-    <main class="container nospace clear"> 
-      <!-- main body -->
-      <!-- ################################################################################################ -->
-      <div class="group">
-        <div class="one_half first paditout">
-          <h2 class="heading uppercase btmspace-50">Integer varius enim id augue faucibus mattis</h2>
-          <ul class="nospace group">
-            <li class="btmspace-30">
-              <article class="service largeicon"><i class="icon nobg circle fa fa-ra"></i>
-                <h6 class="heading"><a href="#">Vestibulum nibh enim</a></h6>
-                <p>Aenean semper elementum tellus, ut placerat leo. Quisque vehicula, urna sit amet.</p>
-              </article>
-            </li>
-            <li class="btmspace-30">
-              <article class="service largeicon"><i class="icon nobg circle fa fa-female"></i>
-                <h6 class="heading"><a href="#">Praesent facilisis diam</a></h6>
-                <p>Aenean semper elementum tellus, ut placerat leo. Quisque vehicula, urna sit amet.</p>
-              </article>
-            </li>
-            <li>
-              <article class="service largeicon"><i class="icon nobg circle fa fa-history"></i>
-                <h6 class="heading"><a href="#">Proin ac augue sed nulla</a></h6>
-                <p>Aenean semper elementum tellus, ut placerat leo. Quisque vehicula, urna sit amet.</p>
-              </article>
-            </li>
-          </ul>
-        </div>
-        <div class="one_half"><a href="#"><img src="../images/demo/vertical.png" alt=""></a></div>
+  <main class="container nospace clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="group">
+      <div class="one_half first paditout">
+        <h2 class="heading uppercase btmspace-50">오늘의 뮤직</h2>
+        <ul class="nospace group">
+          <li class="btmspace-30">
+            <article class="service largeicon"><i class="icon nobg circle fa fa-ra"></i>
+              <h6 class="heading"><a href="#">노래명</a></h6>
+              <p>봄여름가을겨울 (Still Life)</p>
+            </article>
+          </li>
+          <li class="btmspace-30">
+            <article class="service largeicon"><i class="icon nobg circle fa fa-female"></i>
+              <h6 class="heading"><a href="#">가수명</a></h6>
+              <p>BIGBANG (빅뱅)</p>
+            </article>
+          </li>
+          <li>
+            <article class="service largeicon"><i class="icon nobg circle fa fa-history"></i>
+              <h6 class="heading"><a href="#">앨범명</a></h6>
+              <p>봄여름가을겨울 (Still Life)</p>
+            </article>
+          </li>
+        </ul>
       </div>
-      <!-- ################################################################################################ -->
-      <!-- / main body -->
-      <div class="clear"></div>
-    </main>
-  </div>
+      <div class="one_half">
+        <iframe src="http://youtube.com/embed/eN5mG_yMDiM" width=500 height="600"></iframe>
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
 </body>
 </html>
