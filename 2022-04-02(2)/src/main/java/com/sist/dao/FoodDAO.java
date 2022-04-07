@@ -49,7 +49,7 @@ import com.sist.mapper.*;
 // 오라클 : DML, TCL
 // JSP : MVC (EL/JSTL) → 내장객체, 지시자 (page, taglib)
 public class FoodDAO {
-    
+
     // 스프링에서 구현된 매퍼의 주소값을 얻어 온다
     @Autowired
     private FoodMapper mapper;
@@ -68,5 +68,13 @@ public class FoodDAO {
 
     public List<FoodVO> foodFindData(String address) {
         return mapper.foodFindData(address);
+    }
+
+    public List<String> foodGetNameData() {
+        return mapper.foodGetNameData();
+    }
+
+    public List<FoodVO> foodNameFindData(String name) {
+        return mapper.foodNameFindData(name);
     }
 }

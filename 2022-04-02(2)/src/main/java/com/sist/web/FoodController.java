@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.sist.dao.*;
 import com.sist.vo.*;
 
-
 @Controller
 public class FoodController {
     
@@ -104,5 +103,10 @@ public class FoodController {
         model.addAttribute("list", list);
         model.addAttribute("gu", guList_1[gu]);
         return "food/food_find_result/ajax";
+    }
+    
+    @GetMapping("food/food_recommand.do")
+    public String food_recommand() {
+        return "food/food_recommand";
     }
 }
