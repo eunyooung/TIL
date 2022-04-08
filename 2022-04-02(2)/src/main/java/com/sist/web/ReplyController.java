@@ -26,7 +26,6 @@ import org.springframework.web.bind.annotation.*;
 import com.sist.vo.*;
 import com.sist.dao.*;
 
-
 @Controller // 화면 변경, 변경된 JSP에 값을 전송 
 // ReplyController를 메모리 할당을 하고 → ReplyDAO의 주소값을 주입 
 @RequestMapping("reply/")

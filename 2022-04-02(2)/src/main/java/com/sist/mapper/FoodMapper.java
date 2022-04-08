@@ -3,7 +3,7 @@ package com.sist.mapper;
 // SQL문장 저장 
 import java.util.*;
 
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import com.sist.vo.*;
 

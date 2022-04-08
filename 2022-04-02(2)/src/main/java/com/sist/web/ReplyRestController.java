@@ -3,12 +3,10 @@ package com.sist.web;
 import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.sist.dao.*;
 import com.sist.vo.*;
-
 
 @RestController // 화면변경(X), 출력에 필요한 데이터, 자바스크립트 전송 
 public class ReplyRestController {

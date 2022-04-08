@@ -5,7 +5,7 @@ import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 import com.sist.vo.*;
 import com.sist.dao.*;
@@ -184,5 +184,17 @@ public class RecipeController {
     @GetMapping("recipe/recipe_recommand.do")
     public String recipe_recommand() {
         return "recipe/recipe_recommand";
+    }
+
+    @RequestMapping("recipe/priceCompare.do")
+    public String recipe_price(String[] recipe, String fd, Model model) {
+        if (recipe != null) {
+            Map map = new HashMap();
+            map.put("fsArr", recipe);
+            map.put("ss", fd);
+            List<RecipeVO> list = dao.recipeSearchData(map);
+            model.addAttribute("rList", list);
+        }
+        return "recipe/priceCompare";
     }
 }

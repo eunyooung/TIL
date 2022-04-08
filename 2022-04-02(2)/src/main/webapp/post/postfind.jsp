@@ -28,9 +28,8 @@
             postfind:function() {
                 new window.daum.Postcode({
                     oncomplete: (data) => {
-                      
-                      this.post = data.zonecode;
-                      this.address= data.roadAddress;
+                        this.post = data.zonecode;
+                        this.address= data.roadAddress;
                     },
                 }).open();
             }

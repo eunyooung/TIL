@@ -7,13 +7,9 @@ package com.sist.mapper;
 
 import java.util.*;
 
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import com.sist.vo.*;
-
 
 public interface BoardMapper {
     
@@ -61,7 +57,8 @@ public interface BoardMapper {
     public void boardUpdate(BoardVO vo);
 
     // 삭제 → Delete 
-    @Delete("DELETE FROM final_board " + "WHERE no=#{no}")
+    @Delete("DELETE FROM final_board "
+            + "WHERE no=#{no}")
     public void boardDelete(int no);
     // DB, XML, IO → ***메모리 (ArrayList) add, remove, set, get
 }

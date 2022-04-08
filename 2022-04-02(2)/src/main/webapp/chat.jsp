@@ -33,7 +33,7 @@
     let websocket;
     function connection() {
         // 소켓 생성 
-        websocket = new WebSocket("ws://localhost:8080/web/chat")
+        websocket = new WebSocket("ws://localhost:8080/web/chat-ws")
         websocket.onopen = onOpen;
         websocket.onmessage = onMessage;
         websocket.onclose = onClose;
@@ -44,7 +44,7 @@
     }
     function onMessage(event) {
         let data = event.data;
-        if (data.substring(0, 4) == "msg:") { // 문자 채팅 : msg:, 방만들기 : makeroom:
+        if (data.substring(0, 4) == "msg:") { // 문자 채팅 : msg: , 방만들기 : makeroom:
             appendMessage(data.substring(4));
         }
     }
@@ -100,7 +100,7 @@
 <body>
   <div class="container">
     <h1>WebSocket을 이용한 간단한 웹채팅</h1>
-    <%-- security , task , validation --%>
+    <%-- security, task, validation --%>
     <div class="row">
       <table class="table">
         <tr>

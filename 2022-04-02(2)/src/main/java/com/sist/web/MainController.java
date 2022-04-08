@@ -5,14 +5,14 @@ import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 import com.sist.vo.*;
 import com.sist.dao.*;
 
 @Controller
 public class MainController {
-    
+
     @Autowired
     private RecipeDAO dao;
 
@@ -46,5 +46,10 @@ public class MainController {
             }
             com[i] = su;
         }
+    }
+
+    @GetMapping("chat/chat.do")
+    public String chat_chat() {
+        return "chat/chat";
     }
 }

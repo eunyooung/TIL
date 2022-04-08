@@ -3,13 +3,9 @@ package com.sist.mapper;
 // SQL 문장 수행 
 import java.util.*;
 
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import com.sist.vo.*;
-
 
 public interface ReplyMapper {
     
@@ -61,8 +57,7 @@ public interface ReplyMapper {
             + "FROM final_reply "
             + "WHERE no=#{no}")
     public ReplyVO replyParentInfoData(int no);
-
-    // 초대졸(2600~2800) / 대졸(2800~3200) → 3000  
+    
     // 1-2.
     // 실제 답변 추가 
     @Insert("INSERT INTO final_reply(no,name,subject,content,pwd,"

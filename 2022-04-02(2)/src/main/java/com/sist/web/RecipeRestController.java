@@ -155,4 +155,30 @@ public class RecipeRestController {
         }
         return result;
     }
+
+    @PostMapping(value = "recipe/recipe_goods_data.do", produces = "text/plain;charset=utf-8")
+    public String recipe_goods_data(String fd) {
+        String result = "";
+        try {
+            fd = fd.substring(0, fd.indexOf(" "));
+            int count = dao.goodsCountData(fd);
+            List<GoodsVO> list = dao.goodsLikeData(fd);
+            JSONArray arr = new JSONArray(); //[] → [{},{},{}..]
+            int i = 0;
+            for (GoodsVO vo : list) {
+                JSONObject obj = new JSONObject();//{}
+                obj.put("name", vo.getProduct_name());
+                obj.put("poster", vo.getProduct_poster());
+                obj.put("price", vo.getProduct_price());
+                if (i == 0) {
+                    obj.put("count", count);
+                }
+                arr.add(obj);
+                i++;
+            }
+            result = arr.toJSONString();
+        } catch (Exception ex) {
+        }
+        return result;
+    }
 }

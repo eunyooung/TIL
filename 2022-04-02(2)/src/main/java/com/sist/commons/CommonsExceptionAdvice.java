@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 // 스프링에서 관리 : ~Controller, ~DAO, ~Advice, ~Aspect, ~Manager(open api)
 // 프로그래머 관리 : ~VO, ~DTO(일반 데이터형 취급), interface(Mapper)
 public class CommonsExceptionAdvice {
-    
+
     @ExceptionHandler(SQLException.class)
     public void sqlException(SQLException ex) {
         System.out.println("=== SQL 예외 발생 ===");

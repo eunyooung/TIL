@@ -95,7 +95,7 @@
             }
         })
     })
-  </script>
+</script>
 </head>
 <body>
   <div class="container">
