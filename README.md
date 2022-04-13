@@ -863,3 +863,15 @@ Text Books
 * **[2022-04-08](https://github.com/eunyooung/TIL/tree/main/2022-04-08/src/main)**
   - [Image Project](https://github.com/chaijewon/2021-12-09-SpringStudy/tree/master/ImageProject)
     - Multipartfile
+* **[2022-04-11(1)](https://github.com/eunyooung/TIL/tree/main/2022-04-11(1)/src/main)**
+  - [Spring Total Project](https://github.com/chaijewon/2021-12-09-SpringStudy/tree/master/SpringTotalProject)
+    - MySQL
+* **[2022-04-11(2)](https://github.com/eunyooung/TIL/tree/main/2022-04-11(2)/src/main)**
+  -[Spring Total Project_Web(My-SQL-MyBatis-CURD)](https://github.com/chaijewon/2021-12-09-SpringStudy/tree/master/SpringTotalProject_Web(My-SQL-MyBatis-CURD))
+* **[2022-04-11(3)](https://github.com/eunyooung/TIL/tree/main/2022-04-11(3)/src/main)**
+  - MySQL
+  - @PathVariable
+* **[2022-04-12-1]()**
+  - [Web Front Server Project]()
+* **[2022-04-12-2]()**
+  - [Spring Boot MyBatis Project]()

@@ -48,7 +48,7 @@ public class MusicManager {
             int k = 1;
             for (int i = 1; i <= 2; i++) {
                 // HTML을 읽어 와서 메모리 저장 
-                Document doc = Jsoup.connect("https://www.genie.co.kr/chart/musicHistory?year=2021&category=0&pg=" + i).get();
+                Document doc = Jsoup.connect("https://www.genie.co.kr/chart/genre?ditc=D&ymd=20220411&genrecode=M0500&pg=" + i).get();
                 Elements title = doc.select("td.info a.title");
                 Elements singer = doc.select("td.info a.artist");
                 Elements album = doc.select("td.info a.albumtitle");
@@ -79,7 +79,7 @@ public class MusicManager {
                     // System.out.println("key:"+getMkeyData(title.get(j).text()));
                     System.out.println("=================================");
                     MusicVO vo = new MusicVO();
-                    vo.setCno(7);
+                    vo.setCno(6);
                     vo.setTitle(title.get(j).text());
                     vo.setSinger(singer.get(j).text());
                     vo.setPoster(poster.get(j).attr("src"));
@@ -87,7 +87,7 @@ public class MusicManager {
                     vo.setIdcrement(idcrment);
                     vo.setAlbum(album.get(j).text());
                     vo.setMkey(getMkeyData(title.get(j).text()));
-                    //dao.musicInsert(vo);
+                    dao.musicInsert(vo);
                     System.out.println("k=" + k);
                     k++;
                 }
