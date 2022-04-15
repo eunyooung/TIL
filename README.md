@@ -879,3 +879,7 @@ Text Books
   - Spring Boot MyBatis Project2
 * **[2022-04-12-4](https://github.com/eunyooung/TIL/tree/main/2022-04-12-4)**
   - [Spring Boot JPA Project1](https://github.com/chaijewon/2021-12-09-SpringStudy/tree/master/SpringBootJPAProject1)
+**[2022-04-13-1](https://github.com/eunyooung/TIL/tree/main/2022-04-13-1)**
+  - [Spring Boot JPA Project_1](https://github.com/chaijewon/2021-12-09-SpringStudy/tree/master/SpringBootJpaProject_1)
+**[2022-04-13-2](https://github.com/eunyooung/TIL/tree/main/2022-04-13-2)**
+  - [Data Project](https://github.com/chaijewon/2021-12-09-SpringStudy/tree/master/DataProject)
