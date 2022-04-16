@@ -19,7 +19,7 @@ public class MovieController {
     @Autowired
     private MovieDAO dao;
 
-    @GetMapping("/movie")
+    @GetMapping("/movie_list")
     public String movie_main(String page, String cno, Model model) {
         if (page == null)
             page = "1";
@@ -41,9 +41,10 @@ public class MovieController {
         // 전송 
         model.addAttribute("list", list);
         model.addAttribute("curpage", curpage);
-        model.addAttribute("tottalpage", totalpage);
+        model.addAttribute("totalpage", totalpage);
         model.addAttribute("startPage", startPage);
         model.addAttribute("endPage", endPage);
+        model.addAttribute("cno", cno);
         model.addAttribute("main_jsp", "../movie/list.jsp");
         return "main/main";
     }
@@ -78,7 +79,7 @@ public class MovieController {
         // 전송 
         model.addAttribute("list", list);
         model.addAttribute("curpage", curpage);
-        model.addAttribute("tottalpage", totalpage);
+        model.addAttribute("totalpage", totalpage);
         model.addAttribute("startPage", startPage);
         model.addAttribute("endPage", endPage);
         model.addAttribute("main_jsp", "../movie/find.jsp");
