@@ -9,6 +9,8 @@ import ChefList from "./components/recipe/ChefList";
 import Location from "./components/seoul/Location";
 import Nature from "./components/seoul/Nature";
 import Hotel from "./components/seoul/Hotel";
+import FoodCategoryList from "./components/food/FoodCategoryList";
+import FoodDetail from "./components/food/FoodDetail";
 import Footer from "./Footer";
 /*
         Router : 전체 화면 관리
@@ -30,6 +32,8 @@ class App extends Component {
                             <Route path={"/seoul/location"} element={<Location/>}/>
                             <Route path={"/seoul/nature"} element={<Nature/>}/>
                             <Route path={"/seoul/hotel"} element={<Hotel/>}/>
+                            <Route path={"/food/category_food_list/:cno"} element={<FoodCategoryList/>}/>
+                            <Route path={"/food/detail/:no"} element={<FoodDetail/>}/>
                         </Routes>
                     </div>
                     <Footer/>

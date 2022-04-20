@@ -11,4 +11,5 @@ public class SeoulVO {
     private double score;
     private String name, title, msg, poster;
     private String address, images;
+    private int curpage,totalpage;
 }
