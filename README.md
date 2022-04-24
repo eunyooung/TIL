@@ -1,6 +1,6 @@
 # **TIL**
 ### Today I Learned at [<img width="12%" src="https://user-images.githubusercontent.com/70963337/146190115-602caa89-8752-41ff-84fc-891d5d99f5e1.png"/>](https://www.sist.co.kr/index.jsp)  
-Records of my daily studies at SIST from 2021.11.11 until the end of training. 📔✏️
+Records of my daily studies at SIST from 2021.11.11 ~ 2022.04.26 📔✏️
 
 </br>
 
@@ -10,9 +10,13 @@ This is just for a faster approach when reviewing!
 Text Books
 - 자바의 정석  
 - 모두의 네트워크
+- UML 기초와 응용
 - HTML5 웹 프로그래밍 입문
 - 데이터베이스 개론과 실습
 - JSP & Servlet 웹 프로그래밍 입문 + 활용
+- 코드로 배우는 스프링 웹 프로젝트 개정판
+
+</br>
 
 [ ] = _Notes, Comments_  
 ( ) = _Programs_
