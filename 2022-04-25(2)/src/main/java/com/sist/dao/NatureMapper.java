@@ -1,0 +1,25 @@
+package com.sist.dao;
+
+import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.annotations.Select;
+
+import com.sist.vo.*;
+
+public interface NatureMapper {
+    
+    @Select("SELECT no,title,poster,num "
+            + "FROM (SELECT no,title,poster,rownum as num "
+            + "FROM (SELECT /*+ INDEX_DESC(seoul_nature sn_no_pk)*/ no,title,poster "
+            + "FROM seoul_nature)) "
+            + "WHERE num BETWEEN #{start} AND #{end}")
+    public List<NatureVO> natureListData(Map map);
+    
+    @Select("SELECT CEIL(COUNT(*)/12.0) FROM seoul_nature")
+    public int natureTotalPage();
+    
+    @Select("SELECT * FROM seoul_nature "
+            + "WHERE no=#{no}")
+    public NatureVO natureDetailData(int no);
+}
